@@ -1,0 +1,111 @@
+site_name: Docs
+theme:
+  name: material
+  custom_dir: ./overrides/
+  logo: docs_assets/images/logos/AHORA-white.svg # ← Your project logo here
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night 
+        name: Switch to dark mode
+    - scheme: darkmode
+      toggle:
+        icon: octicons/sun-16
+        name: Switch to light mode
+  language: en
+  features:
+    - navigation.path
+    - navigation.expand # Expanded sections in sidebar
+    - navigation.sections # Section headers in sidebar
+    - navigation.instant # Instant page loading (SPA-like)
+    - navigation.tracking # Track active section in sidebar
+    - navigation.top # Track active section in sidebar
+    - search.highlight # Highlight search terms
+    - search.suggest # Show search suggestions
+    - content.code.copy  # Code copy button
+use_directory_urls: true
+extra:
+  version:
+    provider: mike
+extra_css:
+  # Basic styles for every documentation project
+  ## Basic Structure
+  - stylesheets/custom-colors.css
+  - stylesheets/fh-structural/base.css
+  - stylesheets/fh-structural/code-highlighting.css
+  - stylesheets/fh-structural/css-class-components.css
+  - stylesheets/fh-structural/404-error.css
+  ## Basic components
+  - stylesheets/fh-structural/components/fh-modal.css
+  - stylesheets/fh-structural/components/fh-copy.css
+  - stylesheets/fh-structural/components/fh-namepropagator.css
+  ## Basic fonts and icons
+  - docs_assets/fh-structural/fonts/flags/flags.css
+
+  # Your project styles files here ↓
+  - docs_assets/fonts/flexygo/utils.css
+  - docs_assets/fonts/flexygo/flexygo.css
+  - stylesheets/flexygo-styles/main-flexygo-styles.css
+  - stylesheets/flexygo-styles/cols.css
+  - stylesheets/flexygo-styles/list-groups.css
+extra_javascript:
+  # Basic javascripts for every documentation project
+  ## Basic utilities
+  - javascripts/fh-structural/utils.js
+  ## Basic components
+  - javascripts/fh-structural/components/fh-modal.js
+  - javascripts/fh-structural/components/fh-copy.js
+  - javascripts/fh-structural/components/fh-popover.js
+  - javascripts/fh-structural/components/fh-namepropagator.js
+  - javascripts/fh-structural/components/flx-navbutton.js
+  ## Translation files
+  - javascripts/cultures/es.js
+  - javascripts/cultures/en.js
+
+  # Your project styles files here ↓
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - tables
+  - admonition
+  - footnotes
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      auto_title: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: es
+          name: Español
+          build: true
+          # Here goes every menu translation for Spanish ↓
+          nav_translations:
+            # - Home: Inicio (Would translate Home menu to Inicio in the left sidebar)
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: zoom
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: false
+      skip_classes:
+        - not-zoomable
+        - fh-image-of-title
