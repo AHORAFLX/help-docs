@@ -28,6 +28,7 @@ El nivel 1 (`#`) generalmente se reserva para el título del documento, que se m
 ```
 
 **Resultado:**
+
 - **Texto en negrita**
 - *Texto en cursiva*
 - ***Texto en negrita y cursiva***
@@ -53,6 +54,7 @@ Para un salto de línea sin párrafo nuevo, termina la línea con dos espacios.
 ```
 
 **Resultado:**
+
 - Primer elemento
 - Segundo elemento
   - Sub-elemento 1
@@ -70,6 +72,7 @@ Para un salto de línea sin párrafo nuevo, termina la línea con dos espacios.
 ```
 
 **Resultado:**
+
 1. Primer paso
 2. Segundo paso
 3. Tercer paso
@@ -78,18 +81,9 @@ Para un salto de línea sin párrafo nuevo, termina la línea con dos espacios.
 
 ## Enlaces
 
-## Enlaces externos
-
 ```markdown
-[Texto del enlace](https://www.ejemplo.com)
-[Enlace con título](https://www.ejemplo.com "Título al pasar el ratón")
-```
-
-## Enlaces internos
-
-```markdown
-[Ir a otra sección](#nombre-de-la-sección)
 [Ir a otro documento](../OtraCarpeta/OtraSeccion.es.md)
+[Texto del enlace](https://www.ejemplo.com)
 ```
 
 Los enlaces internos son sensibles a mayúsculas y espacios (convertidos a guiones).
@@ -103,17 +97,18 @@ Los enlaces internos son sensibles a mayúsculas y espacios (convertidos a guion
 ```
 
 **Ejemplo:**
-```markdown
-![Logo](/docs_assets/images/logo.png)
-```
+
+![Logo](/docs_assets/images/logos/AHORA-white.svg){ width="300" style="filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(5563%) hue-rotate(305deg) brightness(105%) contrast(81%);" }
 
 ## Bloques de código
 
 ## Código en línea
 
-Usa comillas invertidas simples: \`codigo\` produce `codigo`
+Usa comillas invertidas simples:
 
-## Bloques de código con resaltado de sintaxis
+\`const hola = 'codigo'\` produce `const hola = 'codigo'`
+
+## Bloques de código
 
 Usa tres comillas invertidas seguidas del lenguaje:
 
@@ -149,6 +144,7 @@ Usa el símbolo `>` para crear citas:
 ```
 
 **Resultado:**
+
 > Esta es una cita.
 > Puede tener múltiples líneas.
 >
@@ -178,7 +174,13 @@ Usa el símbolo `>` para crear citas:
 | Texto     | Texto  | Texto   |
 ```
 
-## Líneas horizontales
+**Resultado:**
+
+| Izquierda | Centro | Derecha |
+|:----------|:------:|--------:|
+| Texto  de prueba    | Texto  | Texto de prueba   |
+
+## Separadores
 
 Crea separadores visuales con tres o más guiones:
 
@@ -199,17 +201,10 @@ Crea separadores visuales con tres o más guiones:
 ```
 
 **Resultado:**
+
 - [x] Tarea completada
 - [ ] Tarea pendiente
 - [ ] Otra tarea pendiente
-
-## Notas de pie de página
-
-```markdown
-Este es un texto con una nota[^1].
-
-[^1]: Esta es la nota al pie.
-```
 
 ## Escapar caracteres especiales
 
@@ -220,18 +215,26 @@ Si necesitas mostrar un carácter especial de Markdown literalmente, usa la barr
 \# Este no será un encabezado
 ```
 
+**Resultado:**
+
+\* Este asterisco no creará una lista
+\# Este no será un encabezado
+
 ## HTML embebido
 
 Markdown permite usar HTML cuando necesitas más control:
 
 ```html
-<div style="background-color: #f0f0f0; padding: 10px;">
+<div style="background-color: #88e7c3; padding: 10px;">
   <p>Contenido HTML personalizado</p>
 </div>
 ```
 
-Usa HTML con moderación para mantener el contenido legible en formato Markdown.
-{ .fh-warning-card }
+**Resultado:**
+
+<div style="background-color: #88e7c3; padding: 10px;">
+  <p>Contenido HTML personalizado</p>
+</div>
 
 ## Próximos pasos
 
@@ -242,4 +245,3 @@ Ahora que conoces la sintaxis básica, aprende sobre:
 - [Buenas prácticas de escritura](../BuenasPracticas/EscrituraEfectiva.es.md) - Consejos para contenido claro
 
 Con esta base, ya puedes crear documentación completa y profesional.
-{ .fh-success-card }

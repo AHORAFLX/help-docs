@@ -190,6 +190,7 @@ main {
 
         article {
           max-width: 630px;
+          width: 630px;
         }
       }
       
@@ -237,7 +238,7 @@ main {
   }
 
   /* Centered Images */
-  p:has(> img) {
+  p:has(> img:not(.twemoji,.fh-image-of-title)) {
     display: flex;
     justify-content: center;
   }

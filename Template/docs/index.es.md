@@ -1,41 +1,38 @@
-# Estructura visual
+# Crear tu ayuda
+
+Para empezar a entender como desarrollar tu ayuda creemos que lo mejor es empezar a crearla, para ello es que está esta sección.
 
 ## Obtener Template del Proyecto
 
-Si ya sabes como funciona la documentación descargate el template aquí, sino ves [aquí](#1-barra-de-navegación):
+Empezaremos descargandote este zip con la estructura base que toda ayuda de Ahora tendrá.
+
+Una vez descargada descomprimiremos el archivo donde queramos crear la ayuda.
 
 <button class="button" onclick="downloadTemplateZip()">Descargar ZIP</button>
 
----
 
-Hay tres secciones de la ayuda que se generan automáticamente, la [barra de navegación](#1---barra-de-navegación), el [bloque de contenido](#2---bloque-de-contenido) y el [menú de subnavegación](#3---menú-de-subnavegación)
+## Entendiendo la plantilla
 
-![Docs Sections](/docs_assets/delete/docs-sections.png)
+Para entender como funciona esta plantilla es necesario saber dos cosas, su estructura y el lengüaje utilizado
 
-## 1 - Barra de navegación
+### MarkDown
 
-La barra de navegación se genera automáticamente a partir de los ficheros markdown y las carpetas que contengan algún .md (estas sirven de agrupación).
+MarkDown no es más que una forma sencilla de dar formato al texto sin necesidad de envolverlo todo en etiquetas html.
 
-En la imagen se observa que, por cada opción del menú, hay dos archivos (uno por idioma), pero el nombre visible en la navegación lo define el primer título de cada archivo. Así, "index.es.md" aparece como "Introduction to Flexygo".
+Poner títulos h1 es tan facil como que la línea empiece por `#`, los `h2` por `##` y así sucesivamente; los enlaces simplemente se escriben tal que `\[así\](/pagina/a/la/que/navegar)` y así con infinidad de cosas igualmente sencillas.
 
-![Navigation bar](/docs_assets/delete/navigation-bar.png)
+Aquí puedes ver por encima como funciona:
 
-## 2 - Bloque de contenido
+![](/docs_assets/delete/Ejemplo.png)
 
-Este bloque muestra el contenido del archivo Markdown en HTML. Además, es posible usar código HTML dentro del Markdown si es necesario (aunque se recomienda moderación para mantener la coherencia).
+De todos modos para saber todo lo que se puede hacer recomendamos que al terminar de ver como funciona el proyecto de documentación eches un vistazo tanto a los [elementos básicos de MarkDown](/Markdown/SintaxisBasica) como los [elementos avanzados](/Markdown/ElementosAvanzados).
 
-Aquí aprovechamos para explicar la extensión de los archivos:  
-Los archivos **.es.md** contienen la versión en español y los **.en.md** la versión en inglés. Para añadir traducciones a una sección, basta con crear ambos archivos con el mismo nombre base.
+Pero además de los básicos nosotros tenemos [nuestros propios componentes](/Our%20Resources/OurComponents) y [nuestras propias clases](/Our%20Resources/OurComponents).
 
-![Navigation bar](/docs_assets/delete/main-block.png)
+### Estructra
 
-## 3 - Menú de subnavegación
+La estructura de la plantilla es una muy básica, dentro de la carpeta de `docs` se situarán todos los archivos (páginas) que compondrán la ayuda. En base a su organización en carpetas, se autogenerará la página siguiendo la plantilla creada.
 
-Este menú permite navegar directamente a los apartados internos de la página en la que te encuentras, identificados por títulos de segundo o tercer nivel (# o ##, estos últimos se anidan debajo de los primeros).
+Esta plantilla es personalizable pero deberíamos mantener una coherencia entre nuestras ayudas.
 
-Aunque es menos útil en páginas cortas, facilita mucho la lectura en documentos extensos.  
-
-Ten en cuenta que, por configuración, solo se muestran aquí los títulos de nivel # y ##. Los de cuarto nivel (##) o superior no aparecerán en este menú.
-{ .fh-warning-card }
-
-![Menú de subnavegación](/docs_assets/delete/right-bar.png)
+Para entender completamente y poder empezar a desarrollar visita la sección de [estructura de ficheros](/Structure/FileStructure) y después la de [estructura visual](/Structure/VisualStructure).

@@ -84,27 +84,6 @@ Las admonitions son cajas destacadas para llamar la atención sobre información
 ???+ warning "Expandido por defecto"
     Este contenido está visible por defecto pero se puede colapsar.
 
-## Tarjetas personalizadas
-
-En este proyecto, tenemos clases personalizadas para crear tarjetas:
-
-```markdown
-Este es un mensaje informativo.
-{ .fh-info-card }
-
-Esta es una advertencia importante.
-{ .fh-warning-card }
-
-Este es un mensaje de éxito.
-{ .fh-success-card }
-
-Este es un mensaje de error.
-{ .fh-danger-card }
-```
-
-Las clases CSS personalizadas se definen en `stylesheets/custom-colors.css`.
-{ .fh-info-card }
-
 ## Pestañas (Tabs)
 
 Las pestañas permiten organizar contenido alternativo:
@@ -202,7 +181,8 @@ Usa códigos de emoji para agregar iconos:
 :smile: :heart: :rocket: :tada: :warning:
 ```
 
-**Resultado:** 😊 ❤️ 🚀 🎉 ⚠️
+**Resultado:**
+:smile:  :heart: :rocket: :tada: :warning:
 
 Lista completa en: [Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
@@ -216,6 +196,12 @@ El tema Material incluye miles de iconos:
 :material-check-circle: Éxito
 :material-information: Información
 ```
+
+**Resultado:** 
+:material-account-circle: Usuario
+:material-alert-circle: Alerta
+:material-check-circle: Éxito
+:material-information: Información
 
 Explora todos los iconos en: [Material Design Icons](https://pictogrammers.com/library/mdi/)
 
@@ -267,6 +253,9 @@ El CSS controla el estilo.
 
 Al pasar el ratón sobre HTML o CSS, verás su significado completo.
 
+*[HTML]: HyperText Markup Language
+*[CSS]: Cascading Style Sheets
+
 ## Marcado de teclado
 
 Muestra teclas y combinaciones:
@@ -284,98 +273,7 @@ Usa ++cmd+space++ en Mac para buscar.
 
 Guardar archivo: ++ctrl+s++
 
-## Grids y columnas
-
-Organiza contenido en columnas usando HTML y clases personalizadas:
-
-```html
-<div class="grid cards" markdown>
-
-- :material-clock-fast: **Rápido**
-
-    ---
-
-    Construcción y recarga rápida del sitio
-    
-- :material-check-bold: **Confiable**
-
-    ---
-
-    Documentación estable y consistente
-
-</div>
-```
-
-**Ejemplo en acción:**
-
-<div class="grid cards" markdown>
-
-- :material-clock-fast: **Rápido**
-
-    ---
-
-    Construcción y recarga rápida del sitio
-    
-- :material-check-bold: **Confiable**
-
-    ---
-
-    Documentación estable y consistente
-    
-- :material-shield-check: **Seguro**
-
-    ---
-
-    Documentación versionada y controlada
-
-</div>
-
-O usando un layout simple con dos columnas:
-
-```html
-<div class="two-columns" markdown>
-
-<div markdown>
-
-### Ventajas
-
-- Fácil de usar
-- Rápido de configurar
-- Gratis y open source
-
-</div>
-
-<div markdown>
-
-### Características
-
-- Búsqueda integrada
-- Responsive design
-- Múltiples temas
-
-</div>
-
-</div>
-```
-
-Para usar el layout de dos columnas, agrega este CSS en tu archivo `custom-colors.css`:
-
-```css
-.two-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-@media screen and (max-width: 76.1875em) {
-    .two-columns {
-        grid-template-columns: 1fr;
-    }
-}
-```
-{ .fh-info-card }
-
-### Diagramas con Mermaid
+## Diagramas
 
 Crea diagramas de flujo, secuencia, etc.:
 
@@ -401,41 +299,8 @@ graph LR
     D --> E
 ```
 
-### Tipos de diagramas
-
-**Diagrama de secuencia:**
-
-```mermaid
-sequenceDiagram
-    participant Usuario
-    participant Sistema
-    participant BaseDatos
-    Usuario->>Sistema: Login
-    Sistema->>BaseDatos: Validar credenciales
-    BaseDatos-->>Sistema: Credenciales OK
-    Sistema-->>Usuario: Acceso concedido
-```
-
-**Diagrama de estados:**
-
-```mermaid
-stateDiagram-v2
-    [*] --> Borrador
-    Borrador --> Revisión
-    Revisión --> Aprobado
-    Revisión --> Rechazado
-    Rechazado --> Borrador
-    Aprobado --> Publicado
-    Publicado --> [*]
-```
-
-Otros tipos disponibles:
-- **Flowchart**: Diagramas de flujo
-- **Sequence**: Diagramas de secuencia
-- **Gantt**: Cronogramas
-- **Class**: Diagramas de clases
-- **State**: Diagramas de estados
-- **ER**: Diagramas entidad-relación
+!!! info "Aprende más sobre diagramas"
+    Para ver todos los tipos de diagramas disponibles y ejemplos detallados, visita la [documentación oficial de Mermaid](https://mermaid.js.org/intro/).
 
 ## Anotaciones de contenido
 
@@ -456,18 +321,19 @@ MkDocs (1) es un generador de sitios estáticos especialmente diseñado para doc
 1.  :material-book-open-page-variant: MkDocs es rápido, simple y completamente personalizable.
 2.  :material-file-document: Usa archivos Markdown para crear páginas HTML profesionales.
 
-## Snippets (Fragmentos reutilizables)
-
-Incluye contenido de otros archivos:
+## Notas de pie de página
 
 ```markdown
---8<-- "ruta/al/fragmento.md"
+Este es un texto con una nota[^1].
+
+[^1]: Esta es la nota al pie.
 ```
 
-Útil para:
-- Reutilizar contenido común
-- Incluir bloques de código externos
-- Mantener ejemplos actualizados
+**Resultado:**
+
+Este es un texto con una nota[^1].
+
+[^1]: Esta es la nota al pie.
 
 ## Atributos personalizados
 
@@ -505,14 +371,3 @@ extra:
 Versión actual: {{ version }}
 Desarrollado por {{ company }}
 ```
-
-## Próximos pasos
-
-Con estas herramientas avanzadas, tu documentación será más rica e interactiva:
-
-- [Estilos personalizados](../Estilos/EstilosPersonalizados.es.md) - Personaliza la apariencia
-- [Componentes reutilizables](../Estilos/ComponentesPersonalizados.es.md) - Crea elementos consistentes
-- [Organización del contenido](../Organizacion/EstructuraCarpetas.es.md) - Estructura tu documentación
-
-Experimenta con estas funcionalidades para crear documentación excepcional.
-{ .fh-success-card }

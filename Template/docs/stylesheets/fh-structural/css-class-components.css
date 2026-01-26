@@ -140,15 +140,27 @@
 }
 
 /* Buttons */
-.button, .md-typeset a.button {
+.button, .md-typeset a.button, .md-typeset .md-button {
     display: inline-block;
     cursor: pointer;
-    background-color: var(--fh-identity-color);
-    color: var(--fh-color-text);
+    background-color: var(--md-default-bg-color);
+    color: var(--fh-identity-color);
     padding: 10px 15px;
     border-radius: 50px;
-    border: 1px solid var(--fh-identity-color-accent);
+    border: .1rem solid var(--fh-identity-color);
     font-weight: 500;
+    transition: color 125ms, background-color 125ms, border-color 125ms;
+
+    &.md-button--primary {
+        background-color: var(--fh-identity-color);
+        color: var(--fh-color-text);
+        border: .1rem solid var(--fh-identity-color);
+    }
+
+    &:hover {
+        background-color: var(--fh-identity-color);
+        color: var(--fh-color-text);
+    }
 }
 
 /* Links */
