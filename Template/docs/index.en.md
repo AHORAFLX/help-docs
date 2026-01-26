@@ -8,9 +8,7 @@ We’ll start by having you download this ZIP with the base structure that every
 
 Once downloaded, we’ll unzip the file wherever we want to create the help.
 
-```html
 <button class="button" onclick="downloadTemplateZip()">Download ZIP</button>
-```
 
 ## Understanding the template
 
@@ -20,7 +18,7 @@ To understand how this template works, you need to know two things: its structur
 
 Markdown is simply an easy way to format text without needing to wrap everything in HTML tags.
 
-Adding **h1** titles is as easy as starting the line with `#`, **h2** with `##`, and so on; links are written like this: `[like this](/page/to/navigate/to)`, and the same goes for countless other simple things.
+Adding **h1** titles is as easy as starting the line with `#`, `h2` with `##`, and so on; links are written like this: `[like this](/page/to/navigate/to)`, and the same goes for countless other simple things.
 
 Here you can get a quick overview of how it works:
 
