@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>None./</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/"/>
+    </url>
+    <url>
+        <loc>NoneMarkdown/BasicSyntax/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneMarkdown/BasicSyntax/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Markdown/BasicSyntax/"/>
+    </url>
+    <url>
+        <loc>NoneMarkdown/ElementosAvanzados/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneMarkdown/ElementosAvanzados/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Markdown/ElementosAvanzados/"/>
+    </url>
+    <url>
+        <loc>NoneOur%20Resources/OurClasses/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOur%20Resources/OurClasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Our%20Resources/OurClasses/"/>
+    </url>
+    <url>
+        <loc>NoneOur%20Resources/OurComponents/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOur%20Resources/OurComponents/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Our%20Resources/OurComponents/"/>
+    </url>
+    <url>
+        <loc>NoneStructure/FileStructure/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStructure/FileStructure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Structure/FileStructure/"/>
+    </url>
+    <url>
+        <loc>NoneStructure/VisualStructure/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStructure/VisualStructure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Structure/VisualStructure/"/>
+    </url>
+    <url>
+        <loc>Nonees/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+    </url>
+    <url>
+        <loc>Nonees/Markdown/BasicSyntax/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Markdown/BasicSyntax/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneMarkdown/BasicSyntax/"/>
+    </url>
+    <url>
+        <loc>Nonees/Markdown/ElementosAvanzados/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Markdown/ElementosAvanzados/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneMarkdown/ElementosAvanzados/"/>
+    </url>
+    <url>
+        <loc>Nonees/Our%20Resources/OurClasses/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Our%20Resources/OurClasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOur%20Resources/OurClasses/"/>
+    </url>
+    <url>
+        <loc>Nonees/Our%20Resources/OurComponents/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Our%20Resources/OurComponents/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOur%20Resources/OurComponents/"/>
+    </url>
+    <url>
+        <loc>Nonees/Structure/FileStructure/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Structure/FileStructure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStructure/FileStructure/"/>
+    </url>
+    <url>
+        <loc>Nonees/Structure/VisualStructure/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Structure/VisualStructure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStructure/VisualStructure/"/>
+    </url>
+</urlset>
