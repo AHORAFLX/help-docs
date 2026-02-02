@@ -3,7 +3,7 @@
  */
 
 function downloadTemplateZip() {
-    fetch('/docs_assets/delete/Template.zip')
+    fetch('docs_assets/delete/Template.zip')
         .then(response => {
             if (!response.ok) throw new Error('Template.zip no encontrado');
             return response.blob();
