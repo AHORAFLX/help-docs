@@ -1,4 +1,4 @@
-site_name: Docs
+site_name: Docs  # ← Your site name here
 theme:
   name: material
   custom_dir: ./overrides/
@@ -44,11 +44,7 @@ extra_css:
   - docs_assets/fh-structural/fonts/flags/flags.css
 
   # Your project styles files here ↓
-  - docs_assets/fonts/flexygo/utils.css
-  - docs_assets/fonts/flexygo/flexygo.css
-  - stylesheets/flexygo-styles/main-flexygo-styles.css
-  - stylesheets/flexygo-styles/cols.css
-  - stylesheets/flexygo-styles/list-groups.css
+  
 extra_javascript:
   # Basic javascripts for every documentation project
   ## Basic utilities
@@ -105,16 +101,18 @@ plugins:
           default: true
           name: English
           build: true
+          # Here goes every menu translation for English (only the ones that are not like the folder name) ↓
+          nav_translations:
+            OurResources: Our resources
         - locale: es
           name: Español
           build: true
           # Here goes every menu translation for Spanish ↓
           nav_translations:
             Structure: Estructura
-            Our Resources: Nuestros recursos
+            OurResources: Nuestros recursos
             Our Classes: Nuestras clases
             Our Components: Nuestros componentes
-            # - Home: Inicio (Would translate Home menu to Inicio in the left sidebar)
   - glightbox:
       touchNavigation: true
       loop: false
