@@ -98,7 +98,7 @@ Los enlaces internos son sensibles a mayúsculas y espacios (convertidos a guion
 
 **Ejemplo:**
 
-![Logo](/docs_assets/images/logos/AHORA-white.svg){ width="300" style="filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(5563%) hue-rotate(305deg) brightness(105%) contrast(81%);" }
+![Logo](../docs_assets/images/logos/AHORA-white.svg){ width="300" style="filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(5563%) hue-rotate(305deg) brightness(105%) contrast(81%);" }
 
 ## Bloques de código
 

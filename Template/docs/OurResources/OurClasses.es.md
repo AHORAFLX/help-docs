@@ -1,6 +1,6 @@
 # Nuestras clases CSS { .flx-title-with-image }
 
-![Ahora ERP](/docs_assets/images/logos/AHORA-white.svg){ .fh-image-of-title style="filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(5563%) hue-rotate(305deg) brightness(105%) contrast(81%);" }
+![Ahora ERP](../docs_assets/images/logos/AHORA-white.svg){ .fh-image-of-title style="filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(5563%) hue-rotate(305deg) brightness(105%) contrast(81%);" }
 
 Hay varias clases que puedes usar para dar estilo directamente a secciones o componentes de ayuda y hacer que el diseño sea más coherente.
 
@@ -9,7 +9,7 @@ Hay varias clases que puedes usar para dar estilo directamente a secciones o com
 ```md
 # Paco { .flx-title-with-image }
 
-![Ahora ERP](/docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
+![Ahora ERP](../docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
 ```
 
 !!! info "Ejemplo"
@@ -55,8 +55,8 @@ Mi texto <span class="link">el enlace</span> continúo mi texto
 
 Cambia entre el modo oscuro y el modo claro para ver imágenes diferentes:
 
-![](/docs_assets/delete/Ejemplo.png#only-light){data-gallery="light"}
-![](/docs_assets/images/logos/AHORA-white.svg#only-dark){data-gallery="dark" width="200px"}
+![](../docs_assets/delete/Ejemplo.png#only-light){data-gallery="light"}
+![](../docs_assets/images/logos/AHORA-white.svg#only-dark){data-gallery="dark" width="200px"}
 
 !!! warning "Galería"
     La parte que hace que las imágenes solo sean visibles en un modo es “#only-light/dark”, pero para evitar que el usuario pueda navegar por imágenes ocultas cuando haya hecho clic en una, debes añadir el atributo data-gallery="light/dark".

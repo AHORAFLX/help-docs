@@ -60,7 +60,7 @@ Mostrará una imagen como un popover (al hacer clic) o como un tooltip (al pasar
 
 **Ejemplo:**
 
-<fh-popover class="button" mode="tooltip" src="/docs_assets/delete/Ejemplo.png">Mi texto</fh-popover>
+<fh-popover class="button" mode="tooltip" src="../docs_assets/delete/Ejemplo.png">Mi texto</fh-popover>
 
 | Atributo | Descripción                                                                                                   |
 | -------- | ------------------------------------------------------------------------------------------------------------- |

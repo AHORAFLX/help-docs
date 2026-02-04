@@ -23,11 +23,11 @@ Poner títulos h1 es tan facil como que la línea empiece por `#`, los `h2` por 
 
 Aquí puedes ver por encima como funciona:
 
-![](/docs_assets/delete/Ejemplo.png)
+![](./docs_assets/delete/Ejemplo.png)
 
-De todos modos para saber todo lo que se puede hacer recomendamos que al terminar de ver como funciona el proyecto de documentación eches un vistazo tanto a los [elementos básicos de MarkDown](/Markdown/SintaxisBasica) como los [elementos avanzados](/Markdown/ElementosAvanzados).
+De todos modos para saber todo lo que se puede hacer recomendamos que al terminar de ver como funciona el proyecto de documentación eches un vistazo tanto a los [elementos básicos de MarkDown](./Markdown/BasicSyntax/) como los [elementos avanzados](./Markdown/ElementosAvanzados/).
 
-Pero además de los básicos nosotros tenemos [nuestros propios componentes](/Our%20Resources/OurComponents) y [nuestras propias clases](/Our%20Resources/OurComponents).
+Pero además de los básicos nosotros tenemos [nuestros propios componentes](./OurResources/OurComponents/) y [nuestras propias clases](./OurResources/OurClasses/).
 
 ### Estructra
 
@@ -35,4 +35,4 @@ La estructura de la plantilla es una muy básica, dentro de la carpeta de `docs`
 
 Esta plantilla es personalizable pero deberíamos mantener una coherencia entre nuestras ayudas.
 
-Para entender completamente y poder empezar a desarrollar visita la sección de [estructura de ficheros](/Structure/FileStructure) y después la de [estructura visual](/Structure/VisualStructure).
+Para entender completamente y poder empezar a desarrollar visita la sección de [estructura de ficheros](./Structure/FileStructure/) y después la de [estructura visual](./Structure/VisualStructure/).

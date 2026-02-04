@@ -1,6 +1,6 @@
 # Our CSS classes { .flx-title-with-image }
 
-![Ahora ERP](/docs_assets/images/logos/AHORA-white.svg){ .fh-image-of-title style="filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(5563%) hue-rotate(305deg) brightness(105%) contrast(81%);" }
+![Ahora ERP](../docs_assets/images/logos/AHORA-white.svg){ .fh-image-of-title style="filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(5563%) hue-rotate(305deg) brightness(105%) contrast(81%);" }
 
 There are multiple classes that you can use to style directly help sections or components and make it more cohesive.
 
@@ -9,7 +9,7 @@ There are multiple classes that you can use to style directly help sections or c
 ```md
 # Paco { .flx-title-with-image }
 
-![Ahora ERP](/docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
+![Ahora ERP](../docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
 ```
 
 !!! info "Example"
@@ -55,8 +55,8 @@ My text <span class="link">the link</span> continue my text
 
 Toggle between dark and light mode to see different images:
 
-![](/docs_assets/delete/Ejemplo.png#only-light){data-gallery="light"}
-![](/docs_assets/images/logos/AHORA-white.svg#only-dark){data-gallery="dark" width="200px"}
+![](../docs_assets/delete/Ejemplo.png#only-light){data-gallery="light"}
+![](../docs_assets/images/logos/AHORA-white.svg#only-dark){data-gallery="dark" width="200px"}
 
 !!! warning "Gallery"
     The part of this that makes images only visible in one mode is the "#only-light/dark" but to avoid the user navigating through hidden images when it has clicked one you must add the attribute data-gallery="light/dark".

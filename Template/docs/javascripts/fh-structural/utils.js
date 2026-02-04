@@ -6,9 +6,9 @@ addEventListener("DOMContentLoaded", () => {
     navigation_dialog = document.getElementById('navigation-dialog');
     navigation_dialog.querySelector('label').innerText = translate('flexygo_URL_modal_title');
 
-    // We check if we are inside an iframe (is loaded on flexygo) and add a class to the document so we can style accordingly
-    if (isOnIframe()) {
-        document.documentElement.classList.add('in-iframe');
+    // We check if we are on flexygo and add a class to the document so we can style accordingly
+    if (isAFlexy()) {
+        document.documentElement.classList.add('in-flexygo');
     }
 });
 
@@ -47,10 +47,10 @@ function changeLanguage(new_language) {
     window.location.href = new_url;
 }
 
-// We look for any <link> that points into /main-flexygo-styles.css and grab that url from before stylesheets so that will know the base path
-// We do it with main-flexygo-styles.css because /docs_assets/ is saved in a different place
+// We look for any <link> that points into /base-styles.css and grab that url from before stylesheets so that will know the base path
+// We do it with base-styles.css because /docs_assets/ is saved in a different place
 function getBasePath() {
-    const link_element = document.querySelector('link[href*="/main-flexygo-styles.css"]');
+    const link_element = document.querySelector('link[href*="/base.css"]');
     if (!link_element) return '';
     try {
         // We get the prefix up to (but not including) /docs_assets/ and remove the last / if present 
@@ -96,17 +96,21 @@ function navigateToFlexy(json, ctrlKey_pressed) {
 }
 
 function isAFlexy() {
-    const current_url = new URL(window.location.href);
-    if (current_url.pathname.startsWith('/docs/')) {
-        return true;
-    }
-
-    return false;
+    const is_mkdocs = (window.location.hostname === 'localhost' || 
+                        window.location.hostname === '127.0.0.1') &&
+                        window.location.port === '8000';
+    return !is_mkdocs && !window.location.href.includes('ayuda.ahora.es');
 }
 
 function _nav(url) {
     if (!url) {
-        url = '/Index#' + btoa(JSON.stringify(current_navigation_url));
+        //We remove /docs from the path if we are in flexygo to get the correct base path
+        if (isAFlexy()) {
+            url = window.location.href;
+            url = url.slice(0, url.indexOf('/docs')) + '/Index#' + btoa(JSON.stringify(current_navigation_url));
+        } else {
+            url += getBasePath() + '/Index#' + btoa(JSON.stringify(current_navigation_url));
+        }
     } else {
         if (!url.endsWith('/')) {
             url += '/';
