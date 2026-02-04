@@ -15,7 +15,7 @@
   --flx-main-content-margin: 2rem;
 
   /* Images */
-  --flx-main-background: url(/docs_assets/fh-structural/images/backgrounds/light-background.svg);
+  --flx-main-background: url(../../docs_assets/fh-structural/images/backgrounds/light-background.svg);
 
   /* Box Shadw */
   --flx-module-boxshadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
@@ -24,7 +24,7 @@
 /* Dark mode variables */
 [data-md-color-scheme="darkmode"] {
   /* Images */
-  --flx-main-background: url(/docs_assets/fh-structural/images/backgrounds/dark-background.svg);
+  --flx-main-background: url(../../docs_assets/fh-structural/images/backgrounds/dark-background.svg);
 }
 
 /* Hiding images that are only for light mode in dark mode */
@@ -58,6 +58,11 @@ header.md-header {
     margin: 0;
     max-width: 100%;
     margin-right: 20px;
+    
+    .md-version__list {
+      background-color: var(--fh-color-section);
+      border-radius: var(--fh-border-radius);
+    }
   }
 
   /* Search input */
@@ -87,7 +92,16 @@ header.md-header {
           }
         }
       }
+
+      .md-search-result__meta {
+        background-color: #e5e7e9;
+      }
     }
+  }
+
+  [data-md-toggle=search]:checked~.md-header .md-search__form {
+      background-color: var(--md-default-bg-color);
+      border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0;
   }
 
   .md-search__output {
@@ -110,6 +124,11 @@ header.md-header {
 /* Header with search bar focused */
 [data-md-toggle="search"]:checked ~ header.md-header .md-search__inner .md-search__form {
   border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0 !important;
+}
+
+[data-md-toggle=search]:checked~header.md-header .md-search .md-search__inner .md-search__form {
+  background-color: var(--md-default-bg-color);
+  border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0;
 }
 
 /* Main Sidebar */
@@ -144,7 +163,7 @@ header.md-header {
     background: var(--fh-color-section);
     padding: var(--flx-main-sidebar-padding);
     border: var(--fh-border);
-    box-shadow: var(--flx-module-boxshadow);
+    box-shadow: 0 8px 19px 0 rgb(0 0 0 / 37%); /* Uses a different box shadow for it to only be shown on the right */
   }
 
   /* Making nav nodes have an small margin left */
@@ -315,6 +334,13 @@ a.md-logo {
   scroll-margin-top: 2.3rem; /* Adds an offset above an element when scrolled to, preventing it from being hidden behind fixed headers  */
 }
 
+/* Styles to apply when docs are in an iframe */
+.in-flexygo {
+  .md-version {
+    display: none;
+  }
+}
+
 /* Medium Screen Size */
 @media screen and (max-width: 76.2344em) {
   /* Header */
@@ -328,6 +354,10 @@ a.md-logo {
       align-items: center;
     }
     
+    .md-version {
+      margin-left: 5.4rem;
+    }
+
     .md-search {
       left: calc(50dvw);
 
@@ -415,8 +445,8 @@ a.md-logo {
       align-content: center;
       flex-wrap: wrap;
       
-      min-width: calc(100dvw - 80px);
-      max-width: calc(100dvw - 80px);
+      margin: 30px 0 0 0;
+      min-width: 100dvw;
     }
   }
 }
@@ -436,6 +466,12 @@ a.md-logo {
 
 .hidden {
   display: none;
+}
+
+/* We do this so the right menu works properly */
+.hidden-title { 
+  visibility: hidden;
+  height: 1px;
 }
 
 .clickable {
@@ -468,32 +504,42 @@ i[data-toggle="collapse"] {
 }
 
 /* Ocultar otros idiomas en la barra de búsqueda */
-html[lang="es"] .md-search-result__item:not(:has(a[href*="/es/"])) {
+html[lang="en"] .md-search-result__item:not(:has(a[href*="/en/"])) {
   display: none;
 }
 
-html[lang="en"] .md-search-result__item:has(a[href*="/es/"]) {
+html[lang="es"] .md-search-result__item:has(a[href*="/en/"]) {
   display: none;
+}
+
+/* No ocultar selector de versión al scrollear */
+.md-header__title {
+  transform: none !important;
+}
+
+.md-header__topic:first-child {
+  transform: none !important;
+  opacity: 1 !important;
 }
 
 /* Smaller Screen Size */
 @media screen and (max-width: 44.9844em) {
-    /* Codeblocks get multiple styles that make docs look worse in this sizes */
-    main .md-main__inner .fh-maincontainer .md-content article {
-        max-width: 100%;
-    }
+  /* Codeblocks get multiple styles that make docs look worse in this sizes */
+  main .md-main__inner .fh-maincontainer .md-content article {
+      max-width: 100%;
+  }
 
-    .md-content__inner > .highlight {
-        margin: 0;
-        
-        > .filename {
-            border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0;
-        }
+  .md-content__inner > .highlight {
+      margin: 0;
+      
+      > .filename {
+          border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0;
+      }
 
-        .md-content__inner > .highlight > pre > code {
-            border-radius: 0 0 var(--fh-border-radius) var(--fh-border-radius);
-        }
-    }
+      .md-content__inner > .highlight > pre > code {
+          border-radius: 0 0 var(--fh-border-radius) var(--fh-border-radius);
+      }
+  }
 }
 
 /* Dialog for flexygo url opening */

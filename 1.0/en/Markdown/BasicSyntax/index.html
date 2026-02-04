@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es" class="no-js"><head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Sintaxis Básica de Markdown - Docs</title>
+        <title>Basic Markdown Syntax - Docs</title>
       
     
     
@@ -61,16 +61,6 @@
     
       <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
-    
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
-    
-      <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
-    
-      <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/cols.css">
-    
-      <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/list-groups.css">
-    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -107,8 +97,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#sintaxis-basica-de-markdown" class="md-skip">
-          Saltar a contenido
+        <a href="#basic-markdown-syntax" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -126,13 +116,21 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
   <img src="../../../docs_assets/images/logos/AHORA-white.svg" alt="logo">
 
       Docs
     </a>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+          </span>
+        </div>
+      </div>
+    </div>
     <label class="md-header__button md-icon" for="__drawer">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -148,16 +146,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
@@ -170,7 +168,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando búsqueda
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -184,7 +182,7 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
     </button>
     <div class="md-select__inner">
@@ -269,7 +267,7 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
     
     <ul class="md-nav__list" data-md-scrollfix>
         
@@ -285,7 +283,7 @@
   
   
   <span class="md-ellipsis">
-    Crear tu ayuda
+    Create your help
     
   </span>
   
@@ -361,7 +359,7 @@
   
   
   <span class="md-ellipsis">
-    Sintaxis Básica de Markdown
+    Basic Markdown Syntax
     
   </span>
   
@@ -374,7 +372,7 @@
   
   
   <span class="md-ellipsis">
-    Sintaxis Básica de Markdown
+    Basic Markdown Syntax
     
   </span>
   
@@ -383,7 +381,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -392,185 +390,167 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#encabezados" class="md-nav__link">
+  <a href="#headings" class="md-nav__link">
     <span class="md-ellipsis">
-      Encabezados
+      Headings
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#formato-de-texto" class="md-nav__link">
+  <a href="#text-formatting" class="md-nav__link">
     <span class="md-ellipsis">
-      Formato de texto
+      Text formatting
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#enfasis-basico" class="md-nav__link">
+  <a href="#basic-emphasis" class="md-nav__link">
     <span class="md-ellipsis">
-      Énfasis básico
+      Basic emphasis
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parrafos-y-saltos-de-linea" class="md-nav__link">
+  <a href="#paragraphs-and-line-breaks" class="md-nav__link">
     <span class="md-ellipsis">
-      Párrafos y saltos de línea
+      Paragraphs and line breaks
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listas" class="md-nav__link">
+  <a href="#lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Listas
+      Lists
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listas-desordenadas" class="md-nav__link">
+  <a href="#unordered-lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Listas desordenadas
+      Unordered lists
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listas-ordenadas" class="md-nav__link">
+  <a href="#ordered-lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Listas ordenadas
+      Ordered lists
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#enlaces" class="md-nav__link">
+  <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
-      Enlaces
+      Links
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#imagenes" class="md-nav__link">
+  <a href="#images" class="md-nav__link">
     <span class="md-ellipsis">
-      Imágenes
+      Images
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bloques-de-codigo" class="md-nav__link">
+  <a href="#code-blocks" class="md-nav__link">
     <span class="md-ellipsis">
-      Bloques de código
+      Code blocks
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#codigo-en-linea" class="md-nav__link">
+  <a href="#inline-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Código en línea
+      Inline code
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bloques-de-codigo_1" class="md-nav__link">
+  <a href="#code-blocks_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Bloques de código
+      Code blocks
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#citas" class="md-nav__link">
+  <a href="#blockquotes" class="md-nav__link">
     <span class="md-ellipsis">
-      Citas
+      Blockquotes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tablas" class="md-nav__link">
+  <a href="#tables" class="md-nav__link">
     <span class="md-ellipsis">
-      Tablas
+      Tables
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#alineacion-de-columnas" class="md-nav__link">
+  <a href="#column-alignment" class="md-nav__link">
     <span class="md-ellipsis">
-      Alineación de columnas
+      Column alignment
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#separadores" class="md-nav__link">
+  <a href="#horizontal-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Separadores
+      Horizontal rules
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listas-de-tareas" class="md-nav__link">
+  <a href="#task-lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Listas de tareas
+      Task lists
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#escapar-caracteres-especiales" class="md-nav__link">
+  <a href="#escaping-special-characters" class="md-nav__link">
     <span class="md-ellipsis">
-      Escapar caracteres especiales
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#html-embebido" class="md-nav__link">
-    <span class="md-ellipsis">
-      HTML embebido
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proximos-pasos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Próximos pasos
+      Escaping special characters
     </span>
   </a>
   
@@ -597,7 +577,7 @@
   
   
   <span class="md-ellipsis">
-    Elementos Avanzados de Markdown
+    Advanced Markdown Elements
     
   </span>
   
@@ -645,7 +625,7 @@
   
   
   <span class="md-ellipsis">
-    Nuestros recursos
+    Our resources
     
   </span>
   
@@ -656,7 +636,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Nuestros recursos
+            Our resources
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -667,12 +647,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Our%20Resources/OurClasses/" class="md-nav__link">
+      <a href="../../OurResources/OurClasses/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Nuestras clases CSS
+    Our CSS classes
     
   </span>
   
@@ -690,12 +670,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Our%20Resources/OurComponents/" class="md-nav__link">
+      <a href="../../OurResources/OurComponents/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Nuestros componentes
+    Our components
     
   </span>
   
@@ -743,7 +723,7 @@
   
   
   <span class="md-ellipsis">
-    Estructura
+    Structure
     
   </span>
   
@@ -754,7 +734,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Estructura
+            Structure
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -770,7 +750,7 @@
   
   
   <span class="md-ellipsis">
-    Estructura del Proyecto
+    Project Structure
     
   </span>
   
@@ -793,7 +773,7 @@
   
   
   <span class="md-ellipsis">
-    Estructura visual
+    Visual Structure
     
   </span>
   
@@ -826,203 +806,213 @@
 
 
 
-<h1 id="sintaxis-basica-de-markdown">Sintaxis Básica de Markdown<a class="headerlink" href="#sintaxis-basica-de-markdown" title="Permanent link">¶</a></h1>
-<p>Markdown es un lenguaje de marcado ligero que te permite escribir contenido formateado usando una sintaxis simple y legible. Esta guía cubre los elementos esenciales que necesitas para crear documentación profesional.</p>
-<h2 id="encabezados">Encabezados<a class="headerlink" href="#encabezados" title="Permanent link">¶</a></h2>
-<p>Los encabezados organizan tu contenido en secciones jerárquicas:</p>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># Encabezado de nivel 2</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gu">## Encabezado de nivel 3</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gu">## Encabezado de nivel 4</span>
+<h1 id="basic-markdown-syntax">Basic Markdown Syntax<a class="headerlink" href="#basic-markdown-syntax" title="Permanent link">¶</a></h1>
+<p>Markdown is a lightweight markup language that lets you write formatted content using a simple, readable syntax. This guide covers the essential elements you need to create professional documentation.</p>
+<h2 id="headings">Headings<a class="headerlink" href="#headings" title="Permanent link">¶</a></h2>
+<p>Headings organize your content into hierarchical sections:</p>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># Level 2 heading</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gu">## Level 3 heading</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gu">## Level 4 heading</span>
 </span></code></pre></div>
-<p class="fh-info-card">El nivel 1 (<code>#</code>) generalmente se reserva para el título del documento, que se muestra en la barra de navegación.</p>
-<h2 id="formato-de-texto">Formato de texto<a class="headerlink" href="#formato-de-texto" title="Permanent link">¶</a></h2>
-<h2 id="enfasis-basico">Énfasis básico<a class="headerlink" href="#enfasis-basico" title="Permanent link">¶</a></h2>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gs">**Texto en negrita**</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="ge">*Texto en cursiva*</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>***Texto en negrita y cursiva***
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="gd">~~Texto tachado~~</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="sb">`Código en línea`</span>
+<p class="fh-info-card">Level 1 (<code>#</code>) is generally reserved for the document title, which is displayed in the navigation bar.</p>
+<h2 id="text-formatting">Text formatting<a class="headerlink" href="#text-formatting" title="Permanent link">¶</a></h2>
+<h2 id="basic-emphasis">Basic emphasis<a class="headerlink" href="#basic-emphasis" title="Permanent link">¶</a></h2>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gs">**Bold text**</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="ge">*Italic text*</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>***Bold and italic text***
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="gd">~~Strikethrough text~~</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="sb">`Inline code`</span>
 </span></code></pre></div>
-<p><strong>Resultado:</strong></p>
+<p><strong>Result:</strong></p>
 <ul>
-<li><strong>Texto en negrita</strong></li>
-<li><em>Texto en cursiva</em></li>
-<li><strong><em>Texto en negrita y cursiva</em></strong></li>
-<li><del>Texto tachado</del></li>
-<li><code>Código en línea</code></li>
+<li><strong>Bold text</strong></li>
+<li><em>Italic text</em></li>
+<li><strong><em>Bold and italic text</em></strong></li>
+<li><del>Strikethrough text</del></li>
+<li><code>Inline code</code></li>
 </ul>
-<h2 id="parrafos-y-saltos-de-linea">Párrafos y saltos de línea<a class="headerlink" href="#parrafos-y-saltos-de-linea" title="Permanent link">¶</a></h2>
-<p>Para crear un nuevo párrafo, deja una línea en blanco entre dos bloques de texto.</p>
-<p>Para un salto de línea sin párrafo nuevo, termina la línea con dos espacios.</p>
-<h2 id="listas">Listas<a class="headerlink" href="#listas" title="Permanent link">¶</a></h2>
-<h2 id="listas-desordenadas">Listas desordenadas<a class="headerlink" href="#listas-desordenadas" title="Permanent link">¶</a></h2>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">-</span><span class="w"> </span>Primer elemento
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">-</span><span class="w"> </span>Segundo elemento
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="k">-</span><span class="w"> </span>Sub-elemento 1
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="k">-</span><span class="w"> </span>Sub-elemento 2
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">-</span><span class="w"> </span>Tercer elemento
+<h2 id="paragraphs-and-line-breaks">Paragraphs and line breaks<a class="headerlink" href="#paragraphs-and-line-breaks" title="Permanent link">¶</a></h2>
+<p>To create a new paragraph, leave a blank line between two blocks of text.</p>
+<p>For a line break without starting a new paragraph, end the line with two spaces.</p>
+<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">¶</a></h2>
+<h2 id="unordered-lists">Unordered lists<a class="headerlink" href="#unordered-lists" title="Permanent link">¶</a></h2>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">-</span><span class="w"> </span>First item
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">-</span><span class="w"> </span>Second item
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="k">-</span><span class="w"> </span>Sub-item 1
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="k">-</span><span class="w"> </span>Sub-item 2
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">-</span><span class="w"> </span>Third item
 </span></code></pre></div>
-<p><strong>Resultado:</strong></p>
+<p><strong>Result:</strong></p>
 <ul>
-<li>Primer elemento</li>
-<li>Segundo elemento</li>
-<li>Sub-elemento 1</li>
-<li>Sub-elemento 2</li>
-<li>Tercer elemento</li>
+<li>First item</li>
+<li>
+<p>Second item</p>
+</li>
+<li>
+<p>Sub-item 1</p>
+</li>
+<li>Sub-item 2</li>
+<li>Third item</li>
 </ul>
-<h2 id="listas-ordenadas">Listas ordenadas<a class="headerlink" href="#listas-ordenadas" title="Permanent link">¶</a></h2>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">1.</span> Primer paso
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">2.</span> Segundo paso
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">3.</span> Tercer paso
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">   </span><span class="k">1.</span> Sub-paso A
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">   </span><span class="k">2.</span> Sub-paso B
+<h2 id="ordered-lists">Ordered lists<a class="headerlink" href="#ordered-lists" title="Permanent link">¶</a></h2>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">1.</span> First step
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">2.</span> Second step
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">3.</span> Third step
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">   </span><span class="k">1.</span> Sub-step A
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">   </span><span class="k">2.</span> Sub-step B
 </span></code></pre></div>
-<p><strong>Resultado:</strong></p>
+<p><strong>Result:</strong></p>
 <ol>
-<li>Primer paso</li>
-<li>Segundo paso</li>
-<li>Tercer paso</li>
-<li>Sub-paso A</li>
-<li>Sub-paso B</li>
+<li>First step</li>
+<li>Second step</li>
+<li>
+<p>Third step</p>
+</li>
+<li>
+<p>Sub-step A</p>
+</li>
+<li>Sub-step B</li>
 </ol>
-<h2 id="enlaces">Enlaces<a class="headerlink" href="#enlaces" title="Permanent link">¶</a></h2>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[<span class="nt">Ir a otro documento</span>](<span class="na">../OtraCarpeta/OtraSeccion.es.md</span>)
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[<span class="nt">Texto del enlace</span>](<span class="na">https://www.ejemplo.com</span>)
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">¶</a></h2>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[<span class="nt">Go to another document</span>](<span class="na">../OtherFolder/OtherSection.en.md</span>)
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[<span class="nt">Link text</span>](<span class="na">https://www.example.com</span>)
 </span></code></pre></div>
-<p class="fh-warning-card">Los enlaces internos son sensibles a mayúsculas y espacios (convertidos a guiones).</p>
-<h2 id="imagenes">Imágenes<a class="headerlink" href="#imagenes" title="Permanent link">¶</a></h2>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>![<span class="nt">Texto alternativo</span>](<span class="na">/ruta/a/imagen.png</span>)
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>![<span class="nt">Imagen con título</span>](<span class="na">/ruta/a/imagen.png "Título de la imagen"</span>)
+<p class="fh-warning-card">Internal links are case-sensitive and spaces are converted to hyphens.</p>
+<h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">¶</a></h2>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>![<span class="nt">Alt text</span>](<span class="na">/path/to/image.png</span>)
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>![<span class="nt">Image with title</span>](<span class="na">/path/to/image.png "Image title"</span>)
 </span></code></pre></div>
-<p><strong>Ejemplo:</strong></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/logos/AHORA-white.svg" data-desc-position="bottom"><img alt="Logo" src="/docs_assets/images/logos/AHORA-white.svg" style="filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(5563%) hue-rotate(305deg) brightness(105%) contrast(81%);" width="300"></a></p>
-<h2 id="bloques-de-codigo">Bloques de código<a class="headerlink" href="#bloques-de-codigo" title="Permanent link">¶</a></h2>
-<h2 id="codigo-en-linea">Código en línea<a class="headerlink" href="#codigo-en-linea" title="Permanent link">¶</a></h2>
-<p>Usa comillas invertidas simples:</p>
-<p>`const hola = 'codigo'` produce <code>const hola = 'codigo'</code></p>
-<h2 id="bloques-de-codigo_1">Bloques de código<a class="headerlink" href="#bloques-de-codigo_1" title="Permanent link">¶</a></h2>
-<p>Usa tres comillas invertidas seguidas del lenguaje:</p>
+<p><strong>Example:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/logos/AHORA-white.svg" data-desc-position="bottom"><img alt="Logo" src="../../../docs_assets/images/logos/AHORA-white.svg" style="filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(5563%) hue-rotate(305deg) brightness(105%) contrast(81%);" width="300"></a></p>
+<h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">¶</a></h2>
+<h2 id="inline-code">Inline code<a class="headerlink" href="#inline-code" title="Permanent link">¶</a></h2>
+<p>Use single backticks:</p>
+<p><code>const hello = 'code'</code> produces <code>const hello = 'code'</code></p>
+<h2 id="code-blocks_1">Code blocks<a class="headerlink" href="#code-blocks_1" title="Permanent link">¶</a></h2>
+<p>Use three backticks followed by the language:</p>
 <div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="sb">```python</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">"Hola, </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2">!"</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!"</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">saludar</span><span class="p">(</span><span class="s2">"Mundo"</span><span class="p">))</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="s2">"World"</span><span class="p">))</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="sb">```</span>
 </span></code></pre></div>
-<p><strong>Resultado:</strong></p>
-<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">"Hola, </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2">!"</span>
+<p><strong>Result:</strong></p>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!"</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">saludar</span><span class="p">(</span><span class="s2">"Mundo"</span><span class="p">))</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="s2">"World"</span><span class="p">))</span>
 </span></code></pre></div>
-<p>Lenguajes soportados: <code>python</code>, <code>javascript</code>, <code>java</code>, <code>csharp</code>, <code>sql</code>, <code>bash</code>, <code>json</code>, <code>xml</code>, <code>yaml</code>, etc.</p>
-<h2 id="citas">Citas<a class="headerlink" href="#citas" title="Permanent link">¶</a></h2>
-<p>Usa el símbolo <code>&gt;</code> para crear citas:</p>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">&gt; </span><span class="ge">Esta es una cita.</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">&gt; </span><span class="ge">Puede tener múltiples líneas.</span>
+<p>Supported languages: <code>python</code>, <code>javascript</code>, <code>java</code>, <code>csharp</code>, <code>sql</code>, <code>bash</code>, <code>json</code>, <code>xml</code>, <code>yaml</code>, etc.</p>
+<h2 id="blockquotes">Blockquotes<a class="headerlink" href="#blockquotes" title="Permanent link">¶</a></h2>
+<p>Use the <code>&gt;</code> symbol to create quotes:</p>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">&gt; </span><span class="ge">This is a quote.</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">&gt; </span><span class="ge">It can have multiple lines.</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">&gt;</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="ge">&gt; Y múltiples párrafos.</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="ge">&gt; And multiple paragraphs.</span>
 </span></code></pre></div>
-<p><strong>Resultado:</strong></p>
+<p><strong>Result:</strong></p>
 <blockquote>
-<p>Esta es una cita.
-Puede tener múltiples líneas.</p>
-<p>Y múltiples párrafos.</p>
+<p>This is a quote.
+It can have multiple lines.</p>
+<p>And multiple paragraphs.</p>
 </blockquote>
-<h2 id="tablas">Tablas<a class="headerlink" href="#tablas" title="Permanent link">¶</a></h2>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>| Columna 1 | Columna 2 | Columna 3 |
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>|-----------|-----------|-----------|
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>| Fila 1    | Dato 1    | Dato 2    |
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>| Fila 2    | Dato 3    | Dato 4    |
+<h2 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">¶</a></h2>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>| Column 1 | Column 2 | Column 3 |
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>|----------|----------|----------|
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>| Row 1    | Data 1   | Data 2   |
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>| Row 2    | Data 3   | Data 4   |
 </span></code></pre></div>
-<p><strong>Resultado:</strong></p>
+<p><strong>Result:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Columna 1</th>
-<th>Columna 2</th>
-<th>Columna 3</th>
+<th>Column 1</th>
+<th>Column 2</th>
+<th>Column 3</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Fila 1</td>
-<td>Dato 1</td>
-<td>Dato 2</td>
+<td>Row 1</td>
+<td>Data 1</td>
+<td>Data 2</td>
 </tr>
 <tr>
-<td>Fila 2</td>
-<td>Dato 3</td>
-<td>Dato 4</td>
+<td>Row 2</td>
+<td>Data 3</td>
+<td>Data 4</td>
 </tr>
 </tbody>
 </table>
-<h2 id="alineacion-de-columnas">Alineación de columnas<a class="headerlink" href="#alineacion-de-columnas" title="Permanent link">¶</a></h2>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>| Izquierda | Centro | Derecha |
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>|:----------|:------:|--------:|
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>| Texto     | Texto  | Texto   |
+<h2 id="column-alignment">Column alignment<a class="headerlink" href="#column-alignment" title="Permanent link">¶</a></h2>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>| Left     | Center | Right   |
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>|:---------|:------:|--------:|
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>| Text     | Text   | Text    |
 </span></code></pre></div>
-<p><strong>Resultado:</strong></p>
+<p><strong>Result:</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Izquierda</th>
-<th style="text-align: center;">Centro</th>
-<th style="text-align: right;">Derecha</th>
+<th style="text-align: left;">Left</th>
+<th style="text-align: center;">Center</th>
+<th style="text-align: right;">Right</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Texto  de prueba</td>
-<td style="text-align: center;">Texto</td>
-<td style="text-align: right;">Texto de prueba</td>
+<td style="text-align: left;">Sample text</td>
+<td style="text-align: center;">Text</td>
+<td style="text-align: right;">Sample text</td>
 </tr>
 </tbody>
 </table>
-<h2 id="separadores">Separadores<a class="headerlink" href="#separadores" title="Permanent link">¶</a></h2>
-<p>Crea separadores visuales con tres o más guiones:</p>
+<h2 id="horizontal-rules">Horizontal rules<a class="headerlink" href="#horizontal-rules" title="Permanent link">¶</a></h2>
+<p>Create visual separators with three or more hyphens:</p>
 <div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>---
 </span></code></pre></div>
-<p><strong>Resultado:</strong></p>
+<p><strong>Result:</strong></p>
 <hr>
-<h2 id="listas-de-tareas">Listas de tareas<a class="headerlink" href="#listas-de-tareas" title="Permanent link">¶</a></h2>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">- [x]</span> Tarea completada
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">- [ ]</span> Tarea pendiente
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">- [ ]</span> Otra tarea pendiente
+<h2 id="task-lists">Task lists<a class="headerlink" href="#task-lists" title="Permanent link">¶</a></h2>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">- [x]</span> Completed task
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">- [ ]</span> Pending task
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">- [ ]</span> Another pending task
 </span></code></pre></div>
-<p><strong>Resultado:</strong></p>
+<p><strong>Result:</strong></p>
 <ul>
-<li>[x] Tarea completada</li>
-<li>[ ] Tarea pendiente</li>
-<li>[ ] Otra tarea pendiente</li>
+<li>[x] Completed task</li>
+<li>[ ] Pending task</li>
+<li>[ ] Another pending task</li>
 </ul>
-<h2 id="escapar-caracteres-especiales">Escapar caracteres especiales<a class="headerlink" href="#escapar-caracteres-especiales" title="Permanent link">¶</a></h2>
-<p>Si necesitas mostrar un carácter especial de Markdown literalmente, usa la barra invertida <code>\</code>:</p>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>\* Este asterisco no creará una lista
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>\# Este no será un encabezado
+<h2 id="escaping-special-characters">Escaping special characters<a class="headerlink" href="#escaping-special-characters" title="Permanent link">¶</a></h2>
+<p>If you need to show a Markdown special character literally, use a backslash <code>\</code>:</p>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>\* This asterisk won’t create a list
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>\# This won’t be a heading
 </span></code></pre></div>
-<p><strong>Resultado:</strong></p>
-<p>* Este asterisco no creará una lista
-# Este no será un encabezado</p>
-<h2 id="html-embebido">HTML embebido<a class="headerlink" href="#html-embebido" title="Permanent link">¶</a></h2>
-<p>Markdown permite usar HTML cuando necesitas más control:</p>
+<p><strong>Result:</strong></p>
+<ul>
+<li>This asterisk won’t create a list</li>
+</ul>
+<h1 id="this-wont-be-a-heading">This won’t be a heading<a class="headerlink" href="#this-wont-be-a-heading" title="Permanent link">¶</a></h1>
+<h2 id="embedded-html">Embedded HTML<a class="headerlink" href="#embedded-html" title="Permanent link">¶</a></h2>
+<p>Markdown allows you to use HTML when you need more control:</p>
 <div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">"background-color: #88e7c3; padding: 10px;"</span><span class="p">&gt;</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido HTML personalizado<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Custom HTML content<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p><strong>Resultado:</strong></p>
+<p><strong>Result:</strong></p>
 <div style="background-color: #88e7c3; padding: 10px;">
-  <p>Contenido HTML personalizado</p>
+  <p>Custom HTML content</p>
 </div>
 
-<h2 id="proximos-pasos">Próximos pasos<a class="headerlink" href="#proximos-pasos" title="Permanent link">¶</a></h2>
-<p>Ahora que conoces la sintaxis básica, aprende sobre:</p>
+<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">¶</a></h2>
+<p>Now that you know the basic syntax, learn about:</p>
 <ul>
-<li><a href="../ElementosAvanzados/">Elementos avanzados de Markdown</a> - Extensiones y funcionalidades adicionales</li>
-<li><a href="../Estilos/ComponentesPersonalizados.es.md">Estilos y componentes personalizados</a> - Elementos visuales especiales</li>
-<li><a href="../BuenasPracticas/EscrituraEfectiva.es.md">Buenas prácticas de escritura</a> - Consejos para contenido claro</li>
+<li><a href="AdvancedElements.en.md">Advanced Markdown elements</a> — Extensions and additional features</li>
+<li><a href="../Styles/CustomComponents.en.md">Custom styles and components</a> — Special visual elements</li>
+<li><a href="../BestPractices/EffectiveWriting.en.md">Writing best practices</a> — Tips for clear content</li>
 </ul>
-<p>Con esta base, ya puedes crear documentación completa y profesional.</p>
+<p>With this foundation, you can now create complete and professional documentation.</p>
 
 
 
@@ -1046,7 +1036,7 @@ Puede tener múltiples líneas.</p>
                     <div class="md-sidebar__inner">
                       
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1055,185 +1045,167 @@ Puede tener múltiples líneas.</p>
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#encabezados" class="md-nav__link">
+  <a href="#headings" class="md-nav__link">
     <span class="md-ellipsis">
-      Encabezados
+      Headings
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#formato-de-texto" class="md-nav__link">
+  <a href="#text-formatting" class="md-nav__link">
     <span class="md-ellipsis">
-      Formato de texto
+      Text formatting
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#enfasis-basico" class="md-nav__link">
+  <a href="#basic-emphasis" class="md-nav__link">
     <span class="md-ellipsis">
-      Énfasis básico
+      Basic emphasis
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parrafos-y-saltos-de-linea" class="md-nav__link">
+  <a href="#paragraphs-and-line-breaks" class="md-nav__link">
     <span class="md-ellipsis">
-      Párrafos y saltos de línea
+      Paragraphs and line breaks
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listas" class="md-nav__link">
+  <a href="#lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Listas
+      Lists
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listas-desordenadas" class="md-nav__link">
+  <a href="#unordered-lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Listas desordenadas
+      Unordered lists
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listas-ordenadas" class="md-nav__link">
+  <a href="#ordered-lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Listas ordenadas
+      Ordered lists
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#enlaces" class="md-nav__link">
+  <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
-      Enlaces
+      Links
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#imagenes" class="md-nav__link">
+  <a href="#images" class="md-nav__link">
     <span class="md-ellipsis">
-      Imágenes
+      Images
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bloques-de-codigo" class="md-nav__link">
+  <a href="#code-blocks" class="md-nav__link">
     <span class="md-ellipsis">
-      Bloques de código
+      Code blocks
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#codigo-en-linea" class="md-nav__link">
+  <a href="#inline-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Código en línea
+      Inline code
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bloques-de-codigo_1" class="md-nav__link">
+  <a href="#code-blocks_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Bloques de código
+      Code blocks
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#citas" class="md-nav__link">
+  <a href="#blockquotes" class="md-nav__link">
     <span class="md-ellipsis">
-      Citas
+      Blockquotes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tablas" class="md-nav__link">
+  <a href="#tables" class="md-nav__link">
     <span class="md-ellipsis">
-      Tablas
+      Tables
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#alineacion-de-columnas" class="md-nav__link">
+  <a href="#column-alignment" class="md-nav__link">
     <span class="md-ellipsis">
-      Alineación de columnas
+      Column alignment
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#separadores" class="md-nav__link">
+  <a href="#horizontal-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Separadores
+      Horizontal rules
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listas-de-tareas" class="md-nav__link">
+  <a href="#task-lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Listas de tareas
+      Task lists
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#escapar-caracteres-especiales" class="md-nav__link">
+  <a href="#escaping-special-characters" class="md-nav__link">
     <span class="md-ellipsis">
-      Escapar caracteres especiales
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#html-embebido" class="md-nav__link">
-    <span class="md-ellipsis">
-      HTML embebido
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proximos-pasos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Próximos pasos
+      Escaping special characters
     </span>
   </a>
   
@@ -1255,7 +1227,7 @@ Puede tener múltiples líneas.</p>
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
-  Volver al principio
+  Back to top
 </button>
         
       </main>
@@ -1267,7 +1239,7 @@ Puede tener múltiples líneas.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.expand", "navigation.sections", "navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.expand", "navigation.sections", "navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>

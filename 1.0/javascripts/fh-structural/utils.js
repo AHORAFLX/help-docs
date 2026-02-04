@@ -1,11 +1,15 @@
 const FH_CULTURES = new Object(); //The object with every culture translations
-const DEFAULT_LANGUAGE = 'en';
 const LANGUAGES = ['en', 'es'];
 
 let navigation_dialog;
 addEventListener("DOMContentLoaded", () => { 
     navigation_dialog = document.getElementById('navigation-dialog');
     navigation_dialog.querySelector('label').innerText = translate('flexygo_URL_modal_title');
+
+    // We check if we are on flexygo and add a class to the document so we can style accordingly
+    if (isAFlexy()) {
+        document.documentElement.classList.add('in-flexygo');
+    }
 });
 
 function changeLanguage(new_language) {
@@ -42,7 +46,6 @@ function changeLanguage(new_language) {
 
     window.location.href = new_url;
 }
-
 
 // We look for any <link> that points into /main-flexygo-styles.css and grab that url from before stylesheets so that will know the base path
 // We do it with main-flexygo-styles.css because /docs_assets/ is saved in a different place
@@ -93,25 +96,29 @@ function navigateToFlexy(json, ctrlKey_pressed) {
 }
 
 function isAFlexy() {
-    const current_url = new URL(window.location.href);
-    if (current_url.pathname.startsWith('/docs/')) {
-        return true;
-    }
-
-    return false;
+    const is_mkdocs = (window.location.hostname === 'localhost' || 
+                        window.location.hostname === '127.0.0.1') &&
+                        window.location.port === '8000';
+    return !is_mkdocs && !window.location.href.includes('ayuda.ahora.es');
 }
 
 function _nav(url) {
     if (!url) {
-        url = '/Index#' +btoa(JSON.stringify(current_navigation_url));
+        //We remove /docs from the path if we are in flexygo to get the correct base path
+        if (isAFlexy()) {
+            url = window.location.href;
+            url = url.slice(0, url.indexOf('/docs')) + '/Index#' + btoa(JSON.stringify(current_navigation_url));
+        } else {
+            url += getBasePath() + '/Index#' + btoa(JSON.stringify(current_navigation_url));
+        }
     } else {
         if (!url.endsWith('/')) {
             url += '/';
         }
 
-        url += 'Index#' +btoa(JSON.stringify(current_navigation_url));
+        url += 'Index#' + btoa(JSON.stringify(current_navigation_url));
     }
-    
+
     window.open(url, '_blank');
     navigation_dialog.close();
 }
@@ -191,4 +198,8 @@ function getElementsWithCertainText(starting_element, text) {
     }
 
     return matches;
+}
+
+function isOnIframe() {
+    return window.location !== window.parent.location;
 }

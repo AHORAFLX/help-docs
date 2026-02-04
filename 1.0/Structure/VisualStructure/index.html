@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" class="no-js"><head>
+<!DOCTYPE html><html lang="es" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -15,7 +15,7 @@
     
     
       
-        <title>Visual Structure - Docs</title>
+        <title>Estructura visual - Docs</title>
       
     
     
@@ -59,16 +59,6 @@
     
       <link rel="stylesheet" href="../../docs_assets/fh-structural/fonts/flags/flags.css">
     
-      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/utils.css">
-    
-      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/flexygo.css">
-    
-      <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
-    
-      <link rel="stylesheet" href="../../stylesheets/flexygo-styles/cols.css">
-    
-      <link rel="stylesheet" href="../../stylesheets/flexygo-styles/list-groups.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -105,8 +95,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#visual-structure" class="md-skip">
-          Skip to content
+        <a href="#estructura-visual" class="md-skip">
+          Saltar a contenido
         </a>
       
     </div>
@@ -124,13 +114,21 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
   <img src="../../docs_assets/images/logos/AHORA-white.svg" alt="logo">
 
       Docs
     </a>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+          </span>
+        </div>
+      </div>
+    </div>
     <label class="md-header__button md-icon" for="__drawer">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -146,16 +144,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
@@ -168,7 +166,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -182,7 +180,7 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
     </button>
     <div class="md-select__inner">
@@ -267,7 +265,7 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
     
     <ul class="md-nav__list" data-md-scrollfix>
         
@@ -283,7 +281,7 @@
   
   
   <span class="md-ellipsis">
-    Create your help
+    Crear tu ayuda
     
   </span>
   
@@ -350,7 +348,7 @@
   
   
   <span class="md-ellipsis">
-    Basic Markdown Syntax
+    Sintaxis Básica de Markdown
     
   </span>
   
@@ -373,7 +371,7 @@
   
   
   <span class="md-ellipsis">
-    Advanced Markdown Elements
+    Elementos Avanzados de Markdown
     
   </span>
   
@@ -421,7 +419,7 @@
   
   
   <span class="md-ellipsis">
-    Our Resources
+    Nuestros recursos
     
   </span>
   
@@ -432,7 +430,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Our Resources
+            Nuestros recursos
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -443,12 +441,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Our%20Resources/OurClasses/" class="md-nav__link">
+      <a href="../../OurResources/OurClasses/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Our CSS classes
+    Nuestras clases CSS
     
   </span>
   
@@ -466,12 +464,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Our%20Resources/OurComponents/" class="md-nav__link">
+      <a href="../../OurResources/OurComponents/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Our components
+    Nuestros componentes
     
   </span>
   
@@ -519,7 +517,7 @@
   
   
   <span class="md-ellipsis">
-    Structure
+    Estructura
     
   </span>
   
@@ -530,7 +528,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Structure
+            Estructura
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -546,7 +544,7 @@
   
   
   <span class="md-ellipsis">
-    Project Structure
+    Estructura del Proyecto
     
   </span>
   
@@ -578,7 +576,7 @@
   
   
   <span class="md-ellipsis">
-    Visual Structure
+    Estructura visual
     
   </span>
   
@@ -591,7 +589,7 @@
   
   
   <span class="md-ellipsis">
-    Visual Structure
+    Estructura visual
     
   </span>
   
@@ -600,7 +598,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -609,32 +607,32 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-navigation-bar" class="md-nav__link">
+  <a href="#1-barra-de-navegacion" class="md-nav__link">
     <span class="md-ellipsis">
-      1 - Navigation bar
+      1 - Barra de navegación
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-content-block" class="md-nav__link">
+  <a href="#2-bloque-de-contenido" class="md-nav__link">
     <span class="md-ellipsis">
-      2 - Content block
+      2 - Bloque de contenido
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-sub-navigation-menu" class="md-nav__link">
+  <a href="#3-menu-de-subnavegacion" class="md-nav__link">
     <span class="md-ellipsis">
-      3 - Sub-navigation menu
+      3 - Menú de subnavegación
     </span>
   </a>
   
@@ -671,23 +669,23 @@
 
 
 
-<h1 id="visual-structure">Visual Structure<a class="headerlink" href="#visual-structure" title="Permanent link">¶</a></h1>
-<p>There are three sections of the help that are automatically generated: the <a href="#1-navigation-bar">navigation bar</a>, the <a href="#2-content-block">content block</a>, and the <a href="#3-sub-navigation-menu">sub-navigation menu</a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/delete/docs-sections.png" data-desc-position="bottom"><img alt="Docs Sections" src="/docs_assets/delete/docs-sections.png"></a></p>
-<h2 id="1-navigation-bar">1 - Navigation bar<a class="headerlink" href="#1-navigation-bar" title="Permanent link">¶</a></h2>
-<p>The navigation bar is automatically generated from the markdown files and folders that contain any .md file (these serve as grouping).</p>
-<p>In the image, you can see that for each menu option, there are two files (one per language), but the visible name in the navigation is defined by the first title of each file. Thus, "index.es.md" appears as "Introduction to Flexygo".</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/delete/navigation-bar.png" data-desc-position="bottom"><img alt="Navigation bar" src="/docs_assets/delete/navigation-bar.png"></a></p>
-<h2 id="2-content-block">2 - Content block<a class="headerlink" href="#2-content-block" title="Permanent link">¶</a></h2>
-<p>This block displays the content of the Markdown file in HTML. Additionally, it is possible to use HTML code within Markdown if necessary (although moderation is recommended to maintain coherence).</p>
-<p>Here we take the opportunity to explain the file extensions:<br>
-The <strong>.es.md</strong> files contain the Spanish version and the <strong>.en.md</strong> files contain the English version. To add translations to a section, simply create both files with the same base name.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/delete/main-block.png" data-desc-position="bottom"><img alt="Navigation bar" src="/docs_assets/delete/main-block.png"></a></p>
-<h2 id="3-sub-navigation-menu">3 - Sub-navigation menu<a class="headerlink" href="#3-sub-navigation-menu" title="Permanent link">¶</a></h2>
-<p>This menu allows you to navigate directly to the internal sections of the page you are on, identified by second or third level headings (# or ##, the latter are nested below the former).</p>
-<p>Although it is less useful on short pages, it greatly facilitates reading on extensive documents.  </p>
-<p class="fh-warning-card">Keep in mind that, by configuration, only level # and ## headings are shown here. Fourth level headings (###) or higher will not appear in this menu.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/delete/right-bar.png" data-desc-position="bottom"><img alt="Sub-navigation menu" src="/docs_assets/delete/right-bar.png"></a></p>
+<h1 id="estructura-visual">Estructura visual<a class="headerlink" href="#estructura-visual" title="Permanent link">¶</a></h1>
+<p>Hay tres secciones de la ayuda que se generan automáticamente, la <a href="#1-barra-de-navegacion">barra de navegación</a>, el <a href="#2-bloque-de-contenido">bloque de contenido</a> y el <a href="#3-menu-de-subnavegacion">menú de subnavegación</a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/delete/docs-sections.png" data-desc-position="bottom"><img alt="Docs Sections" src="../../docs_assets/delete/docs-sections.png"></a></p>
+<h2 id="1-barra-de-navegacion">1 - Barra de navegación<a class="headerlink" href="#1-barra-de-navegacion" title="Permanent link">¶</a></h2>
+<p>La barra de navegación se genera automáticamente a partir de los ficheros markdown y las carpetas que contengan algún .md (estas sirven de agrupación).</p>
+<p>En la imagen se observa que, por cada opción del menú, hay dos archivos (uno por idioma), pero el nombre visible en la navegación lo define el primer título de cada archivo. Así, "index.es.md" aparece como "Introduction to Flexygo".</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/delete/navigation-bar.png" data-desc-position="bottom"><img alt="Navigation bar" src="../../docs_assets/delete/navigation-bar.png"></a></p>
+<h2 id="2-bloque-de-contenido">2 - Bloque de contenido<a class="headerlink" href="#2-bloque-de-contenido" title="Permanent link">¶</a></h2>
+<p>Este bloque muestra el contenido del archivo Markdown en HTML. Además, es posible usar código HTML dentro del Markdown si es necesario (aunque se recomienda moderación para mantener la coherencia).</p>
+<p>Aquí aprovechamos para explicar la extensión de los archivos:<br>
+Los archivos <strong>.es.md</strong> contienen la versión en español y los <strong>.en.md</strong> la versión en inglés. Para añadir traducciones a una sección, basta con crear ambos archivos con el mismo nombre base.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/delete/main-block.png" data-desc-position="bottom"><img alt="Navigation bar" src="../../docs_assets/delete/main-block.png"></a></p>
+<h2 id="3-menu-de-subnavegacion">3 - Menú de subnavegación<a class="headerlink" href="#3-menu-de-subnavegacion" title="Permanent link">¶</a></h2>
+<p>Este menú permite navegar directamente a los apartados internos de la página en la que te encuentras, identificados por títulos de segundo o tercer nivel (# o ##, estos últimos se anidan debajo de los primeros).</p>
+<p>Aunque es menos útil en páginas cortas, facilita mucho la lectura en documentos extensos.  </p>
+<p class="fh-warning-card">Ten en cuenta que, por configuración, solo se muestran aquí los títulos de nivel # y ##. Los de cuarto nivel (##) o superior no aparecerán en este menú.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/delete/right-bar.png" data-desc-position="bottom"><img alt="Menú de subnavegación" src="../../docs_assets/delete/right-bar.png"></a></p>
 
 
 
@@ -711,7 +709,7 @@ The <strong>.es.md</strong> files contain the Spanish version and the <strong>.e
                     <div class="md-sidebar__inner">
                       
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -720,32 +718,32 @@ The <strong>.es.md</strong> files contain the Spanish version and the <strong>.e
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-navigation-bar" class="md-nav__link">
+  <a href="#1-barra-de-navegacion" class="md-nav__link">
     <span class="md-ellipsis">
-      1 - Navigation bar
+      1 - Barra de navegación
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-content-block" class="md-nav__link">
+  <a href="#2-bloque-de-contenido" class="md-nav__link">
     <span class="md-ellipsis">
-      2 - Content block
+      2 - Bloque de contenido
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-sub-navigation-menu" class="md-nav__link">
+  <a href="#3-menu-de-subnavegacion" class="md-nav__link">
     <span class="md-ellipsis">
-      3 - Sub-navigation menu
+      3 - Menú de subnavegación
     </span>
   </a>
   
@@ -767,7 +765,7 @@ The <strong>.es.md</strong> files contain the Spanish version and the <strong>.e
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
-  Back to top
+  Volver al principio
 </button>
         
       </main>
@@ -779,7 +777,7 @@ The <strong>.es.md</strong> files contain the Spanish version and the <strong>.e
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.expand", "navigation.sections", "navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.expand", "navigation.sections", "navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
