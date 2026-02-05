@@ -58,7 +58,7 @@ extra_css:
   ## Basic fonts and icons
   - docs_assets/fh-structural/fonts/flags/flags.css
   - docs_assets/fh-structural/fonts/flexygo/utils.css
-  - docs_assets/fh-structural/fonts/flexygo/flexygo.css
+  - docs_assets/fh-structural/fonts/flexygo/flexygo-icons.css
 
   # Your project styles files here ↓
 
