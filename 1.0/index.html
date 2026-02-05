@@ -7,7 +7,7 @@
       
       
       
-        <link rel="next" href="Markdown/BasicSyntax/">
+        <link rel="next" href="GettingStarted/QuickStart/">
       
       
       <link rel="icon" href="docs_assets/images/logos/fl-favicon.ico">
@@ -59,6 +59,10 @@
     
       <link rel="stylesheet" href="docs_assets/fh-structural/fonts/flags/flags.css">
     
+      <link rel="stylesheet" href="docs_assets/fh-structural/fonts/flexygo/utils.css">
+    
+      <link rel="stylesheet" href="docs_assets/fh-structural/fonts/flexygo/flexygo-icons.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -95,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#crear-tu-ayuda" class="md-skip">
+        <a href="#empezar-a-desarrollar" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -250,8 +254,8 @@
           
             
               
-              <div class="flx-sidebar md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-                <div class="flx-sidebarheader">
+              <div class="fh-sidebar md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="fh-sidebarheader">
                   <a href="." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
   <img src="docs_assets/images/logos/AHORA-white.svg" alt="logo">
@@ -290,7 +294,7 @@
   
   
   <span class="md-ellipsis">
-    Crear tu ayuda
+    Inicio
     
   </span>
   
@@ -303,7 +307,7 @@
   
   
   <span class="md-ellipsis">
-    Crear tu ayuda
+    Inicio
     
   </span>
   
@@ -326,37 +330,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#obtener-template-del-proyecto" class="md-nav__link">
+  <a href="#estructura-de-la-documentacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Obtener Template del Proyecto
+      Estructura de la documentación
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entendiendo-la-plantilla" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entendiendo la plantilla
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Entendiendo la plantilla">
+    <nav class="md-nav" aria-label="Estructura de la documentación">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#markdown" class="md-nav__link">
+  <a href="#primeros-pasos" class="md-nav__link">
     <span class="md-ellipsis">
-      MarkDown
+      Primeros Pasos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#estructra" class="md-nav__link">
+  <a href="#escribir-contenido" class="md-nav__link">
     <span class="md-ellipsis">
-      Estructra
+      Escribir Contenido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Despliegue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucion-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solución de problemas
     </span>
   </a>
   
@@ -364,6 +377,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descargar-plantilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargar plantilla
+    </span>
+  </a>
   
 </li>
       
@@ -405,7 +427,7 @@
   
   
   <span class="md-ellipsis">
-    Markdown
+    Primeros pasos
     
   </span>
   
@@ -416,7 +438,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Markdown
+            Primeros pasos
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -427,12 +449,12 @@
   
   
     <li class="md-nav__item">
-      <a href="Markdown/BasicSyntax/" class="md-nav__link">
+      <a href="GettingStarted/QuickStart/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Sintaxis Básica de Markdown
+    Inicio rápido
     
   </span>
   
@@ -450,12 +472,35 @@
   
   
     <li class="md-nav__item">
-      <a href="Markdown/ElementosAvanzados/" class="md-nav__link">
+      <a href="GettingStarted/VisualStructure/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Elementos Avanzados de Markdown
+    Estructura visual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="GettingStarted/FileStructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructura de archivos
     
   </span>
   
@@ -503,7 +548,7 @@
   
   
   <span class="md-ellipsis">
-    Nuestros recursos
+    Componentes
     
   </span>
   
@@ -514,7 +559,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Nuestros recursos
+            Componentes
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -525,12 +570,12 @@
   
   
     <li class="md-nav__item">
-      <a href="OurResources/OurClasses/" class="md-nav__link">
+      <a href="Components/BasicMarkdown/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Nuestras clases CSS
+    Markdown básico
     
   </span>
   
@@ -548,12 +593,58 @@
   
   
     <li class="md-nav__item">
-      <a href="OurResources/OurComponents/" class="md-nav__link">
+      <a href="Components/AdvancedMarkdown/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Nuestros componentes
+    Markdown avanzado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Components/CustomComponents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componentes personalizados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Components/CustomClasses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clases personalizadas
     
   </span>
   
@@ -601,7 +692,7 @@
   
   
   <span class="md-ellipsis">
-    Estructura
+    Despliegue
     
   </span>
   
@@ -612,7 +703,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Estructura
+            Despliegue
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -623,12 +714,12 @@
   
   
     <li class="md-nav__item">
-      <a href="Structure/FileStructure/" class="md-nav__link">
+      <a href="Deployment/BuildingYourSite/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Estructura del Proyecto
+    Construcción del sitio
     
   </span>
   
@@ -639,6 +730,58 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+        
+            
+            
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Referencia
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Referencia
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -646,12 +789,12 @@
   
   
     <li class="md-nav__item">
-      <a href="Structure/VisualStructure/" class="md-nav__link">
+      <a href="Reference/Troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Estructura visual
+    Solución de problemas
     
   </span>
   
@@ -684,25 +827,43 @@
 
 
 
-<h1 id="crear-tu-ayuda">Crear tu ayuda<a class="headerlink" href="#crear-tu-ayuda" title="Permanent link">¶</a></h1>
-<p>Para empezar a entender como desarrollar tu ayuda creemos que lo mejor es empezar a crearla, para ello es que está esta sección.</p>
-<h2 id="obtener-template-del-proyecto">Obtener Template del Proyecto<a class="headerlink" href="#obtener-template-del-proyecto" title="Permanent link">¶</a></h2>
-<p>Empezaremos descargandote este zip con la estructura base que toda ayuda de Ahora tendrá.</p>
-<p>Una vez descargada descomprimiremos el archivo donde queramos crear la ayuda.</p>
+<h1 id="empezar-a-desarrollar">Empezar a desarrollar<a class="headerlink" href="#empezar-a-desarrollar" title="Permanent link">¶</a></h1>
+<p>Esta plantilla de MkDocs proporciona un marco para crear documentación profesional y multiidioma. Esta guía cubre la configuración, creación de contenido y despliegue para productos, APIs y procesos internos.</p>
+<h2 id="estructura-de-la-documentacion">Estructura de la documentación<a class="headerlink" href="#estructura-de-la-documentacion" title="Permanent link">¶</a></h2>
+<p>La documentación está organizada en las siguientes secciones:</p>
+<h3 id="primeros-pasos">Primeros Pasos<a class="headerlink" href="#primeros-pasos" title="Permanent link">¶</a></h3>
+<p>Todo lo que necesitas para comenzar a crear documentación:</p>
+<ul>
+<li><strong><a href="GettingStarted/QuickStart/">Inicio rápido</a></strong> - Guía básica de configuración</li>
+<li><strong><a href="GettingStarted/VisualStructure/">Configuración de navegación</a></strong> - Cómo se generan los menús</li>
+<li><strong><a href="GettingStarted/FileStructure/">Organización general</a></strong> - Estructura de carpetas, metodología de trabajo básica</li>
+</ul>
+<h3 id="escribir-contenido">Escribir Contenido<a class="headerlink" href="#escribir-contenido" title="Permanent link">¶</a></h3>
+<p>Aprende cómo escribir documentación efectiva:</p>
+<p><strong>Componentes Markdown:</strong></p>
+<ul>
+<li><strong><a href="Components/BasicMarkdown/">Markdown básico</a></strong> - Sintaxis esencial de formato</li>
+<li><strong><a href="Components/AdvancedMarkdown/">Markdown avanzado</a></strong> - Pestañas, admoniciones, diagramas</li>
+</ul>
+<p><strong>Nuestros componentes:</strong></p>
+<ul>
+<li><strong><a href="Components/CustomComponents/">Componentes personalizados</a></strong> - Elementos interactivos</li>
+<li><strong><a href="Components/CustomClasses/">Clases personalizadas</a></strong> - Opciones especiales de estilo</li>
+</ul>
+<h3 id="despliegue">Despliegue<a class="headerlink" href="#despliegue" title="Permanent link">¶</a></h3>
+<p>Construye y publica tu sitio:</p>
+<ul>
+<li><strong><a href="Deployment/BuildingYourSite/">Construir tu sitio</a></strong> - Compilar para producción</li>
+</ul>
+<h3 id="solucion-de-problemas">Solución de problemas<a class="headerlink" href="#solucion-de-problemas" title="Permanent link">¶</a></h3>
+<p>Detalles técnicos y ayuda:</p>
+<ul>
+<li><strong><a href="Reference/Troubleshooting/">Solución de problemas</a></strong> - Problemas comunes y soluciones</li>
+</ul>
+<h2 id="descargar-plantilla">Descargar plantilla<a class="headerlink" href="#descargar-plantilla" title="Permanent link">¶</a></h2>
+<p>Descarga la plantilla del proyecto:</p>
 <p><button class="button" onclick="downloadTemplateZip()">Descargar ZIP</button></p>
-<h2 id="entendiendo-la-plantilla">Entendiendo la plantilla<a class="headerlink" href="#entendiendo-la-plantilla" title="Permanent link">¶</a></h2>
-<p>Para entender como funciona esta plantilla es necesario saber dos cosas, su estructura y el lengüaje utilizado</p>
-<h3 id="markdown">MarkDown<a class="headerlink" href="#markdown" title="Permanent link">¶</a></h3>
-<p>MarkDown no es más que una forma sencilla de dar formato al texto sin necesidad de envolverlo todo en etiquetas html.</p>
-<p>Poner títulos h1 es tan facil como que la línea empiece por <code>#</code>, los <code>h2</code> por <code>##</code> y así sucesivamente; los enlaces simplemente se escriben tal que <code>\[así\](/pagina/a/la/que/navegar)</code> y así con infinidad de cosas igualmente sencillas.</p>
-<p>Aquí puedes ver por encima como funciona:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="docs_assets/delete/Ejemplo.png" data-desc-position="bottom"><img alt="" src="docs_assets/delete/Ejemplo.png"></a></p>
-<p>De todos modos para saber todo lo que se puede hacer recomendamos que al terminar de ver como funciona el proyecto de documentación eches un vistazo tanto a los <a href="./Markdown/BasicSyntax/">elementos básicos de MarkDown</a> como los <a href="./Markdown/ElementosAvanzados/">elementos avanzados</a>.</p>
-<p>Pero además de los básicos nosotros tenemos <a href="./OurResources/OurComponents/">nuestros propios componentes</a> y <a href="./OurResources/OurClasses/">nuestras propias clases</a>.</p>
-<h3 id="estructra">Estructra<a class="headerlink" href="#estructra" title="Permanent link">¶</a></h3>
-<p>La estructura de la plantilla es una muy básica, dentro de la carpeta de <code>docs</code> se situarán todos los archivos (páginas) que compondrán la ayuda. En base a su organización en carpetas, se autogenerará la página siguiendo la plantilla creada.</p>
-<p>Esta plantilla es personalizable pero deberíamos mantener una coherencia entre nuestras ayudas.</p>
-<p>Para entender completamente y poder empezar a desarrollar visita la sección de <a href="./Structure/FileStructure/">estructura de ficheros</a> y después la de <a href="./Structure/VisualStructure/">estructura visual</a>.</p>
+<p>Consulta el <a href="GettingStarted/QuickStart/">Inicio rápido</a> para instrucciones de configuración.</p>
 
 
 
@@ -721,7 +882,7 @@
               
               
                 
-                <div class="flx-rightsidebar md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="fh-rightsidebar md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                   <div class="md-sidebar__scrollwrap">
                     <div class="md-sidebar__inner">
                       
@@ -740,37 +901,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#obtener-template-del-proyecto" class="md-nav__link">
+  <a href="#estructura-de-la-documentacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Obtener Template del Proyecto
+      Estructura de la documentación
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entendiendo-la-plantilla" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entendiendo la plantilla
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Entendiendo la plantilla">
+    <nav class="md-nav" aria-label="Estructura de la documentación">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#markdown" class="md-nav__link">
+  <a href="#primeros-pasos" class="md-nav__link">
     <span class="md-ellipsis">
-      MarkDown
+      Primeros Pasos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#estructra" class="md-nav__link">
+  <a href="#escribir-contenido" class="md-nav__link">
     <span class="md-ellipsis">
-      Estructra
+      Escribir Contenido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Despliegue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucion-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solución de problemas
     </span>
   </a>
   
@@ -778,6 +948,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descargar-plantilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargar plantilla
+    </span>
+  </a>
   
 </li>
       

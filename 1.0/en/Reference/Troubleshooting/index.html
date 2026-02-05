@@ -1,0 +1,1649 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Deployment/BuildingYourSite/">
+      
+      
+      
+      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Troubleshooting - Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom-colors.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/base.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/code-highlighting.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/css-class-components.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/404-error.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-modal.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-copy.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-namepropagator.css">
+    
+      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
+    
+      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flexygo/utils.css">
+    
+      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flexygo/flexygo-icons.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  <img src="../../../docs_assets/images/logos/AHORA-white.svg" alt="logo">
+
+      Docs
+    </a>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+          </span>
+        </div>
+      </div>
+    </div>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <span onclick="changeLanguage('en')" class="md-select__link">
+              English
+            </span>
+          </li>
+        
+          <li class="md-select__item">
+            <span onclick="changeLanguage('es')" class="md-select__link">
+              Español
+            </span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="darkmode" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0M8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0M3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8m13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8m-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13m3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061M2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.75.75 0 0 1-.018 1.042.75.75 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="fh-sidebar md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="fh-sidebarheader">
+                  <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
+                    
+  <img src="../../../docs_assets/images/logos/AHORA-white.svg" alt="logo">
+
+                    Docs
+                  </a>
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+    
+    <ul class="md-nav__list" data-md-scrollfix>
+        
+            
+            
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+        
+            
+            
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/QuickStart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/VisualStructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visual structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/FileStructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+        
+            
+            
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Components
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Components
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Components/BasicMarkdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic markdown
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Components/AdvancedMarkdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced markdown
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Components/CustomComponents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Components/CustomClasses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom classes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+        
+            
+            
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deployment
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Deployment/BuildingYourSite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building your site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+        
+            
+            
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python not found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip-permission-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pip permission errors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-already-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port already in use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changes-not-showing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changes not showing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build errors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plugin-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin not found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-import-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module import errors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Content issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#images-not-displaying" class="md-nav__link">
+    <span class="md-ellipsis">
+      Images not displaying
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broken-internal-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broken internal links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-switcher-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language switcher not working
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Style issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Style issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-colors-not-applying" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom colors not applying
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-css-not-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom CSS not loading
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pages-not-appearing-in-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pages not appearing in navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrong-page-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wrong page order
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-component-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom component not working
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slow-build-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slow Build Times
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-site-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Large Site Size
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-more-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting More Help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-fixes-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Fixes Checklist
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+        
+    </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            <div class="fh-maincontainer">
+              
+                <div class="md-content" data-md-component="content">
+                  <article class="md-content__inner md-typeset">
+                    
+                      
+
+
+
+<h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h1>
+<p>Common issues and their solutions when working with this MkDocs template.</p>
+<h2 id="installation-issues">Installation issues<a class="headerlink" href="#installation-issues" title="Permanent link">¶</a></h2>
+<h3 id="python-not-found">Python not found<a class="headerlink" href="#python-not-found" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p><code>python: command not found</code> or <code>mkdocs: command not found</code></p>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Install Python from <a href="https://www.python.org/downloads/">python.org</a></li>
+<li>Ensure "Add Python to PATH" is checked during installation</li>
+<li>Restart terminal after installation</li>
+</ul>
+<h3 id="pip-permission-errors">Pip permission errors<a class="headerlink" href="#pip-permission-errors" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p><code>ERROR: Could not install packages due to an EnvironmentError: [Errno 13] Permission denied</code></p>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Windows: Run terminal as Administrator</li>
+<li>macOS/Linux: Use <code>pip install --user</code> or <code>sudo pip install</code></li>
+</ul>
+<h2 id="server-issues">Server issues<a class="headerlink" href="#server-issues" title="Permanent link">¶</a></h2>
+<h3 id="port-already-in-use">Port already in use<a class="headerlink" href="#port-already-in-use" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p><code>OSError: [Errno 48] Address already in use</code></p>
+<p><strong>Solution</strong>:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdocs<span class="w"> </span>serve<span class="w"> </span>-a<span class="w"> </span><span class="m">127</span>.0.0.1:8001<span class="w">  </span><span class="c1"># Use different port</span>
+</span></code></pre></div>
+<h3 id="changes-not-showing">Changes not showing<a class="headerlink" href="#changes-not-showing" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p>Modifications don't appear in the browser</p>
+<p><strong>Solution</strong>:</p>
+<ol>
+<li>Hard refresh: Ctrl+Shift+R (Windows/Linux) or Cmd+Shift+R (Mac)</li>
+<li>Use clean flag: <code>mkdocs serve --clean</code></li>
+<li>Clear browser cache</li>
+</ol>
+<h2 id="build-errors">Build errors<a class="headerlink" href="#build-errors" title="Permanent link">¶</a></h2>
+<h3 id="plugin-not-found">Plugin not found<a class="headerlink" href="#plugin-not-found" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p><code>ERROR - Config value: 'plugins'. Error: The "plugin-name" plugin is not installed</code></p>
+<p><strong>Solution</strong>:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-plugin-name
+</span></code></pre></div>
+<p>Common plugins:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-material<span class="w"> </span>mkdocs-i18n<span class="w"> </span>mkdocs-glightbox
+</span></code></pre></div>
+<h3 id="module-import-errors">Module import errors<a class="headerlink" href="#module-import-errors" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p><code>ModuleNotFoundError: No module named 'xyz'</code></p>
+<p><strong>Solution</strong>:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>mkdocs-material
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt<span class="w">  </span><span class="c1"># If available</span>
+</span></code></pre></div>
+<h2 id="content-issues">Content issues<a class="headerlink" href="#content-issues" title="Permanent link">¶</a></h2>
+<h3 id="images-not-displaying">Images not displaying<a class="headerlink" href="#images-not-displaying" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p>Images show broken image icon</p>
+<p><strong>Solutions</strong>:</p>
+<ol>
+<li>Check image path is correct (case-sensitive)</li>
+<li>Use relative paths: <code>../docs_assets/images/file.png</code></li>
+<li>Ensure image file exists in <code>docs_assets/</code></li>
+<li>Check file extension matches actual file</li>
+</ol>
+<h3 id="broken-internal-links">Broken internal links<a class="headerlink" href="#broken-internal-links" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p>Links lead to 404 pages</p>
+<p><strong>Solutions</strong>:</p>
+<ol>
+<li>Use correct relative paths</li>
+<li>Don't include <code>.md</code> extension in links</li>
+<li>End folder links with <code>/</code>: <code>[Link](../Folder/Page/)</code></li>
+<li>Check spelling and case</li>
+</ol>
+<h3 id="language-switcher-not-working">Language switcher not working<a class="headerlink" href="#language-switcher-not-working" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p>Only one language shows or switching fails</p>
+<p><strong>Solutions</strong>:</p>
+<ol>
+<li>Verify both <code>.en.md</code> and <code>.es.md</code> files exist</li>
+<li>Check <code>mkdocs.yml</code> has both languages configured</li>
+<li>Ensure both files have same base name</li>
+<li>Clear browser cache</li>
+</ol>
+<h2 id="style-issues">Style issues<a class="headerlink" href="#style-issues" title="Permanent link">¶</a></h2>
+<h3 id="custom-colors-not-applying">Custom colors not applying<a class="headerlink" href="#custom-colors-not-applying" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p>Color changes don't appear</p>
+<p><strong>Solutions</strong>:</p>
+<ol>
+<li>Edit <code>docs/stylesheets/custom-colors.css</code> (not fh-structural files)</li>
+<li>Check CSS syntax (semicolons, colons)</li>
+<li>Hard refresh browser</li>
+<li>Verify file is linked in <code>mkdocs.yml</code></li>
+</ol>
+<h3 id="custom-css-not-loading">Custom CSS not loading<a class="headerlink" href="#custom-css-not-loading" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p>Custom styles don't work</p>
+<p><strong>Solution</strong>: </p>
+<p>Verify <code>extra_css</code> in <code>mkdocs.yml</code>:
+</p><div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">extra_css</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stylesheets/custom-colors.css</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stylesheets/your-custom-file.css</span><span class="w">  </span><span class="c1"># Your file here</span>
+</span></code></pre></div><p></p>
+<h2 id="navigation-issues">Navigation issues<a class="headerlink" href="#navigation-issues" title="Permanent link">¶</a></h2>
+<h3 id="pages-not-appearing-in-navigation">Pages not appearing in navigation<a class="headerlink" href="#pages-not-appearing-in-navigation" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p>Created page doesn't show in sidebar</p>
+<p><strong>Solutions</strong>:</p>
+<ol>
+<li>Ensure file has <code>.en.md</code> or <code>.es.md</code> extension</li>
+<li>Check file is inside <code>docs/</code> folder</li>
+<li>Add first heading (<code># Title</code>) to file</li>
+<li>Restart <code>mkdocs serve</code></li>
+</ol>
+<h3 id="wrong-page-order">Wrong page order<a class="headerlink" href="#wrong-page-order" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p>Pages appear in wrong order</p>
+<p><strong>Solution</strong>: </p>
+<p>Navigation is alphabetical by default. To customize, add <code>nav</code> section to <code>mkdocs.yml</code>:
+</p><div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">nav</span><span class="p">:</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Getting Started</span><span class="p">:</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">QuickStart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GettingStarted/QuickStart.md</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Guide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guide/Overview.md</span>
+</span></code></pre></div><p></p>
+<h2 id="component-issues">Component issues<a class="headerlink" href="#component-issues" title="Permanent link">¶</a></h2>
+<h3 id="custom-component-not-working">Custom component not working<a class="headerlink" href="#custom-component-not-working" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p><code>&lt;fh-copy&gt;</code> or other components don't function</p>
+<p><strong>Solutions</strong>:</p>
+<ol>
+<li>Check JavaScript is loaded in <code>mkdocs.yml</code></li>
+<li>Open browser console (F12) for errors</li>
+<li>Verify component syntax matches documentation</li>
+<li>Ensure required attributes are provided</li>
+</ol>
+<h2 id="performance-issues">Performance Issues<a class="headerlink" href="#performance-issues" title="Permanent link">¶</a></h2>
+<h3 id="slow-build-times">Slow Build Times<a class="headerlink" href="#slow-build-times" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p><code>mkdocs build</code> takes too long</p>
+<p><strong>Solutions</strong>:</p>
+<ol>
+<li>Use <code>mkdocs serve</code> for development (faster)</li>
+<li>Reduce number of large images</li>
+<li>Optimize image sizes</li>
+<li>Remove unused plugins from <code>mkdocs.yml</code></li>
+</ol>
+<h3 id="large-site-size">Large Site Size<a class="headerlink" href="#large-site-size" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: </p>
+<p><code>site/</code> folder is very large</p>
+<p><strong>Solutions</strong>:</p>
+<ol>
+<li>Compress images before adding</li>
+<li>Use appropriate image formats (WebP, optimized PNG/JPG)</li>
+<li>Remove unused assets from <code>docs_assets/</code></li>
+</ol>
+<h2 id="getting-more-help">Getting More Help<a class="headerlink" href="#getting-more-help" title="Permanent link">¶</a></h2>
+<p>If your issue isn't listed here:</p>
+<ol>
+<li>Check the <a href="https://www.mkdocs.org/">MkDocs Documentation</a></li>
+<li>Review <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs Docs</a></li>
+<li>Search <a href="https://github.com/squidfunk/mkdocs-material/issues">GitHub Issues</a></li>
+<li>Check browser console (F12) for JavaScript errors</li>
+<li>Review terminal output for detailed error messages</li>
+</ol>
+<h2 id="useful-commands">Useful Commands<a class="headerlink" href="#useful-commands" title="Permanent link">¶</a></h2>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Check MkDocs version</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>mkdocs<span class="w"> </span>--version
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Check installed plugins</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>pip<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>mkdocs
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># Update all MkDocs packages</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>mkdocs-material<span class="w"> </span>mkdocs-i18n<span class="w"> </span>mkdocs-glightbox
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1"># Validate configuration</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="c1"># Clear Python cache</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-name<span class="w"> </span>__pycache__<span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+</span></code></pre></div>
+<h2 id="quick-fixes-checklist">Quick Fixes Checklist<a class="headerlink" href="#quick-fixes-checklist" title="Permanent link">¶</a></h2>
+<p>When something breaks, try these in order:</p>
+<ol>
+<li>[ ] Hard refresh browser (Ctrl+Shift+R)</li>
+<li>[ ] Restart <code>mkdocs serve</code></li>
+<li>[ ] Check terminal for error messages</li>
+<li>[ ] Verify file was saved</li>
+<li>[ ] Run <code>mkdocs serve --clean</code></li>
+<li>[ ] Check file paths and spelling</li>
+<li>[ ] Review recent changes (use Git)</li>
+<li>[ ] Update dependencies: <code>pip install --upgrade mkdocs-material</code></li>
+</ol>
+<p>Most issues can be resolved by carefully reading error messages and checking file paths!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                  </article>
+                </div>
+              
+              
+                
+                <div class="fh-rightsidebar md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                  <div class="md-sidebar__scrollwrap">
+                    <div class="md-sidebar__inner">
+                      
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python not found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip-permission-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pip permission errors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-already-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port already in use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changes-not-showing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changes not showing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build errors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plugin-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin not found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-import-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module import errors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Content issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#images-not-displaying" class="md-nav__link">
+    <span class="md-ellipsis">
+      Images not displaying
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broken-internal-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broken internal links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-switcher-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language switcher not working
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Style issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Style issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-colors-not-applying" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom colors not applying
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-css-not-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom CSS not loading
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pages-not-appearing-in-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pages not appearing in navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrong-page-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wrong page order
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-component-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom component not working
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slow-build-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slow Build Times
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-site-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Large Site Size
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-more-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting More Help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-fixes-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Fixes Checklist
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.expand", "navigation.sections", "navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/utils.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/components/fh-modal.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/components/fh-copy.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/components/fh-popover.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/components/fh-namepropagator.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/components/flx-navbutton.js"></script>
+      
+        <script src="../../../javascripts/cultures/default_language.js"></script>
+      
+        <script src="../../../javascripts/cultures/es.js"></script>
+      
+        <script src="../../../javascripts/cultures/en.js"></script>
+      
+        <script src="../../../javascripts/delete/delete.js"></script>
+      
+    
+    <dialog id="navigation-dialog" closedby="any">
+      <p class="input-group">
+        <label>Your flexys URL:</label>
+        <input type="text" id="navigation-dialog-flexy-url" value="https://">
+      </p>
+      <div class="button-container">
+        <button class="button" onclick="_nav(document.getElementById('navigation-dialog-flexy-url').value)">Confirm</button>
+      </div>
+    </dialog>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "zoom"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
