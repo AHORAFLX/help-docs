@@ -1,136 +1,232 @@
-# Building your site
+# Building and Deploying with Mike
 
-Learn how to build your documentation site for deployment.
+Learn how to manage versioned documentation deployments using Mike.
 
 ## Overview
 
-MkDocs compiles your Markdown files into a static HTML website. The build process:
+Mike is a version management tool for MkDocs that allows you to maintain multiple versions of your documentation. It:
 
-1. Converts Markdown to HTML
-2. Applies the Material theme
-3. Generates navigation
-4. Optimizes assets
-5. Creates a `site/` folder with the complete website
+1. Builds documentation for specific versions
+2. Manages multiple versions simultaneously
+3. Stores versions in the `gh-pages` branch
+4. Automatically commits changes (but never pushes)
+5. Provides version selection for users
 
-## Building basics
+!!! important "Git Branch Storage"
+    All deployed versions are stored in the **`gh-pages`** branch of your repository. Mike automatically creates and manages this branch.
 
-### Build command
+!!! warning "Manual Push Required"
+    Mike commits changes to the `gh-pages` branch but **never pushes automatically**. You must push manually to publish your changes.
 
-From your project root, run:
+## Installation
 
-```bash
-mkdocs build
-```
-
-Output:
-```
-INFO    -  Cleaning site directory
-INFO    -  Building documentation to directory: site
-INFO    -  Documentation built in 0.82 seconds
-```
-
-The `site/` folder now contains your complete website.
-
-### Clean build
-
-Force a fresh build:
+Install Mike using pip:
 
 ```bash
-mkdocs build --clean
+pip install mike
 ```
 
-This removes the existing `site/` folder before rebuilding.
+## Deploying New Versions
 
-## Build output
+### Deploy a new version
 
-After building, your project structure includes:
-
-```
-project-root/
-├── docs/              # Source files
-├── mkdocs.yml        # Configuration
-└── site/             # Generated website ← Upload this
-    ├── index.html
-    ├── en/
-    ├── es/
-    ├── assets/
-    ├── javascripts/
-    ├── stylesheets/
-    └── sitemap.xml
-```
-
-!!! info
-    Upload only the `site/` folder to your web server.
-
-## Preview before building
-
-Always preview before building for deployment:
+To deploy a new version of your documentation:
 
 ```bash
-mkdocs serve
+mike deploy <version> <alias>
 ```
 
-Check:
-- [ ] All pages load correctly
-- [ ] Images display properly
-- [ ] Links work (no 404 errors)
-- [ ] Both languages work
-- [ ] Navigation is correct
-
-## Strict mode
-
-Build with strict mode to catch errors:
+**Example**: Deploy version 1.0.0 as latest:
 
 ```bash
-mkdocs build --strict
+mike deploy 1.0.0 latest
 ```
 
-This fails the build if:
-- Links point to non-existent pages
-- Images can't be found
-- Plugins report warnings
+This command:
+
+- Builds your documentation
+- Creates/updates version 1.0.0 in `gh-pages` branch
+- Assigns the "latest" alias to this version
+- Commits changes (but doesn't push)
+
+### Deploy and update default version
+
+To deploy and set as the default version (shown when users first visit):
+
+```bash
+mike deploy <version> <alias> --update-aliases
+```
+
+**Example**:
+
+```bash
+mike deploy 2.0.0 latest --update-aliases
+```
+
+## Updating Existing Versions
+
+### Update version content
+
+To rebuild and update an existing version:
+
+```bash
+mike deploy <version> --update-aliases
+```
+
+**Example**: 
+
+Update version 1.0.0:
+
+```bash
+mike deploy 1.0.0 --update-aliases
+```
 
 !!! tip
-    Use strict mode in CI/CD pipelines for quality assurance.
+    Use `--update-aliases` to keep existing aliases intact when updating.
 
-## Common build issues
+### Change version aliases
 
-### Missing images
+Reassign aliases to different versions:
+
+```bash
+mike alias <version> <new-alias>
+```
+
+**Example**: Move "latest" alias to version 2.0.0:
+
+```bash
+mike alias 2.0.0 latest
+```
+
+## Deleting Versions
+
+### Delete a specific version
+
+To remove a version from deployment:
+
+```bash
+mike delete <version>
+```
+
+**Example**: Delete version 0.9.0:
+
+```bash
+mike delete 0.9.0
+```
+
+### Delete multiple versions
+
+Delete several versions at once:
+
+```bash
+mike delete <version1> <version2> <version3>
+```
+
+**Example**:
+
+```bash
+mike delete 0.8.0 0.9.0 1.0.0-beta
+```
+
+!!! warning
+    Deletion is immediate and removes the version from the `gh-pages` branch. Always verify before deleting.
+
+## Managing Versions
+
+### List all versions
+
+View all deployed versions:
+
+```bash
+mike list
+```
+
+Output example:
+```
+1.0.0 [latest]
+1.1.0
+2.0.0 [stable]
+```
+
+### Set default version
+
+Set which version users see by default:
+
+```bash
+mike set-default <version>
+```
+
+**Example**: 
+
+Set version 2.0.0 as default:
+
+```bash
+mike set-default 2.0.0
+```
+
+## Understanding the gh-pages Branch
+
+### Where versions are stored
+
+Mike stores all versions in the **`gh-pages`** branch of your repository as html files that will be deploy the docs website with it's version selector already implemented:
+
+```
+gh-pages branch
+├── 1.0.0/
+│   ├── index.html
+│   ├── assets/
+│   └── ...
+├── 1.1.0/
+│   ├── index.html
+│   ├── assets/
+│   └── ...
+├── 2.0.0/
+│   ├── index.html
+│   ├── assets/
+│   └── ...
+└── versions.json    # Version metadata
+```
+
+## Common Issues
+
+### Mike not found
 
 **Error**: 
 
-`WARNING - Doc file 'page.md' contains a link './image.png', but the file is not in the docs directory`
-
-**Solution**: 
-
-- Check image path is correct
-- Ensure image exists in `docs_assets/`
-- Use correct relative path
-
-### Broken links
-
-**Error**: 
-
-`WARNING - Doc file 'page.md' contains a link './other.md' which does not exist in the docs directory`
-
-**Solution**:
-
-- Verify linked page exists
-- Check spelling and case sensitivity
-- Ensure `.en.md` or `.es.md` extension is correct
-
-### Plugin errors
-
-**Error**: 
-
-`ERROR - Config value: 'plugins'. Error: The "somePlugin" plugin is not installed`
+`mike: command not found`
 
 **Solution**:
 
 ```bash
-pip install mkdocs-somePlugin
+pip install mike
 ```
+
+### Permission denied on gh-pages
+
+**Error**: 
+
+`Permission denied when pushing to gh-pages`
+
+**Solution**:
+
+- Ensure you have write access to the repository
+- Check your Git credentials
+
+### Versions not showing
+
+**Issue**: 
+
+Deployed versions don't appear on the site
+
+**Solution**:
+
+1. Verify you pushed the `gh-pages` branch:
+   ```bash
+   git push origin gh-pages
+   ```
+2. Check GitHub Pages is enabled in repository settings
+3. Ensure GitHub Pages is set to use `gh-pages` branch
 
 ## Next steps
 
-- [Troubleshooting](../Reference/Troubleshooting.md) - Solve common build issues
+- [Troubleshooting](../Reference/Troubleshooting.md) - Solve common deployment issues

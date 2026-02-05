@@ -121,17 +121,17 @@ plugins:
           # Here goes every menu translation for English (only the ones that are not like the folder name) ↓
           nav_translations:
             Home: Home
-            GettingStarted: Getting Started
-            QuickStart: Quick Start
-            VisualStructure: Visual Structure
-            FileStructure: File Structure
+            GettingStarted: Getting started
+            QuickStart: Quick start
+            VisualStructure: Visual structure
+            FileStructure: File structure
             Components: Components
-            BasicMarkdown: Basic Markdown
-            AdvancedMarkdown: Advanced Markdown
-            CustomComponents: Custom Components
-            CustomClasses: Custom Classes
+            BasicMarkdown: Basic markdown
+            AdvancedMarkdown: Advanced markdown
+            CustomComponents: Custom components
+            CustomClasses: Custom classes
             Deployment: Deployment
-            BuildingYourSite: Building Your Site
+            BuildingYourSite: Building your site
             Reference: Reference
             Troubleshooting: Troubleshooting
         - locale: es
@@ -141,19 +141,19 @@ plugins:
           # Here goes every menu translation for Spanish ↓
           nav_translations:
             Home: Inicio
-            GettingStarted: Primeros Pasos
-            QuickStart: Inicio Rápido
-            VisualStructure: Estructura Visual
-            FileStructure: Estructura de Archivos
+            GettingStarted: Primeros pasos
+            QuickStart: Inicio rápido
+            VisualStructure: Estructura visual
+            FileStructure: Estructura de archivos
             Components: Componentes
-            BasicMarkdown: Markdown Básico
-            AdvancedMarkdown: Markdown Avanzado
-            CustomComponents: Componentes Personalizados
-            CustomClasses: Clases Personalizadas
+            BasicMarkdown: Markdown básico
+            AdvancedMarkdown: Markdown avanzado
+            CustomComponents: Componentes personalizados
+            CustomClasses: Clases personalizadas
             Deployment: Despliegue
-            BuildingYourSite: Construcción del Sitio
+            BuildingYourSite: Construcción del sitio
             Reference: Referencia
-            Troubleshooting: Solución de Problemas
+            Troubleshooting: Solución de problemas
   - glightbox:
       touchNavigation: true
       loop: false

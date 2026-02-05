@@ -1,136 +1,231 @@
-# Construir tu sitio
+# Construir y Desplegar con Mike
 
-Aprende cómo construir tu sitio de documentación para despliegue.
+Aprende cómo gestionar despliegues de documentación versionada usando Mike.
 
 ## Descripción general
 
-MkDocs compila tus archivos Markdown en un sitio web HTML estático. El proceso de construcción:
+Mike es una herramienta de gestión de versiones para MkDocs que te permite mantener múltiples versiones de tu documentación. Permite:
 
-1. Convierte Markdown a HTML
-2. Aplica el tema Material
-3. Genera navegación
-4. Optimiza assets
-5. Crea una carpeta `site/` con el sitio web completo
+1. Construir documentación para versiones específicas
+2. Gestionar múltiples versiones simultáneamente
+3. Almacenar versiones en la rama `gh-pages`
+4. Hacer commit automático de cambios (pero nunca push)
+5. Proporcionar selección de versiones para usuarios
 
-## Fundamentos de construcción
+!!! important "Almacenamiento en Rama Git"
+    Todas las versiones desplegadas se almacenan en la rama **`gh-pages`** de tu repositorio. Mike crea y gestiona esta rama automáticamente.
 
-### Comando de construcción
+!!! warning "Push Manual Requerido"
+    Mike hace commit de los cambios en la rama `gh-pages` pero **nunca hace push automáticamente**. Debes hacer push manualmente para publicar tus cambios.
 
-Desde la raíz de tu proyecto, ejecuta:
+## Instalación
 
-```bash
-mkdocs build
-```
-
-Salida:
-```
-INFO    -  Cleaning site directory
-INFO    -  Building documentation to directory: site
-INFO    -  Documentation built in 0.82 seconds
-```
-
-La carpeta `site/` ahora contiene tu sitio web completo.
-
-### Construcción limpia
-
-Fuerza una construcción fresca:
+Instala Mike usando pip:
 
 ```bash
-mkdocs build --clean
+pip install mike
 ```
 
-Esto elimina la carpeta `site/` existente antes de reconstruir.
+## Desplegar Nuevas Versiones
 
-## Salida de construcción
+### Desplegar una nueva versión
 
-Después de construir, tu estructura de proyecto incluye:
-
-```
-project-root/
-├── docs/              # Archivos fuente
-├── mkdocs.yml        # Configuración
-└── site/             # Sitio web generado ← Sube esto
-    ├── index.html
-    ├── en/
-    ├── es/
-    ├── assets/
-    ├── javascripts/
-    ├── stylesheets/
-    └── sitemap.xml
-```
-
-!!! info
-    Sube solo la carpeta `site/` a tu servidor web.
-
-## Previsualizar antes de construir
-
-Siempre previsualiza antes de construir para despliegue:
+Para desplegar una nueva versión de tu documentación:
 
 ```bash
-mkdocs serve
+mike deploy <version> <alias>
 ```
 
-Verifica:
-- [ ] Todas las páginas cargan correctamente
-- [ ] Las imágenes se muestran correctamente
-- [ ] Los enlaces funcionan (sin errores 404)
-- [ ] Ambos idiomas funcionan
-- [ ] La navegación es correcta
-
-## Modo estricto
-
-Construye con modo estricto para detectar errores:
+**Ejemplo**: Desplegar versión 1.0.0 como latest:
 
 ```bash
-mkdocs build --strict
+mike deploy 1.0.0 latest
 ```
 
-Esto falla la construcción si:
-- Los enlaces apuntan a páginas inexistentes
-- No se pueden encontrar imágenes
-- Los plugins reportan advertencias
+Este comando:
+
+- Construye tu documentación
+- Crea/actualiza la versión 1.0.0 en la rama `gh-pages`
+- Asigna el alias "latest" a esta versión
+- Hace commit de los cambios (pero no hace push)
+
+### Desplegar y actualizar versión predeterminada
+
+Para desplegar y establecer como la versión predeterminada (mostrada cuando los usuarios visitan por primera vez):
+
+```bash
+mike deploy <version> <alias> --update-aliases
+```
+
+**Ejemplo**:
+
+```bash
+mike deploy 2.0.0 latest --update-aliases
+```
+
+## Actualizar Versiones Existentes
+
+### Actualizar contenido de versión
+
+Para reconstruir y actualizar una versión existente:
+
+```bash
+mike deploy <version> --update-aliases
+```
+
+**Ejemplo**: 
+
+Actualizar versión 1.0.0:
+
+```bash
+mike deploy 1.0.0 --update-aliases
+```
 
 !!! tip
-    Usa modo estricto en pipelines CI/CD para aseguramiento de calidad.
+    Usa `--update-aliases` para mantener los aliases existentes intactos al actualizar.
 
-## Problemas comunes de construcción
+### Cambiar aliases de versión
 
-### Imágenes faltantes
+Reasignar aliases a diferentes versiones:
+
+```bash
+mike alias <version> <nuevo-alias>
+```
+
+**Ejemplo**: 
+
+Mover alias "latest" a versión 2.0.0:
+
+```bash
+mike alias 2.0.0 latest
+```
+
+## Eliminar Versiones
+
+### Eliminar una versión específica
+
+Para eliminar una versión del despliegue:
+
+```bash
+mike delete <version>
+```
+
+**Ejemplo**: Eliminar versión 0.9.0:
+
+```bash
+mike delete 0.9.0
+```
+
+### Eliminar múltiples versiones
+
+Eliminar varias versiones a la vez:
+
+```bash
+mike delete <version1> <version2> <version3>
+```
+
+**Ejemplo**:
+
+```bash
+mike delete 0.8.0 0.9.0 1.0.0-beta
+```
+
+!!! warning
+    La eliminación es inmediata y remueve la versión de la rama `gh-pages`. Siempre verifica antes de eliminar.
+
+## Gestionar Versiones
+
+### Listar todas las versiones
+
+Ver todas las versiones desplegadas:
+
+```bash
+mike list
+```
+
+Ejemplo de salida:
+
+```
+1.0.0 [latest]
+1.1.0
+2.0.0 [stable]
+```
+
+### Establecer versión predeterminada
+
+Establecer qué versión ven los usuarios por defecto:
+
+```bash
+mike set-default <version>
+```
+
+**Ejemplo**: Establecer versión 2.0.0 como predeterminada:
+
+```bash
+mike set-default 2.0.0
+```
+
+## Entender la Rama gh-pages
+
+Mike almacena todas las versiones en la rama **`gh-pages`** de tu repositorio en archivos html que será la web de la documentación con su respectivo selector de versiones:
+
+```
+rama gh-pages
+├── 1.0.0/
+│   ├── index.html
+│   ├── assets/
+│   └── ...
+├── 1.1.0/
+│   ├── index.html
+│   ├── assets/
+│   └── ...
+├── 2.0.0/
+│   ├── index.html
+│   ├── assets/
+│   └── ...
+└── versions.json    # Metadatos de versión
+```
+
+## Problemas Comunes
+
+### Mike no encontrado
 
 **Error**: 
 
-`WARNING - Doc file 'page.md' contains a link './image.png', but the file is not in the docs directory`
-
-**Solución**: 
-
-- Verifica que la ruta de la imagen sea correcta
-- Asegúrate de que la imagen existe en `docs_assets/`
-- Usa la ruta relativa correcta
-
-### Enlaces rotos
-
-**Error**: 
-
-`WARNING - Doc file 'page.md' contains a link './other.md' which does not exist in the docs directory`
-
-**Solución**:
-
-- Verifica que la página enlazada existe
-- Verifica ortografía y sensibilidad a mayúsculas
-- Asegúrate de que la extensión `.en.md` o `.es.md` sea correcta
-
-### Errores de plugin
-
-**Error**: 
-
-`ERROR - Config value: 'plugins'. Error: The "somePlugin" plugin is not installed`
+`mike: command not found`
 
 **Solución**:
 
 ```bash
-pip install mkdocs-somePlugin
+pip install mike
 ```
+
+### Permiso denegado en gh-pages
+
+**Error**: 
+
+`Permission denied when pushing to gh-pages`
+
+**Solución**:
+
+- Asegúrate de tener acceso de escritura al repositorio
+- Verifica tus credenciales de Git
+
+### Las versiones no se muestran
+
+**Problema**: 
+
+Las versiones desplegadas no aparecen en el sitio
+
+**Solución**:
+
+1. Verifica que hiciste push de la rama `gh-pages`:
+   ```bash
+   git push origin gh-pages
+   ```
+2. Verifica que GitHub Pages esté habilitado en la configuración del repositorio
+3. Asegúrate de que GitHub Pages esté configurado para usar la rama `gh-pages`
 
 ## Siguientes pasos
 
-- [Solución de problemas](../Reference/Troubleshooting.md) - Resuelve problemas comunes de construcción
+- [Solución de problemas](../Reference/Troubleshooting.md) - Resuelve problemas comunes de despliegue
