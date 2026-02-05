@@ -1,4 +1,4 @@
-# Sintaxis Básica de Markdown
+# Sintaxis básica de Markdown
 
 Markdown es un lenguaje de marcado ligero que te permite escribir contenido formateado usando una sintaxis simple y legible. Esta guía cubre los elementos esenciales que necesitas para crear documentación profesional.
 
@@ -12,8 +12,8 @@ Los encabezados organizan tu contenido en secciones jerárquicas:
 ## Encabezado de nivel 4
 ```
 
-El nivel 1 (`#`) generalmente se reserva para el título del documento, que se muestra en la barra de navegación.
-{ .fh-info-card }
+!!! info
+    El nivel 1 (`#`) generalmente se reserva para el título del documento, que se muestra en la barra de navegación.
 
 ## Formato de texto
 
@@ -86,8 +86,8 @@ Para un salto de línea sin párrafo nuevo, termina la línea con dos espacios.
 [Texto del enlace](https://www.ejemplo.com)
 ```
 
-Los enlaces internos son sensibles a mayúsculas y espacios (convertidos a guiones).
-{ .fh-warning-card }
+!!! warning
+    Los enlaces internos son sensibles a mayúsculas y espacios (convertidos a guiones).
 
 ## Imágenes
 
@@ -240,8 +240,8 @@ Markdown permite usar HTML cuando necesitas más control:
 
 Ahora que conoces la sintaxis básica, aprende sobre:
 
-- [Elementos avanzados de Markdown](ElementosAvanzados.es.md) - Extensiones y funcionalidades adicionales
-- [Estilos y componentes personalizados](../Estilos/ComponentesPersonalizados.es.md) - Elementos visuales especiales
-- [Buenas prácticas de escritura](../BuenasPracticas/EscrituraEfectiva.es.md) - Consejos para contenido claro
+- [Markdown avanzado](AdvancedMarkdown.md) - Extensiones y funcionalidades adicionales
+- [Componentes personalizados](CustomComponents.md) - Elementos interactivos y componentes visuales especiales
+- [Clases personalizadas](CustomClasses.md) - Opciones especiales de estilo
 
 Con esta base, ya puedes crear documentación completa y profesional.

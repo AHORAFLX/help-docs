@@ -137,7 +137,15 @@ Para esta traducciones existe la función translate a la que tan solo se le debe
 !!! info "Categorías"
     No lo organizamos por categorías ya que la ayuda no debería contener tantas traducciones como flexygo u otras aplicaciones.
 
-### Traducciones de categoráis
+## Siguientes pasos
+
+Ahora que entiendes la estructura del proyecto:
+
+1. **Comienza a escribir** - Aprende [Markdown básico](../Components/BasicMarkdown.md) para crear tu primer contenido
+2. **Añade funcionalidades avanzadas** - Explora [Markdown avanzado](../Components/AdvancedMarkdown.md) para pestañas, admoniciones y diagramas
+3. **Personaliza la apariencia** - Revisa [Componentes personalizados](../Components/CustomComponents.md) para elementos interactivos
+
+### Traducciones de categorías
 
 Las categorías, al no dividirse por carpetas según idioma, no se traducen automaticamente. Por ello para agregar traducciones hay que añadirlas a la sección **nav_translations** de mkdocs.yml y agregarlo tal que así:
 

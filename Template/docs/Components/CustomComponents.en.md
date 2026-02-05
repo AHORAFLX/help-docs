@@ -12,7 +12,7 @@ My paragraph <my-component its="attributes"></my-component> continue my paragrap
 
 When clicked it will copy the text written inside of it to the users clipboard and show a copied message.
 
-If no class is added it will apply [link styles](#link-class), but you can use whatever class you want.
+If no class is added it will apply [link styles](../CustomClasses/#link), but you can use whatever class you want.
 
 ```html
 <fh-copy>My text</fh-copy>
@@ -153,3 +153,10 @@ execProcessParams(processname: string, objectname: string, objectwhere: string, 
 
 }
 ```
+
+## Next steps
+
+Now that you know about custom components:
+
+1. **Apply custom styling** - Learn [Custom classes](CustomClasses.md) for special visual effects
+2. **Build your site** - Check [Building your site](../Deployment/BuildingYourSite.md) to compile for production

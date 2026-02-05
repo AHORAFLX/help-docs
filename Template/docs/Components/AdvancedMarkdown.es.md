@@ -1,8 +1,8 @@
-# Elementos Avanzados de Markdown
+# Elementos avanzados de Markdown
 
 MkDocs y el tema Material soportan extensiones avanzadas de Markdown que te permiten crear contenido más rico e interactivo. Esta guía cubre las funcionalidades más útiles.
 
-## Admonitions (Cajas de aviso)
+## Admonitions (cajas de aviso)
 
 Las admonitions son cajas destacadas para llamar la atención sobre información importante.
 
@@ -84,7 +84,7 @@ Las admonitions son cajas destacadas para llamar la atención sobre información
 ???+ warning "Expandido por defecto"
     Este contenido está visible por defecto pero se puede colapsar.
 
-## Pestañas (Tabs)
+## Pestañas (tabs)
 
 Las pestañas permiten organizar contenido alternativo:
 
@@ -352,8 +352,8 @@ Párrafo con clase personalizada
 
 [Abrir en nueva pestaña](https://www.mkdocs.org){ target="_blank" rel="noopener" .md-button }
 
-Texto con estilo personalizado usando la clase fh-info-card.
-{ .fh-info-card }
+!!! info
+    Texto con estilo personalizado usando la clase fh-info-card.
 
 ## Variables y macros
 
@@ -371,3 +371,11 @@ extra:
 Versión actual: {{ version }}
 Desarrollado por {{ company }}
 ```
+
+## Siguientes pasos
+
+Ahora que conoces las funcionalidades avanzadas de Markdown:
+
+1. **Añade componentes personalizados** - Aprende sobre [Componentes personalizados](CustomComponents.md) para elementos interactivos
+2. **Aplica estilos personalizados** - Revisa [Clases personalizadas](CustomClasses.md) para efectos visuales especiales
+3. **Construye tu sitio** - Consulta [Construir tu sitio](../Deployment/BuildingYourSite.md) para compilar para producción

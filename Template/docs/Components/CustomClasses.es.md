@@ -72,3 +72,9 @@ mycode();
 ```js { .no-language }
 mycode();
 ```
+
+## Siguientes pasos
+
+Ahora que conoces las clases personalizadas:
+
+1. **Construye tu sitio** - Aprende cómo [construir tu sitio](../Deployment/BuildingYourSite.md) para producción

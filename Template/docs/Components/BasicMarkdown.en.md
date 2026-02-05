@@ -1,4 +1,4 @@
-# Basic Markdown Syntax
+# Basic markdown syntax
 
 Markdown is a lightweight markup language that lets you write formatted content using a simple, readable syntax. This guide covers the essential elements you need to create professional documentation.
 
@@ -88,8 +88,8 @@ For a line break without starting a new paragraph, end the line with two spaces.
 [Link text](https://www.example.com)
 ```
 
-Internal links are case-sensitive and spaces are converted to hyphens.
-{ .fh-warning-card }
+!!! warning
+    Internal links are case-sensitive and spaces are converted to hyphens.
 
 ## Images
 
@@ -242,8 +242,8 @@ Markdown allows you to use HTML when you need more control:
 
 Now that you know the basic syntax, learn about:
 
-* [Advanced Markdown elements](AdvancedElements.en.md) — Extensions and additional features
-* [Custom styles and components](../Styles/CustomComponents.en.md) — Special visual elements
-* [Writing best practices](../BestPractices/EffectiveWriting.en.md) — Tips for clear content
+* [Advanced markdown](AdvancedMarkdown.md) — Extensions and additional features
+* [Custom components](CustomComponents.md) — Interactive elements and special visual components
+* [Custom classes](CustomClasses.md) — Special styling options
 
 With this foundation, you can now create complete and professional documentation.

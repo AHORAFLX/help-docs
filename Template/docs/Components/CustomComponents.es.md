@@ -12,7 +12,7 @@ Mi párrafo <my-component its="attributes"></my-component> continúo mi párrafo
 
 Cuando se hace clic, copiará el texto escrito dentro al portapapeles del usuario y mostrará un mensaje de copiado.
 
-Si no se añade ninguna clase, aplicará los [estilos de enlace](#link-class), pero puedes usar la clase que quieras.
+Si no se añade ninguna clase, aplicará los [estilos de enlace](../CustomClasses/#link), pero puedes usar la clase que quieras.
 
 ```html
 <fh-copy>Mi texto</fh-copy>
@@ -153,3 +153,10 @@ execProcessParams(processname: string, objectname: string, objectwhere: string, 
 
 }
 ```
+
+## Siguientes pasos
+
+Ahora que conoces los componentes personalizados:
+
+1. **Aplica estilos personalizados** - Aprende sobre [Clases personalizadas](CustomClasses.md) para efectos visuales especiales
+2. **Construye tu sitio** - Revisa [Construir tu sitio](../Deployment/BuildingYourSite.md) para compilar para producción

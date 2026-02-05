@@ -1,4 +1,4 @@
-# Advanced Markdown Elements
+# Advanced markdown elements
 
 MkDocs and the Material theme support advanced Markdown extensions that let you create richer, more interactive content. This guide covers the most useful features.
 
@@ -349,8 +349,8 @@ Paragraph with a custom class
 
 [Open in a new tab](https://www.mkdocs.org){ target="_blank" rel="noopener" .md-button }
 
-Text styled using the fh-info-card class.
-{ .fh-info-card }
+!!! info
+    Text styled using the fh-info-card class.
 
 ## Variables and macros
 
@@ -368,3 +368,11 @@ Use them in Markdown:
 Current version: {{ version }}
 Developed by {{ company }}
 ```
+
+## Next steps
+
+Now that you know advanced Markdown features:
+
+1. **Add custom components** - Learn about [Custom components](CustomComponents.md) for interactive elements
+2. **Apply custom styling** - Check [Custom classes](CustomClasses.md) for special visual effects
+3. **Build your site** - See [Building your site](../Deployment/BuildingYourSite.md) to compile for production

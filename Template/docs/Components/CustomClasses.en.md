@@ -31,7 +31,7 @@ My text <span class="link">the link</span> continue my text
 
 <span class="button">The button</span>
 
-## Youtube videos
+## YouTube videos
 
 ```html
 <div class="video-wrapper">  
@@ -72,3 +72,9 @@ Toggle between dark and light mode to see different images:
 ```js { .no-language }
     mycode();
 ```
+
+## Next steps
+
+Now that you know about custom classes:
+
+1. **Build your site** - Learn how to [build your site](../Deployment/BuildingYourSite.md) for production

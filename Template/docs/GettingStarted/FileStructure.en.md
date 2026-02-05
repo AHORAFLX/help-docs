@@ -135,3 +135,35 @@ For these translations, there is a `translate` function. You only need to pass t
 
 !!! info "Categories"
     We don’t organize these by categories because the help section should not have as many translations as Flexygo or other applications
+## Next steps
+
+Now that you understand the project structure:
+
+1. **Start writing** - Learn [Basic markdown](../Components/BasicMarkdown.md) to create your first content
+2. **Add advanced features** - Explore [Advanced markdown](../Components/AdvancedMarkdown.md) for tabs, admonitions, and diagrams
+3. **Customize appearance** - Check [Custom components](../Components/CustomComponents.md) for interactive elements
+
+### Category translations
+
+Categories, as they are not divided by language folders, are not automatically translated. To add translations, you must add them to the **nav_translations** section in mkdocs.yml like this:
+
+!!! warning "Key name"
+    The key of the category to translate will be the exact same as the folder name, if it include spaces it must contain them
+
+```yaml
+ - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: es
+          name: Español
+          build: true
+          # Here goes every menu translation for Spanish ↓
+          nav_translations:
+            My category: Mi categoría
+            Other category: Otra categoría
+            ...
+```
