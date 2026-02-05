@@ -57,6 +57,8 @@ extra_css:
   - stylesheets/fh-structural/components/fh-namepropagator.css
   ## Basic fonts and icons
   - docs_assets/fh-structural/fonts/flags/flags.css
+  - docs_assets/fh-structural/fonts/flexygo/utils.css
+  - docs_assets/fh-structural/fonts/flexygo/flexygo.css
 
   # Your project styles files here ↓
 
