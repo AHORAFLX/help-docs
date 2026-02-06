@@ -4,7 +4,7 @@ Learn how to manage versioned documentation deployments using Mike.
 
 ## Overview
 
-Mike is a version management tool for MkDocs that allows you to maintain multiple versions of your documentation. It:
+Mike is the version management tool that will generate the documentation site, all in HTML so that this branch can be directly uploaded to the server, within the `gh-pages` branch.
 
 1. Builds documentation for specific versions
 2. Manages multiple versions simultaneously
@@ -26,51 +26,31 @@ Install Mike using pip:
 pip install mike
 ```
 
-## Deploying New Versions
-
-### Deploy a new version
+## Deploying a new version
 
 To deploy a new version of your documentation:
 
 ```bash
-mike deploy <version> <alias>
+mike deploy --update-aliases <version> latest
+mike set-default <version>
 ```
 
-**Example**: Deploy version 1.0.0 as latest:
+**Example**: Deploy version 1.0 as latest:
 
 ```bash
-mike deploy 1.0.0 latest
+mike deploy --update-aliases 1.0 latest
+mike set-default 1.0
 ```
 
-This command:
+- The first command creates the new version and assigns the "latest" alias to identify it as the current version
+- The second command sets it as the default, ensuring users see this version when visiting the base URL
 
-- Builds your documentation
-- Creates/updates version 1.0.0 in `gh-pages` branch
-- Assigns the "latest" alias to this version
-- Commits changes (but doesn't push)
+## Updating existing versions
 
-### Deploy and update default version
-
-To deploy and set as the default version (shown when users first visit):
+To update an existing version:
 
 ```bash
-mike deploy <version> <alias> --update-aliases
-```
-
-**Example**:
-
-```bash
-mike deploy 2.0.0 latest --update-aliases
-```
-
-## Updating Existing Versions
-
-### Update version content
-
-To rebuild and update an existing version:
-
-```bash
-mike deploy <version> --update-aliases
+mike deploy --update <version>
 ```
 
 **Example**: 
@@ -78,24 +58,7 @@ mike deploy <version> --update-aliases
 Update version 1.0.0:
 
 ```bash
-mike deploy 1.0.0 --update-aliases
-```
-
-!!! tip
-    Use `--update-aliases` to keep existing aliases intact when updating.
-
-### Change version aliases
-
-Reassign aliases to different versions:
-
-```bash
-mike alias <version> <new-alias>
-```
-
-**Example**: Move "latest" alias to version 2.0.0:
-
-```bash
-mike alias 2.0.0 latest
+mike deploy --update 1.0
 ```
 
 ## Deleting Versions
@@ -108,10 +71,12 @@ To remove a version from deployment:
 mike delete <version>
 ```
 
-**Example**: Delete version 0.9.0:
+**Example**: 
+
+Delete version 1.2:
 
 ```bash
-mike delete 0.9.0
+mike delete 1.2
 ```
 
 ### Delete multiple versions
@@ -124,16 +89,13 @@ mike delete <version1> <version2> <version3>
 
 **Example**:
 
+Delete versions 1.2, 1.3 and 1.4
+
 ```bash
-mike delete 0.8.0 0.9.0 1.0.0-beta
+mike delete 1.2 1.3 1.4
 ```
 
-!!! warning
-    Deletion is immediate and removes the version from the `gh-pages` branch. Always verify before deleting.
-
-## Managing Versions
-
-### List all versions
+## List all versions
 
 View all deployed versions:
 
@@ -148,25 +110,7 @@ Output example:
 2.0.0 [stable]
 ```
 
-### Set default version
-
-Set which version users see by default:
-
-```bash
-mike set-default <version>
-```
-
-**Example**: 
-
-Set version 2.0.0 as default:
-
-```bash
-mike set-default 2.0.0
-```
-
 ## Understanding the gh-pages Branch
-
-### Where versions are stored
 
 Mike stores all versions in the **`gh-pages`** branch of your repository as html files that will be deploy the docs website with it's version selector already implemented:
 

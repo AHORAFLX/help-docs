@@ -4,7 +4,7 @@ Aprende cómo gestionar despliegues de documentación versionada usando Mike.
 
 ## Descripción general
 
-Mike es una herramienta de gestión de versiones para MkDocs que te permite mantener múltiples versiones de tu documentación. Permite:
+Mike es la herramienta de gestión de versiones que nos generará la página de documentación, toda en HTML para que sea directamente esa rama la que subir al servido, dentro de la rama `gh-pages`.
 
 1. Construir documentación para versiones específicas
 2. Gestionar múltiples versiones simultáneamente
@@ -26,78 +26,39 @@ Instala Mike usando pip:
 pip install mike
 ```
 
-## Desplegar Nuevas Versiones
-
-### Desplegar una nueva versión
+## Desplegar una nueva versión
 
 Para desplegar una nueva versión de tu documentación:
 
 ```bash
-mike deploy <version> <alias>
+mike deploy --update-aliases <version> latest
+mike set-default <version>
 ```
 
-**Ejemplo**: Desplegar versión 1.0.0 como latest:
+**Ejemplo**: Desplegar versión 1.0 como latest:
 
 ```bash
-mike deploy 1.0.0 latest
+mike deploy --update-aliases 1.0 latest
+mike set-default 1.0
 ```
 
-Este comando:
+- El primer comando crea la nueva versión y asigna el alias "latest" para identificarla como la versión actual
+- El segundo comando la establece como predeterminada, asegurando que los usuarios vean esta versión al visitar la URL base
 
-- Construye tu documentación
-- Crea/actualiza la versión 1.0.0 en la rama `gh-pages`
-- Asigna el alias "latest" a esta versión
-- Hace commit de los cambios (pero no hace push)
+## Actualizar versiones existentes
 
-### Desplegar y actualizar versión predeterminada
-
-Para desplegar y establecer como la versión predeterminada (mostrada cuando los usuarios visitan por primera vez):
+Para actualizar una versión existente:
 
 ```bash
-mike deploy <version> <alias> --update-aliases
-```
-
-**Ejemplo**:
-
-```bash
-mike deploy 2.0.0 latest --update-aliases
-```
-
-## Actualizar Versiones Existentes
-
-### Actualizar contenido de versión
-
-Para reconstruir y actualizar una versión existente:
-
-```bash
-mike deploy <version> --update-aliases
+mike deploy --update <version>
 ```
 
 **Ejemplo**: 
 
-Actualizar versión 1.0.0:
+Actualizar versión 1.0:
 
 ```bash
-mike deploy 1.0.0 --update-aliases
-```
-
-!!! tip
-    Usa `--update-aliases` para mantener los aliases existentes intactos al actualizar.
-
-### Cambiar aliases de versión
-
-Reasignar aliases a diferentes versiones:
-
-```bash
-mike alias <version> <nuevo-alias>
-```
-
-**Ejemplo**: 
-
-Mover alias "latest" a versión 2.0.0:
-
-```bash
-mike alias 2.0.0 latest
+mike deploy --update 1.0
 ```
 
 ## Eliminar Versiones
@@ -110,10 +71,12 @@ Para eliminar una versión del despliegue:
 mike delete <version>
 ```
 
-**Ejemplo**: Eliminar versión 0.9.0:
+**Ejemplo**: 
+
+Eliminar versión 1.2:
 
 ```bash
-mike delete 0.9.0
+mike delete 1.2
 ```
 
 ### Eliminar múltiples versiones
@@ -126,16 +89,13 @@ mike delete <version1> <version2> <version3>
 
 **Ejemplo**:
 
+Eliminar versiones 1.2, 1.3 y 1.4
+
 ```bash
-mike delete 0.8.0 0.9.0 1.0.0-beta
+mike delete 1.2 1.3 1.4
 ```
 
-!!! warning
-    La eliminación es inmediata y remueve la versión de la rama `gh-pages`. Siempre verifica antes de eliminar.
-
-## Gestionar Versiones
-
-### Listar todas las versiones
+## Listar todas las versiones
 
 Ver todas las versiones desplegadas:
 
@@ -144,30 +104,15 @@ mike list
 ```
 
 Ejemplo de salida:
-
 ```
 1.0.0 [latest]
 1.1.0
 2.0.0 [stable]
 ```
 
-### Establecer versión predeterminada
-
-Establecer qué versión ven los usuarios por defecto:
-
-```bash
-mike set-default <version>
-```
-
-**Ejemplo**: Establecer versión 2.0.0 como predeterminada:
-
-```bash
-mike set-default 2.0.0
-```
-
 ## Entender la Rama gh-pages
 
-Mike almacena todas las versiones en la rama **`gh-pages`** de tu repositorio en archivos html que será la web de la documentación con su respectivo selector de versiones:
+Mike almacena todas las versiones en la rama **`gh-pages`** de tu repositorio como archivos html que desplegarán el sitio web de documentación con su selector de versiones ya implementado:
 
 ```
 rama gh-pages
