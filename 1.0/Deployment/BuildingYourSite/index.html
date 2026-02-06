@@ -682,16 +682,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#desplegar-nuevas-versiones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desplegar Nuevas Versiones
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Desplegar Nuevas Versiones">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#desplegar-una-nueva-version" class="md-nav__link">
     <span class="md-ellipsis">
       Desplegar una nueva versión
@@ -699,51 +689,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#desplegar-y-actualizar-version-predeterminada" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desplegar y actualizar versión predeterminada
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#actualizar-versiones-existentes" class="md-nav__link">
     <span class="md-ellipsis">
-      Actualizar Versiones Existentes
+      Actualizar versiones existentes
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Actualizar Versiones Existentes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#actualizar-contenido-de-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actualizar contenido de versión
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cambiar-aliases-de-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cambiar aliases de versión
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -781,35 +733,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gestionar-versiones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gestionar Versiones
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Gestionar Versiones">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#listar-todas-las-versiones" class="md-nav__link">
     <span class="md-ellipsis">
       Listar todas las versiones
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#establecer-version-predeterminada" class="md-nav__link">
-    <span class="md-ellipsis">
-      Establecer versión predeterminada
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -982,7 +910,7 @@
 <h1 id="construir-y-desplegar-con-mike">Construir y Desplegar con Mike<a class="headerlink" href="#construir-y-desplegar-con-mike" title="Permanent link">¶</a></h1>
 <p>Aprende cómo gestionar despliegues de documentación versionada usando Mike.</p>
 <h2 id="descripcion-general">Descripción general<a class="headerlink" href="#descripcion-general" title="Permanent link">¶</a></h2>
-<p>Mike es una herramienta de gestión de versiones para MkDocs que te permite mantener múltiples versiones de tu documentación. Permite:</p>
+<p>Mike es la herramienta de gestión de versiones que nos generará la página de documentación, toda en HTML para que sea directamente esa rama la que subir al servido, dentro de la rama <code>gh-pages</code>.</p>
 <ol>
 <li>Construir documentación para versiones específicas</li>
 <li>Gestionar múltiples versiones simultáneamente</li>
@@ -1002,108 +930,76 @@
 <p>Instala Mike usando pip:</p>
 <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mike
 </span></code></pre></div>
-<h2 id="desplegar-nuevas-versiones">Desplegar Nuevas Versiones<a class="headerlink" href="#desplegar-nuevas-versiones" title="Permanent link">¶</a></h2>
-<h3 id="desplegar-una-nueva-version">Desplegar una nueva versión<a class="headerlink" href="#desplegar-una-nueva-version" title="Permanent link">¶</a></h3>
+<h2 id="desplegar-una-nueva-version">Desplegar una nueva versión<a class="headerlink" href="#desplegar-una-nueva-version" title="Permanent link">¶</a></h2>
 <p>Para desplegar una nueva versión de tu documentación:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mike<span class="w"> </span>deploy<span class="w"> </span>&lt;version&gt;<span class="w"> </span>&lt;alias&gt;
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mike<span class="w"> </span>deploy<span class="w"> </span>--update-aliases<span class="w"> </span>&lt;version&gt;<span class="w"> </span>latest
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mike<span class="w"> </span>set-default<span class="w"> </span>&lt;version&gt;
 </span></code></pre></div>
-<p><strong>Ejemplo</strong>: Desplegar versión 1.0.0 como latest:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mike<span class="w"> </span>deploy<span class="w"> </span><span class="m">1</span>.0.0<span class="w"> </span>latest
+<p><strong>Ejemplo</strong>: Desplegar versión 1.0 como latest:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mike<span class="w"> </span>deploy<span class="w"> </span>--update-aliases<span class="w"> </span><span class="m">1</span>.0<span class="w"> </span>latest
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>mike<span class="w"> </span>set-default<span class="w"> </span><span class="m">1</span>.0
 </span></code></pre></div>
-<p>Este comando:</p>
 <ul>
-<li>Construye tu documentación</li>
-<li>Crea/actualiza la versión 1.0.0 en la rama <code>gh-pages</code></li>
-<li>Asigna el alias "latest" a esta versión</li>
-<li>Hace commit de los cambios (pero no hace push)</li>
+<li>El primer comando crea la nueva versión y asigna el alias "latest" para identificarla como la versión actual</li>
+<li>El segundo comando la establece como predeterminada, asegurando que los usuarios vean esta versión al visitar la URL base</li>
 </ul>
-<h3 id="desplegar-y-actualizar-version-predeterminada">Desplegar y actualizar versión predeterminada<a class="headerlink" href="#desplegar-y-actualizar-version-predeterminada" title="Permanent link">¶</a></h3>
-<p>Para desplegar y establecer como la versión predeterminada (mostrada cuando los usuarios visitan por primera vez):</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mike<span class="w"> </span>deploy<span class="w"> </span>&lt;version&gt;<span class="w"> </span>&lt;alias&gt;<span class="w"> </span>--update-aliases
-</span></code></pre></div>
-<p><strong>Ejemplo</strong>:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mike<span class="w"> </span>deploy<span class="w"> </span><span class="m">2</span>.0.0<span class="w"> </span>latest<span class="w"> </span>--update-aliases
-</span></code></pre></div>
-<h2 id="actualizar-versiones-existentes">Actualizar Versiones Existentes<a class="headerlink" href="#actualizar-versiones-existentes" title="Permanent link">¶</a></h2>
-<h3 id="actualizar-contenido-de-version">Actualizar contenido de versión<a class="headerlink" href="#actualizar-contenido-de-version" title="Permanent link">¶</a></h3>
-<p>Para reconstruir y actualizar una versión existente:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mike<span class="w"> </span>deploy<span class="w"> </span>&lt;version&gt;<span class="w"> </span>--update-aliases
+<h2 id="actualizar-versiones-existentes">Actualizar versiones existentes<a class="headerlink" href="#actualizar-versiones-existentes" title="Permanent link">¶</a></h2>
+<p>Para actualizar una versión existente:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mike<span class="w"> </span>deploy<span class="w"> </span>--update<span class="w"> </span>&lt;version&gt;
 </span></code></pre></div>
 <p><strong>Ejemplo</strong>: </p>
-<p>Actualizar versión 1.0.0:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mike<span class="w"> </span>deploy<span class="w"> </span><span class="m">1</span>.0.0<span class="w"> </span>--update-aliases
-</span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Usa <code>--update-aliases</code> para mantener los aliases existentes intactos al actualizar.</p>
-</div>
-<h3 id="cambiar-aliases-de-version">Cambiar aliases de versión<a class="headerlink" href="#cambiar-aliases-de-version" title="Permanent link">¶</a></h3>
-<p>Reasignar aliases a diferentes versiones:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mike<span class="w"> </span><span class="nb">alias</span><span class="w"> </span>&lt;version&gt;<span class="w"> </span>&lt;nuevo-alias&gt;
-</span></code></pre></div>
-<p><strong>Ejemplo</strong>: </p>
-<p>Mover alias "latest" a versión 2.0.0:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>mike<span class="w"> </span><span class="nb">alias</span><span class="w"> </span><span class="m">2</span>.0.0<span class="w"> </span>latest
+<p>Actualizar versión 1.0:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mike<span class="w"> </span>deploy<span class="w"> </span>--update<span class="w"> </span><span class="m">1</span>.0
 </span></code></pre></div>
 <h2 id="eliminar-versiones">Eliminar Versiones<a class="headerlink" href="#eliminar-versiones" title="Permanent link">¶</a></h2>
 <h3 id="eliminar-una-version-especifica">Eliminar una versión específica<a class="headerlink" href="#eliminar-una-version-especifica" title="Permanent link">¶</a></h3>
 <p>Para eliminar una versión del despliegue:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>mike<span class="w"> </span>delete<span class="w"> </span>&lt;version&gt;
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mike<span class="w"> </span>delete<span class="w"> </span>&lt;version&gt;
 </span></code></pre></div>
-<p><strong>Ejemplo</strong>: Eliminar versión 0.9.0:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>mike<span class="w"> </span>delete<span class="w"> </span><span class="m">0</span>.9.0
+<p><strong>Ejemplo</strong>: </p>
+<p>Eliminar versión 1.2:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mike<span class="w"> </span>delete<span class="w"> </span><span class="m">1</span>.2
 </span></code></pre></div>
 <h3 id="eliminar-multiples-versiones">Eliminar múltiples versiones<a class="headerlink" href="#eliminar-multiples-versiones" title="Permanent link">¶</a></h3>
 <p>Eliminar varias versiones a la vez:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>mike<span class="w"> </span>delete<span class="w"> </span>&lt;version1&gt;<span class="w"> </span>&lt;version2&gt;<span class="w"> </span>&lt;version3&gt;
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mike<span class="w"> </span>delete<span class="w"> </span>&lt;version1&gt;<span class="w"> </span>&lt;version2&gt;<span class="w"> </span>&lt;version3&gt;
 </span></code></pre></div>
 <p><strong>Ejemplo</strong>:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>mike<span class="w"> </span>delete<span class="w"> </span><span class="m">0</span>.8.0<span class="w"> </span><span class="m">0</span>.9.0<span class="w"> </span><span class="m">1</span>.0.0-beta
+<p>Eliminar versiones 1.2, 1.3 y 1.4</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>mike<span class="w"> </span>delete<span class="w"> </span><span class="m">1</span>.2<span class="w"> </span><span class="m">1</span>.3<span class="w"> </span><span class="m">1</span>.4
 </span></code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>La eliminación es inmediata y remueve la versión de la rama <code>gh-pages</code>. Siempre verifica antes de eliminar.</p>
-</div>
-<h2 id="gestionar-versiones">Gestionar Versiones<a class="headerlink" href="#gestionar-versiones" title="Permanent link">¶</a></h2>
-<h3 id="listar-todas-las-versiones">Listar todas las versiones<a class="headerlink" href="#listar-todas-las-versiones" title="Permanent link">¶</a></h3>
+<h2 id="listar-todas-las-versiones">Listar todas las versiones<a class="headerlink" href="#listar-todas-las-versiones" title="Permanent link">¶</a></h2>
 <p>Ver todas las versiones desplegadas:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>mike<span class="w"> </span>list
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>mike<span class="w"> </span>list
 </span></code></pre></div>
-<p>Ejemplo de salida:</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>1.0.0 [latest]
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>1.1.0
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>2.0.0 [stable]
-</span></code></pre></div>
-<h3 id="establecer-version-predeterminada">Establecer versión predeterminada<a class="headerlink" href="#establecer-version-predeterminada" title="Permanent link">¶</a></h3>
-<p>Establecer qué versión ven los usuarios por defecto:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>mike<span class="w"> </span>set-default<span class="w"> </span>&lt;version&gt;
-</span></code></pre></div>
-<p><strong>Ejemplo</strong>: Establecer versión 2.0.0 como predeterminada:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>mike<span class="w"> </span>set-default<span class="w"> </span><span class="m">2</span>.0.0
-</span></code></pre></div>
+<p>Ejemplo de salida:
+</p><div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>1.0.0 [latest]
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>1.1.0
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2.0.0 [stable]
+</span></code></pre></div><p></p>
 <h2 id="entender-la-rama-gh-pages">Entender la Rama gh-pages<a class="headerlink" href="#entender-la-rama-gh-pages" title="Permanent link">¶</a></h2>
-<p>Mike almacena todas las versiones en la rama <strong><code>gh-pages</code></strong> de tu repositorio en archivos html que será la web de la documentación con su respectivo selector de versiones:</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>rama gh-pages
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>├── 1.0.0/
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>│   ├── index.html
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>│   ├── assets/
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>│   └── ...
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>├── 1.1.0/
-</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>│   ├── index.html
-</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>│   ├── assets/
-</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>│   └── ...
-</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>├── 2.0.0/
-</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>│   ├── index.html
-</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>│   ├── assets/
-</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>│   └── ...
-</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>└── versions.json    # Metadatos de versión
+<p>Mike almacena todas las versiones en la rama <strong><code>gh-pages</code></strong> de tu repositorio como archivos html que desplegarán el sitio web de documentación con su selector de versiones ya implementado:</p>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>rama gh-pages
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>├── 1.0.0/
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>│   ├── index.html
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>│   ├── assets/
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>│   └── ...
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>├── 1.1.0/
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>│   ├── index.html
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>│   ├── assets/
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>│   └── ...
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>├── 2.0.0/
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>│   ├── index.html
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>│   ├── assets/
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>│   └── ...
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>└── versions.json    # Metadatos de versión
 </span></code></pre></div>
 <h2 id="problemas-comunes">Problemas Comunes<a class="headerlink" href="#problemas-comunes" title="Permanent link">¶</a></h2>
 <h3 id="mike-no-encontrado">Mike no encontrado<a class="headerlink" href="#mike-no-encontrado" title="Permanent link">¶</a></h3>
 <p><strong>Error</strong>: </p>
 <p><code>mike: command not found</code></p>
 <p><strong>Solución</strong>:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mike
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mike
 </span></code></pre></div>
 <h3 id="permiso-denegado-en-gh-pages">Permiso denegado en gh-pages<a class="headerlink" href="#permiso-denegado-en-gh-pages" title="Permanent link">¶</a></h3>
 <p><strong>Error</strong>: </p>
@@ -1119,7 +1015,7 @@
 <p><strong>Solución</strong>:</p>
 <ol>
 <li>Verifica que hiciste push de la rama <code>gh-pages</code>:
-   <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>gh-pages
+   <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>gh-pages
 </span></code></pre></div></li>
 <li>Verifica que GitHub Pages esté habilitado en la configuración del repositorio</li>
 <li>Asegúrate de que GitHub Pages esté configurado para usar la rama <code>gh-pages</code></li>
@@ -1183,16 +1079,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#desplegar-nuevas-versiones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desplegar Nuevas Versiones
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Desplegar Nuevas Versiones">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#desplegar-una-nueva-version" class="md-nav__link">
     <span class="md-ellipsis">
       Desplegar una nueva versión
@@ -1200,51 +1086,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#desplegar-y-actualizar-version-predeterminada" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desplegar y actualizar versión predeterminada
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#actualizar-versiones-existentes" class="md-nav__link">
     <span class="md-ellipsis">
-      Actualizar Versiones Existentes
+      Actualizar versiones existentes
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Actualizar Versiones Existentes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#actualizar-contenido-de-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actualizar contenido de versión
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cambiar-aliases-de-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cambiar aliases de versión
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1282,35 +1130,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gestionar-versiones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gestionar Versiones
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Gestionar Versiones">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#listar-todas-las-versiones" class="md-nav__link">
     <span class="md-ellipsis">
       Listar todas las versiones
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#establecer-version-predeterminada" class="md-nav__link">
-    <span class="md-ellipsis">
-      Establecer versión predeterminada
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
