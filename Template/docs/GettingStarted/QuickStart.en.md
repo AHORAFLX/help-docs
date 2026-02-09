@@ -44,11 +44,13 @@ Extract the ZIP file to a location where you want to work on your documentation 
 
 ## Step 3: Install MkDocs
 
-Open a terminal/command prompt and install MkDocs with required plugins:
+Open a terminal/command prompt in the template folder and install MkDocs with all required dependencies:
 
 ```bash
-pip install mkdocs mkdocs-material mkdocs-static-i18n mkdocs-glightbox pymdown-extensions
+pip install -r requirements.txt
 ```
+
+This will install MkDocs and all necessary plugins with the correct versions specified in the `requirements.txt` file.
 
 ## Step 4: Navigate to your project
 

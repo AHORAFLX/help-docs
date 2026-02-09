@@ -44,11 +44,13 @@ Extrae el archivo ZIP en una ubicación donde quieras trabajar en tu documentaci
 
 ## Paso 3: Instalar MkDocs
 
-Abre una terminal/símbolo del sistema e instala MkDocs con los plugins requeridos:
+Abre una terminal/símbolo del sistema en la carpeta de la plantilla e instala MkDocs con todas las dependencias requeridas:
 
 ```bash
-pip install mkdocs mkdocs-material mkdocs-static-i18n mkdocs-glightbox pymdown-extensions
+pip install -r requirements.txt
 ```
+
+Esto instalará MkDocs y todos los plugins necesarios con las versiones correctas especificadas en el archivo `requirements.txt`.
 
 ## Paso 4: Navegar a tu proyecto
 
