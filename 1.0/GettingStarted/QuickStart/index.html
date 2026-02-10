@@ -883,9 +883,10 @@
 <p><button class="button" onclick="downloadTemplateZip()">Descargar ZIP</button></p>
 <p>Extrae el archivo ZIP en una ubicación donde quieras trabajar en tu documentación (ej: <code>C:\Proyectos\MisDocs</code> o <code>~/Proyectos/MisDocs</code>).</p>
 <h2 id="paso-3-instalar-mkdocs">Paso 3: Instalar MkDocs<a class="headerlink" href="#paso-3-instalar-mkdocs" title="Permanent link">¶</a></h2>
-<p>Abre una terminal/símbolo del sistema e instala MkDocs con los plugins requeridos:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material<span class="w"> </span>mkdocs-static-i18n<span class="w"> </span>mkdocs-glightbox<span class="w"> </span>pymdown-extensions
+<p>Abre una terminal/símbolo del sistema en la carpeta de la plantilla e instala MkDocs con todas las dependencias requeridas:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </span></code></pre></div>
+<p>Esto instalará MkDocs y todos los plugins necesarios con las versiones correctas especificadas en el archivo <code>requirements.txt</code>.</p>
 <h2 id="paso-4-navegar-a-tu-proyecto">Paso 4: Navegar a tu proyecto<a class="headerlink" href="#paso-4-navegar-a-tu-proyecto" title="Permanent link">¶</a></h2>
 <p>En la terminal, ve a la carpeta de tu plantilla extraída:</p>
 <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>ruta/a/tu/plantilla

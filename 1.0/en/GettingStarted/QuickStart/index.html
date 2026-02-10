@@ -883,9 +883,10 @@
 <p><button class="button" onclick="downloadTemplateZip()">Download ZIP</button></p>
 <p>Extract the ZIP file to a location where you want to work on your documentation (e.g., <code>C:\Projects\MyDocs</code> or <code>~/Projects/MyDocs</code>).</p>
 <h2 id="step-3-install-mkdocs">Step 3: Install MkDocs<a class="headerlink" href="#step-3-install-mkdocs" title="Permanent link">¶</a></h2>
-<p>Open a terminal/command prompt and install MkDocs with required plugins:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material<span class="w"> </span>mkdocs-static-i18n<span class="w"> </span>mkdocs-glightbox<span class="w"> </span>pymdown-extensions
+<p>Open a terminal/command prompt in the template folder and install MkDocs with all required dependencies:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </span></code></pre></div>
+<p>This will install MkDocs and all necessary plugins with the correct versions specified in the <code>requirements.txt</code> file.</p>
 <h2 id="step-4-navigate-to-your-project">Step 4: Navigate to your project<a class="headerlink" href="#step-4-navigate-to-your-project" title="Permanent link">¶</a></h2>
 <p>In the terminal, go to your extracted template folder:</p>
 <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>path/to/your/template
