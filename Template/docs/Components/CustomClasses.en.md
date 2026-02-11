@@ -1,4 +1,4 @@
-# Our CSS classes { .flx-title-with-image }
+# Our CSS classes { .fh-title-with-image }
 
 ![Ahora ERP](../docs_assets/images/logos/AHORA-white.svg){ .fh-image-of-title style="filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(5563%) hue-rotate(305deg) brightness(105%) contrast(81%);" }
 
@@ -7,7 +7,7 @@ There are multiple classes that you can use to style directly help sections or c
 ## Title with images
 
 ```md
-# Paco { .flx-title-with-image }
+# Paco { .fh-title-with-image }
 
 ![Ahora ERP](../docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
 ```

@@ -1,4 +1,4 @@
-# Nuestras clases CSS { .flx-title-with-image }
+# Nuestras clases CSS { .fh-title-with-image }
 
 ![Ahora ERP](../docs_assets/images/logos/AHORA-white.svg){ .fh-image-of-title style="filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(5563%) hue-rotate(305deg) brightness(105%) contrast(81%);" }
 
@@ -7,7 +7,7 @@ Hay varias clases que puedes usar para dar estilo directamente a secciones o com
 ## Título con imágenes
 
 ```md
-# Paco { .flx-title-with-image }
+# Paco { .fh-title-with-image }
 
 ![Ahora ERP](../docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
 ```
