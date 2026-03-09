@@ -1,0 +1,107 @@
+/* ─── Reset & base ─────────────────────────────────────── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ─── Skin - default ─────────────────────── */
+:root {
+    --accent:       #001b5e;
+    --accent-hover: #001040;
+    --code-glow:    rgba(0, 27, 94, 0.25);
+}
+
+/* ─── Skin — flexygo ────────────────────────────────────────── */
+.skin-flexygo {
+    --accent:       #2db7af;
+    --accent-hover: #1f8880;
+    --code-glow:    rgba(45, 183, 175, 0.25);
+}
+
+/* ─── Page layout ───────────────────────────────────────── */
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #e9ecef;
+    background-image: url('/404/light-background.svg');
+    color: #222222;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+/* ─── Error box ─────────────────────────────────────────── */
+.error-box {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 1rem;
+    padding: 3rem 3.5rem;
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 0 40px var(--code-glow);
+}
+
+.error-code {
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--accent);
+    letter-spacing: -4px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 30px var(--code-glow);
+}
+
+.error-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #222222;
+}
+
+.error-message {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* ─── Button ────────────────────────────────────────────── */
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.7rem 1.6rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px var(--code-glow);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--code-glow);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.button .mdi {
+    font-size: 1.2rem;
+}

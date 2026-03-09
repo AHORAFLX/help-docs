@@ -36,6 +36,7 @@ nav:
     - AdvancedMarkdown: Components/AdvancedMarkdown.md
     - CustomComponents: Components/CustomComponents.md
     - CustomClasses: Components/CustomClasses.md
+    - Error404Page: Components/Error404.md
   - Deployment:
     - BuildingYourSite: Deployment/BuildingYourSite.md
   - Reference:
@@ -132,6 +133,7 @@ plugins:
             AdvancedMarkdown: Advanced markdown
             CustomComponents: Custom components
             CustomClasses: Custom classes
+            Error404Page: 404 error page
             Deployment: Deployment
             BuildingYourSite: Building your site
             Reference: Reference
@@ -152,6 +154,7 @@ plugins:
             AdvancedMarkdown: Markdown avanzado
             CustomComponents: Componentes personalizados
             CustomClasses: Clases personalizadas
+            Error404Page: Página de error 404
             Deployment: Despliegue
             BuildingYourSite: Construcción del sitio
             Reference: Referencia
