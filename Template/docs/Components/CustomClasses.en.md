@@ -15,6 +15,14 @@ There are multiple classes that you can use to style directly help sections or c
 !!! info "Example"
     To see an example just look at the title of this section
 
+## Version tags in titles <span class="fh-version-tag" title="Available since version 8.5">8.5+</span>
+
+```md
+# My feature <span class="fh-version-tag" title="Available since version 8.5">8.5+</span>
+```
+
+The text in the `title` attribute will be shown when hovering the tag.
+
 ## Link
 
 ```md

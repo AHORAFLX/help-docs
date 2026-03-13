@@ -15,6 +15,14 @@ Hay varias clases que puedes usar para dar estilo directamente a secciones o com
 !!! info "Ejemplo"
     Para ver un ejemplo, solo mira el título de esta sección
 
+## Etiqueta de versión en títulos <span class="fh-version-tag" title="Disponible desde la versión 8.5">8.5+</span>
+
+```md
+# Mi funcionalidad 
+```
+
+El texto del atributo `title` se mostrará en el hover de la etiqueta.
+
 ## Enlace
 
 ```md
