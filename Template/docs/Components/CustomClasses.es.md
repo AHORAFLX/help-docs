@@ -18,18 +18,28 @@ Hay varias clases que puedes usar para dar estilo directamente a secciones o com
 ## Etiqueta de versión en títulos <span class="fh-version-tag" title="Disponible desde la versión 8.5">8.5+</span>
 
 ```md
-# Mi funcionalidad 
+## Mi funcionalidad <span class="fh-version-tag" title="Disponible desde la versión 8.5">8.5+</span>
 ```
 
-El texto del atributo `title` se mostrará en el hover de la etiqueta.
+El texto del atributo `title` se mostrará al pasar el cursor sobre la etiqueta.
+
+```md
+---
+title: WhatsApp
+---
+
+# Mi funcionalidad <span class="fh-version-tag" title="Disponible desde la versión 8.5">8.5+</span>
+```
+
+Si quieres usarlo en el primer encabezado de una página y no quieres que la versión aparezca en el nodo de navegación de la barra lateral, debes usar la opción `title` como en el ejemplo.
 
 ## Enlace
 
 ```md
-Mi texto <span class="link">el enlace</span> continúo mi texto
+Mi texto <span class="link">el enlace</span> continúa mi texto
 ```
 
-Mi texto <span class="link">el enlace</span> continúo mi texto
+Mi texto <span class="link">el enlace</span> continúa mi texto
 
 ## Botón
 

@@ -18,10 +18,20 @@ There are multiple classes that you can use to style directly help sections or c
 ## Version tags in titles <span class="fh-version-tag" title="Available since version 8.5">8.5+</span>
 
 ```md
-# My feature <span class="fh-version-tag" title="Available since version 8.5">8.5+</span>
+## My feature <span class="fh-version-tag" title="Available since version 8.5">8.5+</span>
 ```
 
 The text in the `title` attribute will be shown when hovering the tag.
+
+```md
+---
+title: WhatsApp
+---
+
+# My feature <span class="fh-version-tag" title="Available since version 8.5">8.5+</span>
+```
+
+If you want to use it on the first header of a page and you don't want your version appearing in the left sidebar navigation node, you should use the `title` option as shown in the example.
 
 ## Link
 
