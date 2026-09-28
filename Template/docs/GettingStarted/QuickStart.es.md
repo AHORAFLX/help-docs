@@ -10,8 +10,8 @@ Comprueba si Python está instalado:
     ```powershell
     python --version
     ```
-    
-    Si Python no está instalado, descárgalo desde [python.org](https://www.python.org/downloads/) y asegúrate de marcar "Add Python to PATH" durante la instalación.
+    !!! warning "Al instalar"
+        Si Python no está instalado, descárgalo desde [python.org](https://www.python.org/downloads/) y asegúrate de marcar **Add Python to PATH** durante la instalación.
 
 === "macOS"
     ```bash
@@ -81,6 +81,9 @@ INFO    -  Documentation built in 0.52 seconds
 INFO    -  [12:34:56] Serving on http://127.0.0.1:8000/
 ```
 
+!!! warning "Si esto no funciona"
+    Si al ejecutar este comando te aparece un **error** revisa **[problemas comunes](#problemas-comunes)**.
+
 ## Paso 6: Ver tu sitio
 
 Abre tu navegador y ve a:
@@ -108,23 +111,45 @@ Ahora que todo funciona:
 
 ## Problemas comunes
 
-**¿Puerto ya en uso?**
+### Comando no reconocido
+
+Si te aparece el error **command not found** quiere decir o que no has hecho la instalación con <fh-copy>pip install -r requirements.txt</fh-copy> o que no tienes agregado el **path** de python. En cuyo caso deberás añadir el path de python en tu dispositivo o ejecutar los comandos de mkdocs precedidos de <fh-copy>python -m</fh-copy> tal que así:
+
+```bash
+python -m mkdocs serve
+```
+
+!!! warning "Al usar python-m"
+    En el caso de que por cualquier razón decidas no agregar el path de python debes saber que tendrás que añadir este prefijo en cualquier otro comando pythion, como bien lo es el uso del plugin mike.
+
+### ¿Puerto ya en uso o socket no permitido?
+
+Si te da cualquiera de estos dos errores deberas añadir el puerto en el que quieres ejecutarlo, normalmente con ejecutar el comando tal que así deberías solucionarse:
+
 ```bash
 mkdocs serve -a 127.0.0.1:8001
 ```
 
-**¿Errores de módulo no encontrado?**  
+### ¿Errores de módulo no encontrado?
+
 Asegúrate de haber instalado todas las dependencias:
 ```bash
 pip install -r requirements.txt
 ```
 
-Si requirements.txt no existe, instala manualmente:
-```bash
-pip install mkdocs-material mkdocs-i18n mkdocs-glightbox
+En el caso de que no exista en tu proyecto por cualquier razón crealo con el siguiente contenido y vuelve a ejecutar el comando de arriba.
+
+```html { .no-language }
+mkdocs==1.6.1
+mkdocs-material==9.6.14
+mkdocs-glightbox==0.5.2
+mkdocs-static-i18n==1.3.0
+mkdocs-get-deps==0.2.0
+mkdocs-material-extensions==1.3.1
 ```
 
-**¿Los cambios no se muestran?**  
+### ¿Los cambios no se muestran?
+
 Prueba con el flag clean:
 ```bash
 mkdocs serve --clean

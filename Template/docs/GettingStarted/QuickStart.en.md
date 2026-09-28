@@ -11,7 +11,8 @@ Check if Python is installed:
     python --version
     ```
     
-    If Python is not installed, download from [python.org](https://www.python.org/downloads/) and ensure "Add Python to PATH" is checked during installation.
+    !!! warning "When installing"
+        If Python is not installed, download from [python.org](https://www.python.org/downloads/) and ensure **Add Python to PATH** is checked during installation.
 
 === "macOS"
     ```bash
@@ -81,6 +82,9 @@ INFO    -  Documentation built in 0.52 seconds
 INFO    -  [12:34:56] Serving on http://127.0.0.1:8000/
 ```
 
+!!! warning "If it fails"
+    If you get an **error** when running this command, check **[common issues](#common-issues)**.
+
 ## Step 6: View your site
 
 Open your browser and go to:
@@ -108,23 +112,45 @@ Now that you have everything working:
 
 ## Common issues
 
-**Port already in use?**
+### Command not found
+
+If you get a **command not found** error, it means either you haven't installed with <fh-copy>pip install -r requirements.txt</fh-copy> or you don't have Python's **path** added. In that case you should add Python's path on your device, or run mkdocs commands preceded by <fh-copy>python -m</fh-copy> like this:
+
+```bash
+python -m mkdocs serve
+```
+
+!!! warning "When using python -m"
+    If for any reason you decide not to add Python's path, keep in mind you'll need to add this prefix to any other Python command, such as when using the mike plugin.
+
+### Port already in use or socket not allowed?
+
+If you get either of these two errors, you'll need to add the port you want to run it on. Running the command like this should usually solve it:
+
 ```bash
 mkdocs serve -a 127.0.0.1:8001
 ```
 
-**Module not found errors?**  
+### Module not found errors?
+
 Make sure you installed all dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-If requirements.txt doesn't exist, install manually:
-```bash
-pip install mkdocs-material mkdocs-i18n mkdocs-glightbox
+If requirements.txt doesn't exist in your project for any reason, create it with the following content and run the command above again.
+
+```html { .no-language }
+mkdocs==1.6.1
+mkdocs-material==9.6.14
+mkdocs-glightbox==0.5.2
+mkdocs-static-i18n==1.3.0
+mkdocs-get-deps==0.2.0
+mkdocs-material-extensions==1.3.1
 ```
 
-**Changes not showing?**  
+### Changes not showing?
+
 Try the clean flag:
 ```bash
 mkdocs serve --clean
