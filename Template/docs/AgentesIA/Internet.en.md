@@ -1,0 +1,45 @@
+# Agents with Internet search
+
+An agent can **search the Internet** to fill in what isn't in the ERP: the details of a new supplier, a company's registered address, a regulation… Each agent has it turned on or off separately, and it can be limited to specific sites.
+
+By default, agents do **not** search the Internet. The exception is **Oswald** (creditor invoices): when the ERP is updated to this version it's turned on for him, limited to company information sites, so he can fill in the details of a new supplier.
+
+## Turning it on
+
+There are two ways.
+
+### From the agent's record
+
+In the agent's record, check **Puede buscar en Internet** (Can search the Internet) and, if you want to limit it, type the sites in **Solo en los sitios** (Only on these sites), separated by commas.
+
+![Agent record with Internet search](../docs_assets/images/AgentesIA/ficha-agente-internet.png)
+
+### By asking Amanda
+
+> Let Selina search the Internet, only on einforma.com and infocif.es.
+
+Before turning it on, Amanda explains the risks to you and waits for your yes.
+
+![Amanda explains the risks before turning on the Internet](../docs_assets/images/AgentesIA/amanda-internet.png)
+
+To remove it: *"Selina should no longer search the Internet"*.
+
+## Risks you should know about
+
+1. **What it searches for leaves the company.** The search is performed by the AI provider: if the agent searches with customer names, tax IDs or amounts, that data goes outside. Be careful with personal data.
+2. **A website may try to manipulate the agent.** A page may contain text written to trick it. If the agent can also create or change things in the ERP, the user still confirms every change, but it needs watching.
+3. **What it finds may be false or out of date.** The agent has to say where it got it from, and the user has to check it before saving it.
+4. **Each search costs extra**, with at most 3 per answer.
+
+!!! tip "Limit it to a few sites"
+    Narrowing the search to specific sites reduces all four risks. For company data, for example: <fh-copy>einforma.com, infocif.es, empresia.es, axesor.es</fh-copy>
+
+## A rule that is never broken
+
+An agent built by Amanda or Hugo **can only search the Internet if its base agent can too**. If it's taken away from the base agent, all the agents built from it lose it as well. An agent without a base agent can't search the Internet.
+
+## How you notice it in the conversation
+
+When the agent uses the Internet, it says so and cites where it got each piece of data, so you can check it before saving it.
+
+![Oswald looks up a new supplier's tax details on the Internet and cites his sources](../docs_assets/images/AgentesIA/oswald-internet.png)
