@@ -2,7 +2,10 @@
 
 An agent can **search the Internet** to fill in what isn't in the ERP: the details of a new supplier, a company's registered address, a regulation… Each agent has it turned on or off separately, and it can be limited to specific sites.
 
-By default, agents do **not** search the Internet. The exception is **Oswald** (creditor invoices): when the ERP is updated to this version it's turned on for him, limited to company information sites, so he can fill in the details of a new supplier.
+By default, agents do **not** search the Internet. The exception is **Oswald** (creditor invoices): when the ERP is updated to this version it's turned on for him, limited to company information sites, so he can fill in the details of a new supplier. Only if his model can search.
+
+!!! warning "Only with models that can search"
+    The **Claude** models (Anthropic) and the OpenAI models served through the Responses API (the ones whose description says *Responses API*) can search the Internet. The other OpenAI models, such as GPT-4.1, cannot: Amanda won't turn it on for an agent that uses one of them and tells you to change its model in its record first.
 
 ## Turning it on
 
