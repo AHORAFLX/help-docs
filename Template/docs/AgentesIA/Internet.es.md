@@ -2,10 +2,10 @@
 
 Un agente puede **buscar en Internet** para completar lo que no está en el ERP: los datos de un proveedor nuevo, la dirección fiscal de una empresa, una normativa… Cada agente lo tiene activado o no por separado, y se puede limitar a unos sitios concretos.
 
-Por defecto, los agentes **no** buscan en Internet. La excepción es **Oswald** (facturas de acreedor): al actualizar el ERP a esta versión se le activa, limitado a sitios de información de empresas, para completar los datos de un proveedor nuevo. Solo si su modelo sabe buscar.
+Por defecto, los agentes **no** buscan en Internet. La excepción es **Oswald** (facturas de acreedor): en las instalaciones nuevas nace con Internet activado, limitado a sitios de información de empresas, para completar los datos de un proveedor nuevo. Al actualizar desde una versión anterior no se activa en ningún agente: se enciende en su ficha, con un modelo que sepa buscar.
 
 !!! warning "Solo con modelos que saben buscar"
-    Buscan en Internet los modelos de **Claude** (Anthropic) y los de OpenAI por la API de Responses (los que en su descripción dicen *Responses API*). Los demás de OpenAI, como GPT-4.1, no saben buscar: Amanda no lo enciende en un agente con uno de ellos y te dice que le cambies antes el modelo en su ficha.
+    Buscan en Internet los modelos de **Claude** (Anthropic) y los de OpenAI por la API de Responses (los que en su descripción dicen *Responses API*). Los demás de OpenAI, como GPT-5.2, no saben buscar: Amanda no lo enciende en un agente con uno de ellos y te dice que le cambies antes el modelo en su ficha.
 
 ## Activarlo
 
