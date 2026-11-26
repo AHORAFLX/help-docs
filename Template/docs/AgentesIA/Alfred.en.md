@@ -37,6 +37,8 @@ Alfred queries the ERP before giving you a figure. If the request is clear, he q
 
 If you ask him for an **executive summary** (*"how are we doing?"*), he puts sales, purchases, pending collections and pending payments together in one answer.
 
+![Alfred's summary of sales, purchases, collections and payments](../docs_assets/images/AgentesIA/alfred-resumen.png)
+
 He also makes **charts** from what he queries: *"Make a chart comparing sales and purchases by month"*.
 
 !!! tip "Three buttons to get started"

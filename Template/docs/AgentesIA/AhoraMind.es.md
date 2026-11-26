@@ -11,6 +11,9 @@ Está pensado para cualquier usuario: el que empieza y el que busca una opción 
 ## Dónde lo encuentras
 
 - **En el panel de ayuda**: pulsa **Ayuda** (el icono **?** de la barra superior) y abre la pestaña **AHORAMind**, junto a **Contenido** e **Índice**.
+
+    ![La pestaña AHORAMind del panel de ayuda](../docs_assets/images/AgentesIA/ahoramind-panel-ayuda.png)
+
 - **En la lista de agentes del chat**, con el nombre **AHORAMind**.
 
 ## Qué puede hacer por ti

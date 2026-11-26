@@ -33,6 +33,8 @@ Bárbara queries the ERP's real data before giving you a figure. You don't need 
 
 She also makes **charts** with the data she queries: *«Hazme un gráfico de barras con el gasto mensual de la 628 este año»* (Make me a bar chart with this year's monthly spending on 628).
 
+![Bárbara gives the output VAT by VAT rate](../docs_assets/images/AgentesIA/barbara-iva-repercutido.png)
+
 !!! tip "What you have selected in the ERP"
     If you don't say which year you mean, Bárbara uses the financial year you have selected in the ERP, and tells you so. For another one, name it: *«…del 2025»* (…for 2025).
 
@@ -56,6 +58,8 @@ Bárbara can create two things:
 
 - **A sub-account** in a financial year: *«Crea la subcuenta 430000099 "Cliente varios" en 2026»* (Create sub-account 430000099 "Sundry customer" in 2026).
 - **A cost centre**: *«Crea el centro de coste 001 "Administración"»* (Create cost centre 001 "Administration").
+
+![Bárbara suggests the next free sub-account](../docs_assets/images/AgentesIA/barbara-subcuenta.png)
 
 ## What she asks you to confirm
 

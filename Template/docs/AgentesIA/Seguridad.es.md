@@ -29,6 +29,9 @@ Primero, quítaselo a GRUPOAHORA:
 
 1. En el árbol **Grupos de seguridad** de la izquierda, selecciona **GRUPOAHORA**.
 2. En **Entidad**, elige **Agente IA**. Con **Ver solo permisos asignados** aparecen los agentes que tiene asignados ese grupo.
+
+    ![Los agentes asignados a GRUPOAHORA en Administración de permisos](../docs_assets/images/AgentesIA/seguridad-permisos-agente-ia.png)
+
 3. Marca el agente o agentes que quieras restringir.
 4. Pulsa **Desasignar** y confirma. Desde ese momento, los usuarios que solo tenían el agente por GRUPOAHORA dejan de verlo.
 

@@ -38,6 +38,10 @@ Ve los pedidos con sus líneas, los albaranes, las facturas (también las de deu
 
 Cuando le pides un listado de documentos, te da de cada uno su **Id**, su serie, su número, la fecha, el estado y el cliente. Con el Id puedes pedirle después que actúe sobre uno de la lista: *«factura el segundo»*, *«abre el 29»*.
 
+![Bruce lista los pedidos pendientes de servir](../docs_assets/images/AgentesIA/bruce-pedidos-pendientes.png)
+
+![Bruce dibuja una gráfica con lo facturado por cliente](../docs_assets/images/AgentesIA/bruce-grafica-clientes.png)
+
 !!! tip "Si el número se repite"
     La numeración se reinicia cada año, así que el pedido 5 puede existir en varios años o series. Si le das un número que coincide con varios documentos, Bruce te enseña todos y te pregunta cuál. No elige él.
 
@@ -95,6 +99,8 @@ Al terminar te da el código del registro creado, pero no lo abre: pídeselo si 
 | Algo sobre un número que existe en varios años o series | Te enseña los candidatos y te pregunta cuál |
 
 La confirmación vale para esos mismos documentos y durante 15 minutos. Si tardas más o cambias la lista, te la vuelve a pedir.
+
+![Bruce pide confirmación antes de facturar dos pedidos](../docs_assets/images/AgentesIA/bruce-aviso-varios.png)
 
 !!! warning "Con un solo documento, actúa"
     Si solo quieres saber si se puede hacer algo, díselo así: *«¿se puede facturar el pedido 26? Solo pregunto»*. Bruce mirará su estado sin facturarlo. Lo que genera Bruce no se deshace desde el chat.

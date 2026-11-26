@@ -37,6 +37,8 @@ Alfred consulta el ERP antes de darte una cifra. Si la petición está clara, co
 
 Si le pides un **resumen ejecutivo** (*«¿cómo estamos?»*), junta en una respuesta las ventas, las compras, los cobros pendientes y los pagos pendientes.
 
+![Resumen de Alfred con ventas, compras, cobros y pagos](../docs_assets/images/AgentesIA/alfred-resumen.png)
+
 También hace **gráficos** con lo que consulta: *«Genera una gráfica comparando ventas y compras por mes»*.
 
 !!! tip "Tres botones para empezar"

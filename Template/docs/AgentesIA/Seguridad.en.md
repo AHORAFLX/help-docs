@@ -29,6 +29,9 @@ First, take it away from GRUPOAHORA:
 
 1. In the **Grupos de seguridad** (Security groups) tree on the left, select **GRUPOAHORA**.
 2. In **Entidad** (Entity), choose **Agente IA**. With **Ver solo permisos asignados** (Show only assigned permissions), the agents assigned to that group appear.
+
+    ![The agents assigned to GRUPOAHORA in permissions administration](../docs_assets/images/AgentesIA/seguridad-permisos-agente-ia.png)
+
 3. Check the agent or agents you want to restrict.
 4. Click **Desasignar** (Unassign) and confirm. From then on, users who only had the agent through GRUPOAHORA no longer see it.
 

@@ -67,6 +67,8 @@ He also makes **charts** from what he queries: *"Make me a chart of creditor spe
 
 **A mismatch.** If the sum of the lines doesn't match the document's total, he shows you the difference and asks whether to create it anyway. The IRPF withholding is taken into account: with a withholding, the total is lower than the sum of the lines, and that isn't a mismatch.
 
+![Oswald warns about a mismatch, taking the withholding into account](../docs_assets/images/AgentesIA/oswald-descuadre-irpf.png)
+
 !!! tip "Reply straight away"
     The confirmation applies to that invoice with that data. If you take more than a quarter of an hour to reply, Oswald asks you again.
 

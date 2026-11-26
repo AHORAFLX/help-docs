@@ -38,6 +38,10 @@ He sees orders with their lines, delivery notes, invoices (including debtor invo
 
 When you ask him for a list of documents, he gives you each one's **Id**, series, number, date, status and customer. With the Id you can then ask him to act on one from the list: *«factura el segundo»* (invoice the second one), *«abre el 29»* (open 29).
 
+![Bruce lists the orders pending delivery](../docs_assets/images/AgentesIA/bruce-pedidos-pendientes.png)
+
+![Bruce draws a chart of invoicing per customer](../docs_assets/images/AgentesIA/bruce-grafica-clientes.png)
+
 !!! tip "If the number repeats"
     Numbering restarts every year, so order 5 can exist in several years or series. If you give him a number that matches several documents, Bruce shows you all of them and asks which one you mean. He doesn't choose.
 
@@ -95,6 +99,8 @@ When he's done he gives you the code of the new record, but he doesn't open it: 
 | Do something with a number that exists in several years or series | Shows you the candidates and asks which one |
 
 The confirmation is valid for those same documents and for 15 minutes. If you take longer or change the list, he asks you again.
+
+![Bruce asks for confirmation before invoicing two orders](../docs_assets/images/AgentesIA/bruce-aviso-varios.png)
 
 !!! warning "With a single document, he acts"
     If you only want to know whether something can be done, say so: *«¿se puede facturar el pedido 26? Solo pregunto»* (can order 26 be invoiced? I'm only asking). Bruce will check its status without invoicing it. What Bruce generates can't be undone from the chat.

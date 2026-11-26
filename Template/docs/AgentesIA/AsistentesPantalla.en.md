@@ -25,7 +25,12 @@ Besides the chat agents, the ERP comes with three **AI assistants** that work in
 
 1. In a grid, right-click the top-left corner, where the column titles meet the row margin.
 2. Choose **Analizar con IA**.
+
+    ![The Analizar con IA option in the grid menu](../docs_assets/images/AgentesIA/gridito-analizar-menu.png)
+
 3. A chat window opens to the left of the screen. Ask it whatever you want about the grid's data.
+
+    ![Gridito answers with the grid's data](../docs_assets/images/AgentesIA/gridito-respuesta.png)
 
 For example:
 
@@ -48,6 +53,8 @@ Things worth knowing:
 
 The grids' **filter editor** also uses Gridito's model. You open it by right-clicking a column title. Instead of building the condition by hand, you describe it in your own words, for example *"this year's orders from customers in Madrid"*, and the AI turns it into the filter condition. Check it before applying it.
 
+![The filter editor with the AI filter box](../docs_assets/images/AgentesIA/gridito-filtro-ia.png)
+
 If you've just entered the key, close the screen and open it again so its grids get the AI filter.
 
 ## ReportDesigner: the report designer's chat
@@ -62,6 +69,8 @@ Open the report designer in one of these two ways:
 By default, only administrators can see these two options. The chat is in the designer's **Chat IA** (AI chat) panel and works on the report in the active tab: with each message it receives its structure, with its bands and controls. You hide it and show it again with **View > Chat IA**.
 
 ![The Chat IA panel in the report designer](../docs_assets/images/AgentesIA/disenador-chat.png)
+
+![View > Chat IA shows or hides the chat](../docs_assets/images/AgentesIA/disenador-menu-chat-ia.png)
 
 ### What you can ask it
 
@@ -151,6 +160,8 @@ Some operations need database permissions that the ERP user doesn't have, such a
 
 with a SQL Server user that has those permissions.
 
+![The configurator chat explains the /admin format](../docs_assets/images/AgentesIA/configurador-admin.png)
+
 - **The password never reaches the AI model and isn't stored.** The configurator intercepts the message before sending it, tests the connection and, if it works, uses it in this chat until you close the window.
 - If a piece of data is missing or the credentials don't work, the chat tells you.
 - Once elevated, **repeat your request**.
@@ -162,6 +173,8 @@ You can attach files to it, up to 5 of 10 MB each, with the paper clip or by dra
 The report designer's chat and the configurator's chat can't be active at the same time. If you open one while the other is open, the ERP asks:
 
 > Solo se puede tener una ventana de chat habilitada. ¿Desea desactivar la actual y activar esta?
+
+![Warning that only one AI chat can be open](../docs_assets/images/AgentesIA/aviso-un-solo-chat.png)
 
 (Only one chat window can be enabled. Do you want to disable the current one and enable this one?) If you answer no, the new window opens without a chat.
 

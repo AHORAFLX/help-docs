@@ -37,6 +37,9 @@ Algunas pantallas del ERP llevan su propio asistente de IA, que trabaja sobre lo
 ## Cómo se habla con un agente
 
 - Pulsa **Agentes** en la barra superior del ERP y elige el agente. AHORAMind también está en el panel de **Ayuda**.
+
+    ![El botón Agentes y el panel con los agentes](../docs_assets/images/AgentesIA/agentes-boton.png)
+
 - Escribe lo que necesitas tal como lo dirías, o díctalo con el micrófono: [Dictar por voz en el chat](Voz.md).
 - Cada usuario ve los agentes que le permite su grupo de seguridad: [Restringir los agentes por grupo de seguridad](Seguridad.md).
 - Un agente puede buscar en Internet si se lo activas: [Agentes con búsqueda en Internet](Internet.md).

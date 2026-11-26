@@ -33,6 +33,8 @@ Bárbara consulta los datos reales del ERP antes de darte una cifra. No necesita
 
 También hace **gráficos** con los datos que consulta: *«Hazme un gráfico de barras con el gasto mensual de la 628 este año»*.
 
+![Bárbara da el IVA repercutido por tipo de IVA](../docs_assets/images/AgentesIA/barbara-iva-repercutido.png)
+
 !!! tip "Lo que tienes seleccionado en el ERP"
     Si no dices de qué año hablas, Bárbara usa el ejercicio que tienes seleccionado en el ERP, y te lo dice. Para otro, nómbralo: *«…del 2025»*.
 
@@ -56,6 +58,8 @@ Bárbara puede dar de alta dos cosas:
 
 - **Una subcuenta** en un ejercicio: *«Crea la subcuenta 430000099 "Cliente varios" en 2026»*.
 - **Un centro de coste**: *«Crea el centro de coste 001 "Administración"»*.
+
+![Bárbara propone la siguiente subcuenta libre](../docs_assets/images/AgentesIA/barbara-subcuenta.png)
 
 ## Qué te pide confirmar
 

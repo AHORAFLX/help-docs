@@ -28,6 +28,8 @@ Pamela queries the ERP's real data before giving you a figure or a list.
 
 She also makes **charts** with the data she queries: *«Gráfica de los cobros pendientes agrupados por mes»* (Chart of pending collections grouped by month), *«Gráfica de pagos pendientes por proveedor»* (Chart of pending payments by supplier).
 
+![Pamela lists a customer's pending collections](../docs_assets/images/AgentesIA/pamela-cobros-pendientes.png)
+
 When she shows you a list of documents, she includes their internal number. That way you can carry on with *«registra el primero»* (record the first one) or *«abre ese»* (open that one) without repeating the details.
 
 ### Open and print in the ERP

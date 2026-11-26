@@ -72,6 +72,8 @@ Selina sigue el circuito de compras del ERP. En compras, los documentos llevan l
 
 Si falta algún dato, te lo pide todo en un solo mensaje. Nunca se inventa un número de factura o de albarán del proveedor.
 
+![Selina pide el número de factura del proveedor](../docs_assets/images/AgentesIA/selina-pide-numero.png)
+
 Te dice el resultado documento a documento: el Id del albarán o la factura que ha generado o, si alguno ha fallado, el motivo.
 
 - *«Albaranea el pedido de proveedor 12 con fecha de hoy y albarán del proveedor AB-778»*
