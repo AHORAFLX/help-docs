@@ -13,6 +13,8 @@ The **AI agents** are assistants you talk to in natural language, as you would t
 | [**Pamela**](Pamela.md) | Treasury: collections, payments and remittances |
 | [**Oswald**](Oswald.md) | Creditor invoices from the supplier's document |
 | [**AHORAMind**](AhoraMind.md) | Questions about how the ERP works |
+| [**Hugo**](Hugo.md) | Automations: the ERP does something on its own when something happens |
+| [**Amanda**](Amanda.md) | Building agents tailored to you |
 
 You can also [create your own agents](CrearAgente.md).
 

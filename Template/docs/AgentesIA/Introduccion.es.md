@@ -13,6 +13,8 @@ Los **agentes de IA** son asistentes con los que hablas en lenguaje natural, com
 | [**Pamela**](Pamela.md) | Tesorería: cobros, pagos y remesas |
 | [**Oswald**](Oswald.md) | Facturas de acreedor a partir del documento del proveedor |
 | [**AHORAMind**](AhoraMind.md) | Dudas sobre cómo funciona el ERP |
+| [**Hugo**](Hugo.md) | Automatizaciones: que el ERP haga algo solo cuando pasa algo |
+| [**Amanda**](Amanda.md) | Preparar agentes a tu medida |
 
 Además, puedes [crear tus propios agentes](CrearAgente.md).
 

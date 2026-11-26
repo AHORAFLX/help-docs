@@ -37,10 +37,17 @@ nav:
     - Pamela: AgentesIA/Pamela.md
     - Oswald: AgentesIA/Oswald.md
     - AhoraMind: AgentesIA/AhoraMind.md
+    - Hugo: AgentesIA/Hugo.md
+    - Amanda: AgentesIA/Amanda.md
     - AsistentesPantalla: AgentesIA/AsistentesPantalla.md
     - CrearAgente: AgentesIA/CrearAgente.md
     - Seguridad: AgentesIA/Seguridad.md
     - Voz: AgentesIA/Voz.md
+    - Automatizaciones: AgentesIA/Automatizaciones.md
+    - FormasYOpciones: AgentesIA/FormasYOpciones.md
+    - Ejemplos: AgentesIA/Ejemplos.md
+    - MisAutomatizaciones: AgentesIA/MisAutomatizaciones.md
+    - CatalogoAcciones: AgentesIA/CatalogoAcciones.md
     - Internet: AgentesIA/Internet.md
   - GettingStarted:
     - QuickStart: GettingStarted/QuickStart.md
@@ -153,6 +160,13 @@ plugins:
             Seguridad: Restricting agents by security group
             Voz: Voice dictation in the chat
             Internet: Agents with web search
+            Hugo: Hugo - Automations agent
+            Amanda: Amanda - Custom agents
+            Automatizaciones: AI automations
+            FormasYOpciones: Automation forms and options
+            Ejemplos: Automation examples
+            MisAutomatizaciones: My AI automations
+            CatalogoAcciones: Action catalog
             Modelos: AI models
             GettingStarted: Getting started
             QuickStart: Quick start
@@ -189,6 +203,13 @@ plugins:
             Seguridad: Restringir los agentes por grupo de seguridad
             Voz: Dictar por voz en el chat
             Internet: Agentes con búsqueda en Internet
+            Hugo: Hugo - Agente de automatizaciones
+            Amanda: Amanda - Agentes a tu medida
+            Automatizaciones: Automatizaciones de IA
+            FormasYOpciones: Formas y opciones
+            Ejemplos: Ejemplos de automatizaciones
+            MisAutomatizaciones: Mis automatizaciones IA
+            CatalogoAcciones: Catálogo de acciones
             Modelos: Modelos de IA
             GettingStarted: Primeros pasos
             QuickStart: Inicio rápido
