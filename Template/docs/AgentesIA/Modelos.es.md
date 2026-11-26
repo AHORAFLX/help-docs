@@ -25,18 +25,18 @@ Todo lo que hace falta para empezar está en una sola pantalla: **Administració
 
 Tiene dos pestañas:
 
-- **Claves**: la clave de cada proveedor y, si se usa, la dirección de la pasarela de Anthropic.
 - **Agentes**: todos los agentes, también los estándar y los asistentes de las pantallas, con su modelo, si pueden buscar en Internet y si está puesta la clave de su proveedor.
+- **Claves**: la clave de cada proveedor y, si se usa, la dirección de la pasarela de Anthropic.
 
-![Configuración de IA: las claves de los proveedores](../docs_assets/images/AgentesIA/configuracion-ia-claves.png)
+![Configuración de IA: el modelo de cada agente](../docs_assets/images/AgentesIA/configuracion-ia-agentes.png)
 
-Para empezar a usar la IA:
+En una instalación nueva todos los agentes vienen ya con Claude, como en la imagen, así que basta con poner la clave de Anthropic. Para empezar a usar la IA:
 
 1. En **Claves**, escribe la clave de tu proveedor.
 2. Pulsa **Probar claves**. El ERP pregunta al proveedor si la clave vale, sin ningún coste.
-3. Pulsa **Recomendados de Claude** o **Recomendados de OpenAI**, según el proveedor que uses. Los agentes estándar pasan a los modelos recomendados de ese proveedor; tus agentes propios no se tocan.
+3. Si trabajas con OpenAI, pulsa **Recomendados de OpenAI**: los agentes estándar pasan a sus modelos recomendados. **Recomendados de Claude** los devuelve a los de Claude. Tus agentes propios no se tocan.
 
-![Configuración de IA: el modelo de cada agente](../docs_assets/images/AgentesIA/configuracion-ia-agentes.png)
+![Configuración de IA: las claves de los proveedores](../docs_assets/images/AgentesIA/configuracion-ia-claves.png)
 
 Los cambios valen al momento, sin reiniciar el ERP.
 

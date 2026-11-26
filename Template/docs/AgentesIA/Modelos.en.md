@@ -25,18 +25,18 @@ Everything you need to get started is on a single screen: **Administración > Co
 
 It has two tabs:
 
-- **Claves** (Keys): each provider's key and, if you use one, the address of the Anthropic gateway.
 - **Agentes** (Agents): every agent, including the standard ones and the screen assistants, with its model, whether it can search the Internet and whether its provider's key is set.
+- **Claves** (Keys): each provider's key and, if you use one, the address of the Anthropic gateway.
 
-![AI configuration: the providers' keys](../docs_assets/images/AgentesIA/configuracion-ia-claves.png)
+![AI configuration: each agent's model](../docs_assets/images/AgentesIA/configuracion-ia-agentes.png)
 
-To start using AI:
+In a new installation every agent already comes with Claude, as in the image, so you only need to enter the Anthropic key. To start using AI:
 
 1. In **Claves**, enter your provider's key.
 2. Click **Probar claves** (Test keys). The ERP asks the provider whether the key works, at no cost.
-3. Click **Recomendados de Claude** or **Recomendados de OpenAI** (Recommended for Claude / for OpenAI), depending on your provider. The standard agents switch to that provider's recommended models; your own agents are left untouched.
+3. If you work with OpenAI, click **Recomendados de OpenAI** (Recommended for OpenAI): the standard agents switch to its recommended models. **Recomendados de Claude** switches them back to Claude's. Your own agents are left untouched.
 
-![AI configuration: each agent's model](../docs_assets/images/AgentesIA/configuracion-ia-agentes.png)
+![AI configuration: the providers' keys](../docs_assets/images/AgentesIA/configuracion-ia-claves.png)
 
 Changes take effect immediately, without restarting the ERP.
 
