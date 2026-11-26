@@ -72,6 +72,8 @@ Selina follows the ERP's purchasing cycle. In purchasing, documents carry the su
 
 If any detail is missing, she asks you for all of it in a single message. She never makes up a supplier's invoice or delivery note number.
 
+![Selina asks for the supplier's invoice number](../docs_assets/images/AgentesIA/selina-pide-numero.png)
+
 She tells you the result document by document: the Id of the delivery note or invoice she generated or, if one failed, the reason.
 
 - *«Albaranea el pedido de proveedor 12 con fecha de hoy y albarán del proveedor AB-778»* (Create the delivery note for supplier order 12, dated today, with supplier delivery note AB-778)

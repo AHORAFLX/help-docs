@@ -28,6 +28,9 @@ Si quieres un agente parecido a uno estándar pero con otras instrucciones, crea
     ![El botón para crear un agente nuevo](../docs_assets/images/AgentesIA/crear-agente-boton-nuevo.png)
 
 3. Se abre la ficha de un agente nuevo. Rellena sus datos (ver la tabla siguiente). Como mínimo: **Id Agente**, **Nombre** y **Modelo IA**.
+
+    ![La ficha de un agente nuevo, con un modelo de Claude ya puesto](../docs_assets/images/AgentesIA/crear-agente-ficha-nueva.png)
+
 4. Escribe sus instrucciones en la pestaña **System Prompt**.
 5. Pulsa **Guardar**. Hasta que no guardes el agente, las pestañas **Modelo Datos**, **Herramientas** y **Botones** no se pueden usar, ni se puede cambiar su imagen.
 6. Completa las pestañas: qué datos consulta, qué acciones puede hacer y qué botones rápidos tiene.

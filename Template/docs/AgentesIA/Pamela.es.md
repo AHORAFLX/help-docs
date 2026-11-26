@@ -28,6 +28,8 @@ Pamela consulta los datos reales del ERP antes de darte una cifra o una lista.
 
 También hace **gráficos** con los datos que consulta: *«Gráfica de los cobros pendientes agrupados por mes»*, *«Gráfica de pagos pendientes por proveedor»*.
 
+![Pamela lista los cobros pendientes de un cliente](../docs_assets/images/AgentesIA/pamela-cobros-pendientes.png)
+
 Cuando te enseña una lista de documentos, incluye su número interno. Así puedes seguir con *«registra el primero»* o *«abre ese»* sin repetir los datos.
 
 ### Abrir e imprimir en el ERP

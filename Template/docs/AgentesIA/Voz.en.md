@@ -8,6 +8,9 @@ Dictation only writes: **it never sends the message**. You always review it and 
 
 1. Open an agent's chat.
 2. Click the **microphone** button, to the left of the message box. The Windows voice typing panel opens.
+
+    ![The microphone button, to the left of the message box](../docs_assets/images/AgentesIA/voz-microfono-bruce.png)
+
 3. Speak. What you say is written in the box as you go.
 4. When you stop talking for about two seconds, dictation closes on its own. You can also close it by clicking the microphone again.
 5. Review the text, correct it if needed and send it with **Enter** or with the arrow.

@@ -28,6 +28,9 @@ If you want an agent similar to a standard one but with different instructions, 
     ![The button to create a new agent](../docs_assets/images/AgentesIA/crear-agente-boton-nuevo.png)
 
 3. The record of a new agent opens. Fill in its details (see the table below). At least: **Id Agente** (Agent ID), **Nombre** (Name) and **Modelo IA** (AI model).
+
+    ![The record of a new agent, with a Claude model already set](../docs_assets/images/AgentesIA/crear-agente-ficha-nueva.png)
+
 4. Write its instructions in the **System Prompt** tab.
 5. Click **Guardar** (Save). Until you save the agent, the **Modelo Datos** (Data model), **Herramientas** (Tools) and **Botones** (Buttons) tabs can't be used, and its picture can't be changed.
 6. Fill in the tabs: what data it queries, what actions it can perform and what quick buttons it has.

@@ -67,6 +67,8 @@ También hace **gráficos** con lo que consulta: *«Hazme un gráfico con el gas
 
 **Un descuadre.** Si la suma de las líneas no da el total del documento, te enseña la diferencia y te pregunta si la creas igualmente. La retención de IRPF se tiene en cuenta: con retención, el total es menor que la suma de las líneas, y eso no es un descuadre.
 
+![Oswald avisa de un descuadre teniendo en cuenta el IRPF](../docs_assets/images/AgentesIA/oswald-descuadre-irpf.png)
+
 !!! tip "Contesta en el momento"
     La confirmación vale para esa factura con esos datos. Si tardas más de un cuarto de hora en contestar, Oswald te lo vuelve a preguntar.
 

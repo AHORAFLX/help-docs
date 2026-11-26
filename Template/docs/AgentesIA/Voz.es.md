@@ -8,6 +8,9 @@ El dictado solo escribe: **nunca envía el mensaje**. Siempre lo revisas y lo en
 
 1. Abre el chat de un agente.
 2. Pulsa el botón del **micrófono**, a la izquierda del cuadro de mensaje. Se abre el panel de dictado de Windows.
+
+    ![El botón del micrófono, a la izquierda del cuadro de mensaje](../docs_assets/images/AgentesIA/voz-microfono-bruce.png)
+
 3. Habla. Lo que dices se va escribiendo en el cuadro.
 4. Cuando te callas unos dos segundos, el dictado se cierra solo. También puedes cerrarlo pulsando otra vez el micrófono.
 5. Revisa el texto, corrígelo si hace falta y envíalo con **Intro** o con la flecha.

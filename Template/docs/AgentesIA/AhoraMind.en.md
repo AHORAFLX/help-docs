@@ -11,6 +11,9 @@ It's designed for any user: whether you're just starting or looking for an optio
 ## Where to find it
 
 - **In the help panel**: click **Ayuda** (Help, the **?** icon in the top bar) and open the **AHORAMind** tab, next to **Contenido** (Contents) and **Índice** (Index).
+
+    ![The AHORAMind tab in the help panel](../docs_assets/images/AgentesIA/ahoramind-panel-ayuda.png)
+
 - **In the chat's list of agents**, under the name **AHORAMind**.
 
 ## What it can do for you

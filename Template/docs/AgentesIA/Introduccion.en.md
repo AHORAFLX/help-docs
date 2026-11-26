@@ -39,6 +39,9 @@ Some ERP screens have their own AI assistant, which works on what you have in fr
 ## How to talk to an agent
 
 - Click **Agentes** (Agents) in the ERP's top bar and choose the agent. AHORAMind is also in the **Ayuda** (Help) panel.
+
+    ![The Agentes button and the agents panel](../docs_assets/images/AgentesIA/agentes-boton.png)
+
 - Write what you need just as you would say it, or dictate it with the microphone: [Voice dictation in the chat](Voz.md).
 - Each user sees the agents their security group allows: [Restricting agents by security group](Seguridad.md).
 - An agent can search the Internet if you turn it on: [Agents with Internet search](Internet.md).

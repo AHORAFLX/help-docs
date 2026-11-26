@@ -25,7 +25,12 @@ Además de los agentes del chat, el ERP trae tres **asistentes de IA** que traba
 
 1. En una rejilla, pulsa con el botón derecho en la esquina superior izquierda, donde se cruzan los títulos de las columnas y el margen de las filas.
 2. Elige **Analizar con IA**.
+
+    ![La opción Analizar con IA en el menú de la rejilla](../docs_assets/images/AgentesIA/gridito-analizar-menu.png)
+
 3. Se abre una ventana de chat a la izquierda de la pantalla. Pregúntale lo que quieras sobre los datos de la rejilla.
+
+    ![Gridito responde con los datos de la rejilla](../docs_assets/images/AgentesIA/gridito-respuesta.png)
 
 Por ejemplo:
 
@@ -48,6 +53,8 @@ Qué conviene saber:
 
 El **editor de filtros** de las rejillas también usa el modelo de Gridito. Lo abres con el botón derecho en el título de una columna. En lugar de montar la condición a mano, la describes con tus palabras, por ejemplo *«pedidos de este año de clientes de Madrid»*, y la IA la convierte en la condición del filtro. Revísala antes de aplicarla.
 
+![El editor de filtros con la caja del filtro con IA](../docs_assets/images/AgentesIA/gridito-filtro-ia.png)
+
 Si acabas de poner la clave, cierra y vuelve a abrir la pantalla para que sus rejillas tengan el filtro con IA.
 
 ## ReportDesigner: el chat del diseñador de informes
@@ -62,6 +69,8 @@ Abre el diseñador de informes de una de estas dos maneras:
 Por defecto, las dos opciones solo las ven los administradores. El chat está en el panel **Chat IA** del diseñador y trabaja sobre el informe de la pestaña activa: en cada mensaje recibe su estructura, con sus bandas y sus controles. Lo ocultas y lo vuelves a mostrar con **View > Chat IA**.
 
 ![El panel Chat IA del diseñador de informes](../docs_assets/images/AgentesIA/disenador-chat.png)
+
+![View > Chat IA muestra u oculta el chat](../docs_assets/images/AgentesIA/disenador-menu-chat-ia.png)
 
 ### Qué puedes pedirle
 
@@ -151,6 +160,8 @@ Algunas operaciones necesitan permisos en la base de datos que el usuario del ER
 
 con un usuario de SQL Server que tenga esos permisos.
 
+![El chat del configurador explica el formato de /admin](../docs_assets/images/AgentesIA/configurador-admin.png)
+
 - **La contraseña no llega al modelo de IA ni se guarda.** El configurador intercepta el mensaje antes de enviarlo, prueba la conexión y, si vale, la usa en este chat hasta que cierres la ventana.
 - Si falta un dato o las credenciales no valen, el chat te lo dice.
 - Una vez elevado, **repite tu petición**.
@@ -162,6 +173,8 @@ Puedes adjuntarle archivos, hasta 5 de 10 MB cada uno, con el clip o arrastránd
 El chat del diseñador de informes y el del configurador no pueden estar activos a la vez. Si abres uno con el otro abierto, el ERP pregunta:
 
 > Solo se puede tener una ventana de chat habilitada. ¿Desea desactivar la actual y activar esta?
+
+![Aviso de que solo puede haber un chat IA abierto](../docs_assets/images/AgentesIA/aviso-un-solo-chat.png)
 
 Si contestas que no, la ventana nueva se abre sin chat.
 
