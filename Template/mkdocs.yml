@@ -28,15 +28,20 @@ use_directory_urls: true
 nav:
   - Home: index.md
   - AgentesIA:
-    - Automatizaciones: AgentesIA/Automatizaciones.md
-    - Hugo: AgentesIA/Hugo.md
-    - FormasYOpciones: AgentesIA/FormasYOpciones.md
-    - Ejemplos: AgentesIA/Ejemplos.md
-    - MisAutomatizaciones: AgentesIA/MisAutomatizaciones.md
-    - Amanda: AgentesIA/Amanda.md
-    - CatalogoAcciones: AgentesIA/CatalogoAcciones.md
-    - Internet: AgentesIA/Internet.md
+    - Introduccion: AgentesIA/Introduccion.md
     - Modelos: AgentesIA/Modelos.md
+    - Bruce: AgentesIA/Bruce.md
+    - Selina: AgentesIA/Selina.md
+    - Barbara: AgentesIA/Barbara.md
+    - Alfred: AgentesIA/Alfred.md
+    - Pamela: AgentesIA/Pamela.md
+    - Oswald: AgentesIA/Oswald.md
+    - AhoraMind: AgentesIA/AhoraMind.md
+    - AsistentesPantalla: AgentesIA/AsistentesPantalla.md
+    - CrearAgente: AgentesIA/CrearAgente.md
+    - Seguridad: AgentesIA/Seguridad.md
+    - Voz: AgentesIA/Voz.md
+    - Internet: AgentesIA/Internet.md
   - GettingStarted:
     - QuickStart: GettingStarted/QuickStart.md
     - VisualStructure: GettingStarted/VisualStructure.md
@@ -135,13 +140,18 @@ plugins:
           nav_translations:
             Home: Home
             AgentesIA: ERP AI agents
-            Automatizaciones: AI automations
-            Hugo: Hugo - Automations agent
-            FormasYOpciones: Automation forms and options
-            Ejemplos: Automation examples
-            MisAutomatizaciones: My AI automations
-            Amanda: Amanda - Custom agents
-            CatalogoAcciones: Action catalog
+            Introduccion: Overview
+            Bruce: Bruce - Sales agent
+            Selina: Selina - Purchasing agent
+            Barbara: Bárbara - Accounting and tax agent
+            Alfred: Alfred - Overview agent
+            Pamela: Pamela - Treasury agent
+            Oswald: Oswald - Creditor invoices agent
+            AhoraMind: AHORAMind - ERP help
+            AsistentesPantalla: Screen AI assistants
+            CrearAgente: Creating your own agent
+            Seguridad: Restricting agents by security group
+            Voz: Voice dictation in the chat
             Internet: Agents with web search
             Modelos: AI models
             GettingStarted: Getting started
@@ -166,13 +176,18 @@ plugins:
           nav_translations:
             Home: Inicio
             AgentesIA: Agentes IA del ERP
-            Automatizaciones: Automatizaciones de IA
-            Hugo: Hugo - Agente de automatizaciones
-            FormasYOpciones: Formas y opciones
-            Ejemplos: Ejemplos de automatizaciones
-            MisAutomatizaciones: Mis automatizaciones IA
-            Amanda: Amanda - Agentes a tu medida
-            CatalogoAcciones: Catálogo de acciones
+            Introduccion: Introducción
+            Bruce: Bruce - Agente de ventas
+            Selina: Selina - Agente de compras
+            Barbara: Bárbara - Agente de contabilidad y fiscalidad
+            Alfred: Alfred - Agente de visión de conjunto
+            Pamela: Pamela - Agente de tesorería
+            Oswald: Oswald - Agente de facturas de acreedor
+            AhoraMind: AHORAMind - Ayuda del ERP
+            AsistentesPantalla: Asistentes de IA de las pantallas
+            CrearAgente: Crear un agente propio
+            Seguridad: Restringir los agentes por grupo de seguridad
+            Voz: Dictar por voz en el chat
             Internet: Agentes con búsqueda en Internet
             Modelos: Modelos de IA
             GettingStarted: Primeros pasos

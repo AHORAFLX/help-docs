@@ -5,11 +5,11 @@ Un agente puede **buscar en Internet** para completar lo que no está en el ERP:
 Por defecto, los agentes **no** buscan en Internet. La excepción es **Oswald** (facturas de acreedor): en las instalaciones nuevas nace con Internet activado, limitado a sitios de información de empresas, para completar los datos de un proveedor nuevo. Al actualizar desde una versión anterior no se activa en ningún agente: se enciende en su ficha, con un modelo que sepa buscar.
 
 !!! warning "Solo con modelos que saben buscar"
-    Buscan en Internet los modelos de **Claude** (Anthropic) y los de OpenAI por la API de Responses (los que en su descripción dicen *Responses API*). Los demás de OpenAI, como GPT-5.2, no saben buscar: Amanda no lo enciende en un agente con uno de ellos y te dice que le cambies antes el modelo en su ficha.
+    Buscan en Internet los modelos de **Claude** (Anthropic) y los de OpenAI por la API de Responses (los que en su descripción dicen *Responses API*). Los demás de OpenAI, como GPT-5.2, no saben buscar: si un agente usa uno de ellos, cámbiale antes el modelo.
 
 ## Activarlo
 
-Hay dos maneras.
+Hay dos maneras, y las dos avisan de los riesgos (ver más abajo) y piden confirmación antes de activarlo.
 
 ### Desde la ficha del agente
 
@@ -17,15 +17,9 @@ En la ficha del agente, marca **Puede buscar en Internet** y, si quieres limitar
 
 ![Ficha del agente con la búsqueda en Internet](../docs_assets/images/AgentesIA/ficha-agente-internet.png)
 
-### Pidiéndoselo a Amanda
+### Desde Configuración de IA
 
-> Deja que Selina busque en Internet, solo en einforma.com e infocif.es.
-
-Antes de activarlo, Amanda te explica los riesgos y espera tu sí.
-
-![Amanda explica los riesgos antes de activar Internet](../docs_assets/images/AgentesIA/amanda-internet.png)
-
-Para quitarlo: *«que Selina ya no busque en Internet»*.
+En **Administración > Configuración de IA**, pestaña **Agentes**, marca **Internet** en la fila del agente y escribe los sitios en **Solo en los sitios**. Ahí están todos los agentes a la vista. Los asistentes de las pantallas no buscan en Internet, así que en ellos no se deja.
 
 ## Riesgos que conviene conocer
 
@@ -36,10 +30,6 @@ Para quitarlo: *«que Selina ya no busque en Internet»*.
 
 !!! tip "Limítalo a unos sitios"
     Acotar la búsqueda a unos sitios concretos reduce los cuatro riesgos. Para datos de empresas, por ejemplo: <fh-copy>einforma.com, infocif.es, empresia.es, axesor.es</fh-copy>
-
-## Una regla que no se salta
-
-Un agente preparado por Amanda o por Hugo **solo puede buscar en Internet si su agente de partida también puede**. Si se le quita al agente de partida, lo pierden también todos los agentes preparados a partir de él. Un agente sin agente de partida no puede buscar en Internet.
 
 ## Cómo se nota en la conversación
 

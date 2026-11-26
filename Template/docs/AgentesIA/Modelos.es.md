@@ -86,10 +86,6 @@ Los modelos de Claude se ofrecen con distintos niveles de **esfuerzo**: *low*, *
 
 - **En una instalación nueva**, todos los agentes nacen con **Claude**, así que solo hace falta la clave de Anthropic: los del chat con **Claude Sonnet** (esfuerzo medio), y los asistentes de las pantallas y AHORAMind con **Claude Haiku** (esfuerzo bajo).
 - **Al actualizar**, cada agente **conserva el modelo que ya tenía**, salvo si es uno que OpenAI ha retirado o retira pronto (ver más abajo).
-- **Hugo y Amanda**, que llegan nuevos, vienen con Claude Sonnet.
-
-!!! warning "Si solo tienes clave de OpenAI"
-    Al actualizar, tus agentes siguen con su modelo de OpenAI, pero **Hugo y Amanda** llegan con Claude. Tienes dos opciones: añadir la clave de Anthropic (`AI_TOKEN_ANTHROPIC`) o pulsar **Recomendados de OpenAI** en **Configuración de IA**.
 
 ## Modelos retirados por OpenAI
 
@@ -99,4 +95,4 @@ OpenAI apaga sus modelos antiguos y, desde ese día, un agente que los use deja 
 - GPT-5, GPT-5 mini y GPT-5 nano, con todas sus variantes;
 - o3 y o4-mini.
 
-Al actualizar, una sola vez, los agentes que usaban uno de ellos pasan a **GPT-5.4 mini**, con la misma clave de OpenAI. Después puedes cambiarles el modelo en su ficha cuando quieras.
+Al actualizar, una sola vez, los agentes que usaban uno de ellos pasan a **GPT-5.4 mini**, con la misma clave de OpenAI. Después puedes cambiarles el modelo cuando quieras, en **Configuración de IA** o en su ficha.

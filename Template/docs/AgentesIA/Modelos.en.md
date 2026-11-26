@@ -86,10 +86,6 @@ The Claude models are offered with different levels of **effort**: *low*, *mediu
 
 - **In a new installation**, every agent starts with **Claude**, so only the Anthropic key is needed: the chat agents with **Claude Sonnet** (medium effort), and the screen assistants and AHORAMind with **Claude Haiku** (low effort).
 - **When updating**, each agent **keeps the model it already had**, unless it's one that OpenAI has retired or is about to retire (see below).
-- **Hugo and Amanda**, who are new, come with Claude Sonnet.
-
-!!! warning "If you only have an OpenAI key"
-    When updating, your agents keep their OpenAI model, but **Hugo and Amanda** arrive with Claude. You have two options: add the Anthropic key (`AI_TOKEN_ANTHROPIC`) or click **Recomendados de OpenAI** in **Configuración de IA**.
 
 ## Models retired by OpenAI
 
@@ -99,4 +95,4 @@ OpenAI shuts down its old models and, from that day on, an agent that uses them 
 - GPT-5, GPT-5 mini and GPT-5 nano, with all their variants;
 - o3 and o4-mini.
 
-When updating, once only, the agents that used one of them move to **GPT-5.4 mini**, with the same OpenAI key. Afterwards you can change their model in their record whenever you like.
+When updating, once only, the agents that used one of them move to **GPT-5.4 mini**, with the same OpenAI key. Afterwards you can change their model whenever you like, in **Configuración de IA** or in their record.

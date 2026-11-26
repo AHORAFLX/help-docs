@@ -5,11 +5,11 @@ An agent can **search the Internet** to fill in what isn't in the ERP: the detai
 By default, agents do **not** search the Internet. The exception is **Oswald** (creditor invoices): in new installations he comes with it turned on, limited to company information sites, so he can fill in the details of a new supplier. When updating from an earlier version it isn't turned on for any agent: you turn it on in the agent's record, with a model that can search.
 
 !!! warning "Only with models that can search"
-    The **Claude** models (Anthropic) and the OpenAI models served through the Responses API (the ones whose description says *Responses API*) can search the Internet. The other OpenAI models, such as GPT-5.2, cannot: Amanda won't turn it on for an agent that uses one of them and tells you to change its model in its record first.
+    The **Claude** models (Anthropic) and the OpenAI models served through the Responses API (the ones whose description says *Responses API*) can search the Internet. The other OpenAI models, such as GPT-5.2, cannot: if an agent uses one of them, change its model first.
 
 ## Turning it on
 
-There are two ways.
+There are two ways, and both warn you about the risks (see below) and ask for confirmation before turning it on.
 
 ### From the agent's record
 
@@ -17,15 +17,9 @@ In the agent's record, check **Puede buscar en Internet** (Can search the Intern
 
 ![Agent record with Internet search](../docs_assets/images/AgentesIA/ficha-agente-internet.png)
 
-### By asking Amanda
+### From AI configuration
 
-> Let Selina search the Internet, only on einforma.com and infocif.es.
-
-Before turning it on, Amanda explains the risks to you and waits for your yes.
-
-![Amanda explains the risks before turning on the Internet](../docs_assets/images/AgentesIA/amanda-internet.png)
-
-To remove it: *"Selina should no longer search the Internet"*.
+In **Administración > Configuración de IA** (AI configuration), **Agentes** (Agents) tab, check **Internet** on the agent's row and type the sites in **Solo en los sitios**. All the agents are in view there. The screen assistants don't search the Internet, so it isn't allowed for them.
 
 ## Risks you should know about
 
@@ -36,10 +30,6 @@ To remove it: *"Selina should no longer search the Internet"*.
 
 !!! tip "Limit it to a few sites"
     Narrowing the search to specific sites reduces all four risks. For company data, for example: <fh-copy>einforma.com, infocif.es, empresia.es, axesor.es</fh-copy>
-
-## A rule that is never broken
-
-An agent built by Amanda or Hugo **can only search the Internet if its base agent can too**. If it's taken away from the base agent, all the agents built from it lose it as well. An agent without a base agent can't search the Internet.
 
 ## How you notice it in the conversation
 
