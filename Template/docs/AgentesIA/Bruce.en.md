@@ -38,7 +38,7 @@ He sees orders with their lines, delivery notes, invoices (including debtor invo
 
 When you ask him for a list of documents, he gives you each one's **Id**, series, number, date, status and customer. With the Id you can then ask him to act on one from the list: *«factura el segundo»* (invoice the second one), *«abre el 29»* (open 29).
 
-![Bruce lists the orders pending delivery](../docs_assets/images/AgentesIA/bruce-pedidos-pendientes.png)
+![Bruce lists the orders pending delivery](../docs_assets/images/AgentesIA/bruce-pedidos-sin-servir.png)
 
 ![Bruce draws a chart of invoicing per customer](../docs_assets/images/AgentesIA/bruce-grafica-clientes.png)
 

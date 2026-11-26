@@ -38,7 +38,7 @@ Ve los pedidos con sus líneas, los albaranes, las facturas (también las de deu
 
 Cuando le pides un listado de documentos, te da de cada uno su **Id**, su serie, su número, la fecha, el estado y el cliente. Con el Id puedes pedirle después que actúe sobre uno de la lista: *«factura el segundo»*, *«abre el 29»*.
 
-![Bruce lista los pedidos pendientes de servir](../docs_assets/images/AgentesIA/bruce-pedidos-pendientes.png)
+![Bruce lista los pedidos pendientes de servir](../docs_assets/images/AgentesIA/bruce-pedidos-sin-servir.png)
 
 ![Bruce dibuja una gráfica con lo facturado por cliente](../docs_assets/images/AgentesIA/bruce-grafica-clientes.png)
 
