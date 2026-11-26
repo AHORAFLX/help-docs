@@ -15,11 +15,39 @@ This also applies to the ERP's **screen assistants**, which are agents like the 
 | **ReportDesigner** | The report designer's chat |
 | **Configurador IA** | The screen configurator's chat |
 
-Each one uses the model in its record and its provider's key, just like the chat agents.
+Each one uses the model it has set and its provider's key, just like the chat agents.
+
+## AI configuration: the first step
+
+Everything you need to get started is on a single screen: **Administración > Configuración de IA** (AI configuration). Only administrators can see and open it.
+
+![AI configuration in the Administración menu](../docs_assets/images/AgentesIA/configuracion-ia-menu.png)
+
+It has two tabs:
+
+- **Claves** (Keys): each provider's key and, if you use one, the address of the Anthropic gateway.
+- **Agentes** (Agents): every agent, including the standard ones and the screen assistants, with its model, whether it can search the Internet and whether its provider's key is set.
+
+![AI configuration: the providers' keys](../docs_assets/images/AgentesIA/configuracion-ia-claves.png)
+
+To start using AI:
+
+1. In **Claves**, enter your provider's key.
+2. Click **Probar claves** (Test keys). The ERP asks the provider whether the key works, at no cost.
+3. Click **Recomendados de Claude** or **Recomendados de OpenAI** (Recommended for Claude / for OpenAI), depending on your provider. The standard agents switch to that provider's recommended models; your own agents are left untouched.
+
+![AI configuration: each agent's model](../docs_assets/images/AgentesIA/configuracion-ia-agentes.png)
+
+Changes take effect immediately, without restarting the ERP.
+
+| Recommended | Chat agents | Screen assistants and AHORAMind |
+|---|---|---|
+| **Claude** | Claude Sonnet, medium effort | Claude Haiku, low effort |
+| **OpenAI** | GPT-5.5, low effort | GPT-5.4 mini, low effort |
 
 ## Each provider's keys
 
-Each provider needs its key. They're stored in the ERP's general configuration:
+Each provider needs its key. They're entered in the **Claves** tab of **Configuración de IA** and stored in these parameters of the ERP's general configuration:
 
 | Provider | Parameter | Where to get the key |
 |---|---|---|
@@ -28,6 +56,8 @@ Each provider needs its key. They're stored in the ERP's general configuration:
 
 You only need the keys for the providers whose models you use. If a screen assistant is missing its provider's key, its chat and **Analizar con IA** don't appear.
 
+If your company uses several branches, a branch can have its own key: the **Claves** tab shows all of them, and each user uses their branch's key if there is one.
+
 !!! tip "The chat asks you for it"
     If you open an agent's chat and the key for its model's provider is missing, the chat's configuration screen tells you which key it needs, from which provider and where to get it, and saves it in its parameter.
 
@@ -35,11 +65,11 @@ You only need the keys for the providers whose models you use. If a screen assis
 
 ### Anthropic gateway (optional)
 
-If your company accesses the Claude models through its own gateway instead of directly, enter its address in <fh-copy>AI_URL_ANTHROPIC</fh-copy>. If you leave it empty, Anthropic's is used.
+If your company accesses the Claude models through its own gateway instead of directly, enter its full address (starting with `https://`) in <fh-copy>AI_URL_ANTHROPIC</fh-copy>. If you leave it empty, Anthropic's is used.
 
 ## Changing an agent's model
 
-The model is chosen in the **agent's record**, in the **Modelo IA** (AI model) field. Changes reach the API on their own in less than a minute.
+Any agent's model is changed in the **Agentes** tab of **Configuración de IA**. The chat agents also have it in their **record**, in the **Modelo IA** (AI model) field. Changes reach the API on their own in less than a minute.
 
 ![Model in the agent's record](../docs_assets/images/AgentesIA/ficha-agente-modelo.png)
 
@@ -54,12 +84,12 @@ The Claude models are offered with different levels of **effort**: *low*, *mediu
 
 ## Which model the agents come with
 
-- **In a new installation**, the standard agents start with **Claude Sonnet** (medium effort), and the screen assistants with **GPT-5.4 mini**.
+- **In a new installation**, every agent starts with **Claude**, so only the Anthropic key is needed: the chat agents with **Claude Sonnet** (medium effort), and the screen assistants and AHORAMind with **Claude Haiku** (low effort).
 - **When updating**, each agent **keeps the model it already had**, unless it's one that OpenAI has retired or is about to retire (see below).
 - **Hugo and Amanda**, who are new, come with Claude Sonnet.
 
 !!! warning "If you only have an OpenAI key"
-    When updating, your agents keep their OpenAI model, but **Hugo and Amanda** arrive with Claude. You have two options: add the Anthropic key (`AI_TOKEN_ANTHROPIC`) or change their model to an OpenAI one in their record.
+    When updating, your agents keep their OpenAI model, but **Hugo and Amanda** arrive with Claude. You have two options: add the Anthropic key (`AI_TOKEN_ANTHROPIC`) or click **Recomendados de OpenAI** in **Configuración de IA**.
 
 ## Models retired by OpenAI
 
