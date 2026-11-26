@@ -42,7 +42,7 @@ Por ejemplo:
 Qué conviene saber:
 
 - **Ve las filas que la rejilla tiene cargadas cuando abres el chat.** Se le mandan una sola vez, con tu primera pregunta. Si recargas la rejilla, cierra el chat y vuelve a pulsar **Analizar con IA**: cada vez empieza una conversación nueva.
-- **Tiene un tope de 200.000 caracteres de datos.** Si la rejilla tiene más, recibe solo las primeras filas y te avisa de en cuántas se basa su respuesta.
+- **Tiene un tope de 50.000 caracteres de datos.** Si la rejilla tiene más, recibe solo las primeras filas y te avisa de en cuántas se basa su respuesta.
 - **No recibe imágenes** ni otros datos binarios de la rejilla.
 - **Solo consulta.** No cambia nada en la rejilla ni en el ERP.
 

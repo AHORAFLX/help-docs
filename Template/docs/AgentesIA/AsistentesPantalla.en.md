@@ -42,7 +42,7 @@ For example:
 Things worth knowing:
 
 - **It sees the rows the grid has loaded when you open the chat.** They're sent only once, with your first question. If you reload the grid, close the chat and click **Analizar con IA** again: each time a new conversation starts.
-- **It has a limit of 200,000 characters of data.** If the grid has more, it only receives the first rows and tells you how many its answer is based on.
+- **It has a limit of 50,000 characters of data.** If the grid has more, it only receives the first rows and tells you how many its answer is based on.
 - **It doesn't receive images** or other binary data from the grid.
 - **It only queries.** It doesn't change anything in the grid or in the ERP.
 
